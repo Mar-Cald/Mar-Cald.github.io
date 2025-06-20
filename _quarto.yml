@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Margherita Calderan"
@@ -15,3 +16,4 @@ format:
     theme: Sandstone
     css: style.css
     toc: true
+
