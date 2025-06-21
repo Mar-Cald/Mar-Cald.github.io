@@ -6,7 +6,7 @@ format:
     number-sections: false
     toc-location: right
     page-layout: full
-    css: styles.css
+    css: style.css
 cvcolor: 741b47
 cvfont: lmodern
 cvmeta:
