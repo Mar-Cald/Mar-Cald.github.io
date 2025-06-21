@@ -3,10 +3,10 @@ format:
   html:
     toc: true
     toc-depth: 3
+    toc-title: Section
     number-sections: false
     toc-location: right
     page-layout: full
-    css: style.css
 cvcolor: 741b47
 cvfont: lmodern
 cvmeta:
@@ -33,17 +33,17 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
   result <- ""
 
   for (i in seq_len(nrow(tbl))) {
-    block <- '<div class="cv-entry">\n'
+    block <- '<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5em;">\n'
     
     # Left side: what + where + optional details
-    block <- paste0(block, '  <div class="cv-entry-left">\n')
+    block <- paste0(block, '  <div style="flex: 1 1 70%; min-width: 250px;">\n')
     block <- paste0(block, '    <strong>', tbl[[what]][i], '</strong><br/>\n')
     block <- paste0(block, '    <em>', tbl[[where]][i], '</em><br/>\n')
 
     if (!is.null(details)) {
       detail_items <- tbl[[details]][[i]]
       if (length(detail_items) > 0) {
-        block <- paste0(block, '    <ul class="cv-entry-details">\n')
+        block <- paste0(block, '    <ul style="margin: 0.5em 0 0 1em; padding-left: 0;">\n')
         for (item in detail_items) {
           # Auto-link any URLs
           item <- gsub("(https?://[^\\s)]+)", "<a href='\\1' target='_blank'>\\1</a>", item, perl = TRUE)
@@ -58,7 +58,7 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
     # Right side: when
     block <- paste0(
       block,
-      '  <div class="cv-entry-right">',
+      '  <div style="flex: 0 0 25%; text-align: right; font-weight: bold; min-width: 120px;">',
       tbl[[when]][i],
       '</div>\n'
     )
@@ -69,7 +69,6 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
 
   knitr::asis_output(result)
 }
-
 
 ```
 

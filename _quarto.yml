@@ -3,17 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "Margherita Calderan"
   navbar:
     left:
-      - text: "Home"
+      - text: "home"
         href: index.qmd
-      - text: "CV"
+      - text: "cv"
         href: cv.qmd
 
 format:
   html:
-    theme: Sandstone
+    theme: sandstone
     css: style.css
     toc: true
 

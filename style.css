@@ -1,173 +1,33 @@
-/* style.css - custom styling for your Quarto site */
-
-/* ---------- Navbar ---------- */
+/* Navbar color override */
 .navbar {
-  background-color: #a90b6d;
+  background-color: #a90b6d !important; /* override superhero default */
 }
 
 /* ---------- Base Styling ---------- */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
-  font-size: 18px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 100%;
+  font-size: 20px;
+  padding: 0 1rem;
 }
 
-/* Smaller font size on very small devices */
-@media screen and (max-width: 400px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-/* ---------- Headings ---------- */
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.8rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-h1, h2, h3 {
-  color: #2C3E50;
-}
-
-/* ---------- Links ---------- */
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Tables ---------- */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-th {
-  background-color: #f2f2f2;
-}
-
-/* ---------- Section Spacing ---------- */
-section {
-  margin-bottom: 2rem;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* ---------- Hero Section ---------- */
+/* Hero section custom styles */
 #hero-heading {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1.5rem 1rem;
-  font-size: 2rem;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  margin: 0;
+  width: 100%;
 }
 
 #hero-heading * {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-#hero-heading .about-image {
-  width: 12em;
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
 
-#hero-heading .about-content {
-  flex: 1 1 auto;
-  min-width: 200px;
-}
 
-@media screen and (max-width: 600px) {
-  #hero-heading {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #hero-heading .about-image {
-    width: 8em;
-    margin-bottom: 1rem;
-  }
-}
-
-/* ---------- CV Entries ---------- */
-.cv-entry {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.5em;
-  flex-wrap: wrap;
-}
-
-.cv-entry-left {
-  flex: 1 1 70%;
-  min-width: 250px;
-}
-
-.cv-entry-right {
-  flex: 0 0 25%;
-  text-align: right;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-  .cv-entry {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .cv-entry-right {
-    text-align: left;
-    margin-top: 0.5rem;
-  }
-}
-
-/* ---------- Always Show Sidebar/TOC ---------- */
-@media (max-width: 991.98px) {
-  body > nav#TOC,
-  .sidebar,
-  .nav-footer {
-    display: block !important;
-    position: relative !important;
-    transform: none !important;
-    visibility: visible !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-
-  .page-columns {
-    display: grid !important;
-    grid-template-columns: auto 1fr;
-  }
-
-  .page-sidebar {
-    display: block !important;
-    width: auto !important;
-  }
-
-  .content {
-    width: 100%;
-  }
-}
