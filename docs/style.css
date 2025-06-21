@@ -1,41 +1,44 @@
 /* style.css - custom styling for your Quarto site */
 
+/* ---------- Navbar ---------- */
 .navbar {
   background-color: #a90b6d;
 }
 
-/* Increase the base font size for the whole page */
+/* ---------- Base Styling ---------- */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
-  font-size: 18px;  /* default is often 16px */
-  
-  /* Widen content horizontally */
-  max-width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 18px;
+  margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 100%;
 }
 
-/* Make your main headers larger */
+/* Smaller font size on very small devices */
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* ---------- Headings ---------- */
 h1 {
-  font-size: 2rem; /* roughly 40px */
+  font-size: 2rem;
 }
 h2 {
-  font-size: 1.8rem; /* roughly 32px */
+  font-size: 1.8rem;
 }
 h3 {
-  font-size: 1.5rem; /* roughly 24px */
+  font-size: 1.5rem;
 }
-
-/* Style for headers */
 h1, h2, h3 {
   color: #2C3E50;
 }
 
-/* Customize links */
+/* ---------- Links ---------- */
 a {
   color: #0077cc;
   text-decoration: none;
@@ -44,7 +47,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Make tables look nicer */
+/* ---------- Tables ---------- */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -57,18 +60,17 @@ th {
   background-color: #f2f2f2;
 }
 
-/* Add some spacing between sections */
+/* ---------- Section Spacing ---------- */
 section {
   margin-bottom: 2rem;
-  max-width: 90vw;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/* ----------- Responsive Hero Section ----------- */
-
+/* ---------- Hero Section ---------- */
 #hero-heading {
   display: flex;
   align-items: center;
@@ -76,7 +78,7 @@ section {
   gap: 1rem;
   padding: 1.5rem 1rem;
   font-size: 2rem;
-  max-width: 90vw;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -98,7 +100,6 @@ section {
   min-width: 200px;
 }
 
-/* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   #hero-heading {
     flex-direction: column;
@@ -111,14 +112,13 @@ section {
   }
 }
 
-
-/* CV timeline layout */
+/* ---------- CV Entries ---------- */
 .cv-entry {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5em;
-  flex-wrap: wrap; /* allow stacking on small screens */
+  flex-wrap: wrap;
 }
 
 .cv-entry-left {
@@ -132,7 +132,6 @@ section {
   font-weight: bold;
 }
 
-/* Stack entries on small screens */
 @media screen and (max-width: 600px) {
   .cv-entry {
     flex-direction: column;
@@ -142,5 +141,33 @@ section {
   .cv-entry-right {
     text-align: left;
     margin-top: 0.5rem;
+  }
+}
+
+/* ---------- Always Show Sidebar/TOC ---------- */
+@media (max-width: 991.98px) {
+  body > nav#TOC,
+  .sidebar,
+  .nav-footer {
+    display: block !important;
+    position: relative !important;
+    transform: none !important;
+    visibility: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .page-columns {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+  }
+
+  .page-sidebar {
+    display: block !important;
+    width: auto !important;
+  }
+
+  .content {
+    width: 100%;
   }
 }

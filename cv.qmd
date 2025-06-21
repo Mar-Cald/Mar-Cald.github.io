@@ -2,7 +2,10 @@
 format:
   html:
     toc: true
+    toc-depth: 3
     number-sections: false
+    toc-location: right
+    page-layout: full
     css: styles.css
 cvcolor: 741b47
 cvfont: lmodern
