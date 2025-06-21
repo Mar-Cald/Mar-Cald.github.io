@@ -30,23 +30,6 @@ h3 {
   font-size: 1.5rem; /* roughly 24px */
 }
 
-/* If you want to target your hero heading text */
-#hero-heading {
-  font-size: 2rem;
-  
-  /* Also widen the hero section */
-  max-width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Or increase font size specifically for elements inside hero-heading */
-#hero-heading * {
-  font-size: 1.2rem;
-}
-
 /* Style for headers */
 h1, h2, h3 {
   color: #2C3E50;
@@ -77,8 +60,6 @@ th {
 /* Add some spacing between sections */
 section {
   margin-bottom: 2rem;
-  
-  /* Widen sections as well */
   max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
@@ -86,9 +67,46 @@ section {
   padding-right: 1rem;
 }
 
+/* ----------- Responsive Hero Section ----------- */
+
+#hero-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero-heading * {
+  font-size: 1.2rem;
+}
+
 #hero-heading .about-image {
-  width: auto;
+  width: 12em;
+  max-width: 100%;
   height: auto;
-  max-width: none;
-  max-height: none;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#hero-heading .about-content {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  #hero-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero-heading .about-image {
+    width: 8em;
+    margin-bottom: 1rem;
+  }
 }

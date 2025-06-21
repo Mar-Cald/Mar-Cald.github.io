@@ -5,7 +5,7 @@ about:
   id: hero-heading
   template: jolla
   image-shape: round
-  image-width: 20em
+  image-width: 50%
   links:
     - icon: github
       href: https://github.com/Mar-Cald

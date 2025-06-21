@@ -75,12 +75,6 @@ Download the [PDF](_site/cv-pdf/cv-pdf.pdf) version.
 </br>
 :::
 
-# Research Interests
-
--   Cognitive Psychology
--   Computational models of cognition
--   Bayesian statistics
-
 # Current Position
 
 ```{r}
