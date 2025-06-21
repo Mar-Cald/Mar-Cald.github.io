@@ -21,10 +21,10 @@ body {
 
 /* Make your main headers larger */
 h1 {
-  font-size: 2.5rem; /* roughly 40px */
+  font-size: 2rem; /* roughly 40px */
 }
 h2 {
-  font-size: 2rem; /* roughly 32px */
+  font-size: 1.8rem; /* roughly 32px */
 }
 h3 {
   font-size: 1.5rem; /* roughly 24px */
