@@ -110,3 +110,37 @@ section {
     margin-bottom: 1rem;
   }
 }
+
+
+/* CV timeline layout */
+.cv-entry {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5em;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.cv-entry-left {
+  flex: 1 1 70%;
+  min-width: 250px;
+}
+
+.cv-entry-right {
+  flex: 0 0 25%;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Stack entries on small screens */
+@media screen and (max-width: 600px) {
+  .cv-entry {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .cv-entry-right {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}

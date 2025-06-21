@@ -25,53 +25,55 @@ from: markdown+emoji
 
 ```{r}
 #| label: cvevents
+
 cvevents <- function(tbl, when, what, where, details = NULL) {
   result <- ""
-  
+
   for (i in seq_len(nrow(tbl))) {
-    block <- '<div style="display: flex; justify-content: space-between; margin-bottom: 1.5em;">\n'
+    block <- '<div class="cv-entry">\n'
     
-    # Left side
-    block <- paste0(block, '  <div style="width: 80%;">\n')
+    # Left side: what + where + optional details
+    block <- paste0(block, '  <div class="cv-entry-left">\n')
     block <- paste0(block, '    <strong>', tbl[[what]][i], '</strong><br/>\n')
     block <- paste0(block, '    <em>', tbl[[where]][i], '</em><br/>\n')
-    
+
     if (!is.null(details)) {
       detail_items <- tbl[[details]][[i]]
       if (length(detail_items) > 0) {
-        block <- paste0(block, '    <ul style="margin: 0.5em 0 0 1em; padding-left: 0;">\n')
+        block <- paste0(block, '    <ul class="cv-entry-details">\n')
         for (item in detail_items) {
+          # Auto-link any URLs
           item <- gsub("(https?://[^\\s)]+)", "<a href='\\1' target='_blank'>\\1</a>", item, perl = TRUE)
           block <- paste0(block, '      <li>', item, '</li>\n')
         }
         block <- paste0(block, '    </ul>\n')
       }
     }
-    
+
     block <- paste0(block, '  </div>\n')
     
-    # Right side (date)
+    # Right side: when
     block <- paste0(
       block,
-      '  <div style="width: 18%; text-align: right; font-weight: bold;">',
+      '  <div class="cv-entry-right">',
       tbl[[when]][i],
       '</div>\n'
     )
-    
+
     block <- paste0(block, '</div>\n\n')
-    
     result <- paste0(result, block)
   }
-  
+
   knitr::asis_output(result)
 }
-
 
 
 ```
 
 :::{.pdf .no-print}
-Download the [PDF](_site/cv-pdf/cv-pdf.pdf) version.
+Download the [PDF](docs/cv-pdf/cv-pdf.pdf) version.
+</br>
+<center>*Last update: `r Sys.Date()`*</center>
 </br>
 :::
 
@@ -642,4 +644,5 @@ tibble::tribble(
 ```
 
 ------------------------------------------------------------------------
+
 
