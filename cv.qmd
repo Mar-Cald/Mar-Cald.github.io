@@ -4,31 +4,15 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Section
-    number-sections: false
     toc-location: right
-    sidebar: true  # This shows the TOC on mobile in a slide-out sidebar
+    toc-expand: true
     page-layout: full
-cvcolor: 741b47
-cvfont: lmodern
-cvmeta:
-  - title: Email address
-    left: margherita.calderan@gmail.com
-  - title: ORCID
-    left: 0009-0005-5668-5162
-    right: https://orcid.org/0009-0005-5668-5162
-  - title: GitHub
-    left: Mar-Cald
-    right: https://github.com/Mar-Cald
-  - title: ResearchGate
-    left: Margherita-Calderan-2
-    right: https://www.researchgate.net/profile/Margherita-Calderan-2
-execute:
-  echo: false
 from: markdown+emoji  
 ---
 
 ```{r}
 #| label: cvevents
+#| echo: false
 
 cvevents <- function(tbl, when, what, where, details = NULL) {
   result <- ""
@@ -85,6 +69,7 @@ Download the [PDF](docs/cv-pdf/cv-pdf.pdf) version.
 ```{r}
 #| label: experience
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Postdoctoral Researcher", "Department of General Psychology, University of Padova, Italy", "Oct. 2024 - Present",
@@ -98,6 +83,7 @@ tibble::tribble(
 ```{r }
 #| label: education
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~degree, ~institution, ~dates, ~details,
     "Ph.D. in Psychological Sciences - cum laude", "University of Padova, Italy", "Oct. 2021 - Oct. 2024", 
@@ -119,7 +105,8 @@ tibble::tribble(
 
 ```{r}
 #| label: research
-#| output: asis
+#| output: asi
+#| echo: false
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     
@@ -146,6 +133,7 @@ cvevents(when = "dates", what = "role", where = "institution", details = "tasks"
 ```{r}
 #| label: Abroad 
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Visiting PhD student", "Cognitive Psychology Unit, University of Leiden, the Netherlands", "Feb. 2024 - Jun. 2024",
@@ -172,6 +160,7 @@ tibble::tribble(
 ```{r}
 #| label: Training
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Model-based Neuroscience Summer School", "University of Amsterdam, the Netherlands", "29/07/2024 - 02/08/2024",
@@ -497,6 +486,7 @@ covered topics related to sleep medicine and dreaming. Nijmegen
 ```{r }
 #| label: Groups
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~degree, ~institution, ~dates, ~details,
     "Psicostat", "University of Padova", "2024 - Present", 
@@ -513,6 +503,7 @@ tibble::tribble(
 ```{r }
 #| label: Collaborations
 #| output: asis
+#| echo: false
 tibble::tribble(
     ~degree, ~institution, ~dates, ~details,
     "Dr. Bryant Jongkees", "Univeristy of Leiden, the Netherlands", "2024 - Present", 
@@ -581,6 +572,7 @@ techniques, in the following selected works:
 ```{r }
 #| label: Societies
 #| output: asis
+#| echo: false
 
 tibble::tribble(
     ~degree, ~institution, ~dates, 
@@ -607,6 +599,7 @@ tibble::tribble(
 ```{r}
 #| label: Programming 
 #| output: asis
+#| echo: false
 tibble::tribble(
      ~role, ~institution, ~dates, ~details, ~tasks,
     "R/R Studio", "Proficient", " ",
@@ -631,6 +624,7 @@ tibble::tribble(
 ```{r}
 #| label: skills
 #| output: asis
+#| echo: false
 tibble::tribble(
      ~role, ~institution, ~dates, ~details, ~tasks,
     "PsychoPy/Pavlovia and OpenSesame/OSWeb", "Intermediate", " ",

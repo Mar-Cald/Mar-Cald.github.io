@@ -133,25 +133,11 @@
     "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n\n\n\n\nLast update: 2025-06-22"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "Welcome to my website! I’m building this with Quarto and GitHub Pages."
-  },
-  {
     "objectID": "material.html",
     "href": "material.html",
     "title": "",
     "section": "",
     "text": "Here are some open resources related to reproducibility, and modeling:"
-  },
-  {
-    "objectID": "material.html#pam-predictive-accumulation-models",
-    "href": "material.html#pam-predictive-accumulation-models",
-    "title": "",
-    "section": "PAM: Predictive Accumulation Models",
-    "text": "PAM: Predictive Accumulation Models\nThis project implements the PAM framework https://doi.org/10.48550/arXiv.2411.13203 in R/Stan. Combine predictive processes with evidence accumulation models, repo."
   },
   {
     "objectID": "material.html#reproducible-science",
@@ -161,10 +147,24 @@
     "text": "Reproducible Science\nIntroduction to reproducible science practices (repo, slide)\n\nWrite transparent, script-based analyses in R\nOrganize your projects using functional and modular workflows\nTrack your work with Git and collaborate via GitHub\nShare datasets responsibly using FAIR principles\nCreate fully reproducible papers and reports with Quarto"
   },
   {
+    "objectID": "material.html#pam-predictive-accumulation-models",
+    "href": "material.html#pam-predictive-accumulation-models",
+    "title": "",
+    "section": "PAM: Predictive Accumulation Models",
+    "text": "PAM: Predictive Accumulation Models\nThis project implements the PAM framework https://doi.org/10.48550/arXiv.2411.13203 in R/Stan. Combine predictive processes with evidence accumulation models, repo."
+  },
+  {
     "objectID": "material.html#reaction-time-distributions",
     "href": "material.html#reaction-time-distributions",
     "title": "",
     "section": "Reaction time distributions",
     "text": "Reaction time distributions\nOverview of RT distributions."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Welcome to my website! I’m building this with Quarto and GitHub Pages."
   }
 ]
