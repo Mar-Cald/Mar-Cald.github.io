@@ -1,6 +1,6 @@
 /* Navbar color override */
 .navbar {
-  background-color: #a90b6d !important; /* override superhero default */
+  background-color: #6e0748 !important; /* override superhero default */
 }
 
 /* ---------- Base Styling ---------- */
@@ -63,7 +63,7 @@ body {
 
   .cvevent-right {
     font-weight: bold;
-    color: #a90b6d; /* make date stand out */
+    color: #6e0748; /* make date stand out */
   }
 }
 
