@@ -1,0 +1,63 @@
+/* Navbar color override */
+.navbar {
+  background-color: #a90b6d !important; /* override superhero default */
+}
+
+/* ---------- Base Styling ---------- */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  padding: 0 1rem;
+}
+
+/* Hero section custom styles */
+#hero-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  margin: 0;
+  width: 100%;
+}
+
+#hero-heading * {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ---------- CV Events Layout ---------- */
+.cvevent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5em;
+}
+
+.cvevent-left {
+  flex: 1 1 70%;
+  min-width: 250px;
+}
+
+.cvevent-right {
+  flex: 0 0 25%;
+  min-width: 120px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+  .cvevent-left,
+  .cvevent-right {
+    flex: 1 1 100%;
+    text-align: left;
+    margin-top: 0.5em;
+  }
+}
+
+
