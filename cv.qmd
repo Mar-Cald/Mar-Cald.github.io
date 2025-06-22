@@ -58,7 +58,7 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
 ```
 
 :::{.pdf .no-print}
-Download the [PDF](docs/cv-pdf/cv-pdf.pdf) version.
+Download the [PDF](docs/cv-pdf/cv-pdf.pdf){target="_blank"} version.
 </br>
 <center>*Last update: `r Sys.Date()`*</center>
 </br>

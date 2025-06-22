@@ -6,7 +6,7 @@ Here are some open resources related to reproducibility, and modeling:
 
 ## Reproducible Science
 
-Introduction to reproducible science practices ([repo](https://github.com/Mar-Cald/repro-pre-school), [slide](https://mar-cald.github.io/repro-pre-school/slide/repro-preschool.html#/title-slide))
+Introduction to reproducible science practices ([repo](https://github.com/Mar-Cald/repro-pre-school){target="_blank"}, [slide](https://mar-cald.github.io/repro-pre-school/slide/repro-preschool.html#/title-slide){target="_blank"})
 
 -   Write transparent, script-based analyses in R
 
@@ -20,8 +20,8 @@ Introduction to reproducible science practices ([repo](https://github.com/Mar-Ca
 
 ## PAM: Predictive Accumulation Models
 
-This project implements the PAM framework <https://doi.org/10.48550/arXiv.2411.13203> in R/Stan. Combine predictive processes with evidence accumulation models, [repo](https://github.com/Mar-Cald/PAM-PredictiveAccumulationModels).
+This project implements the PAM framework <https://doi.org/10.48550/arXiv.2411.13203>{target="_blank"} in R/Stan. Combine predictive processes with evidence accumulation models, [repo](https://github.com/Mar-Cald/PAM-PredictiveAccumulationModels){target="_blank"}.
 
 ## Reaction time distributions
 
-[Overview](https://mar-cald.github.io/tempi/) of RT distributions.
+[Overview](https://mar-cald.github.io/tempi/){target="_blank"} of RT distributions.
