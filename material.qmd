@@ -1,5 +1,7 @@
 ---
 title: " "
+markdown:
+  extensions: [link_attributes]
 ---
 
 Here are some open resources related to reproducibility, and modeling:

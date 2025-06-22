@@ -13,6 +13,8 @@ about:
       href: https://gitlab.pavlovia.org/mar.cald
     - icon: file-text
       href: https://www.researchgate.net/profile/Margherita-Calderan-2
+markdown:
+  extensions: [link_attributes]
 engine: knitr
 ---
 

@@ -4,7 +4,7 @@
     "href": "cv.html",
     "title": "Current Position",
     "section": "",
-    "text": "Download the PDF version. \n\nLast update: 2025-06-22"
+    "text": "#| label: cvevents\n#| echo: false\n\ncvevents &lt;- function(tbl, when, what, where, details = NULL) {\n  result &lt;- \"\"\n\n  for (i in seq_len(nrow(tbl))) {\n    block &lt;- '&lt;div class=\"cvevent\"&gt;\\n'\n    \n    # Left column\n    block &lt;- paste0(block, '  &lt;div class=\"cvevent-left\"&gt;\\n')\n    block &lt;- paste0(block, '    &lt;strong&gt;', tbl[[what]][i], '&lt;/strong&gt;&lt;br/&gt;\\n')\n    block &lt;- paste0(block, '    &lt;em&gt;', tbl[[where]][i], '&lt;/em&gt;&lt;br/&gt;\\n')\n\n    if (!is.null(details)) {\n      detail_items &lt;- tbl[[details]][[i]]\n      if (length(detail_items) &gt; 0) {\n        block &lt;- paste0(block, '    &lt;ul&gt;\\n')\n        for (item in detail_items) {\n          item &lt;- gsub(\"(https?://[^\\\\s)]+)\", \"&lt;a href='\\\\1' target='_blank'&gt;\\\\1&lt;/a&gt;\", item, perl = TRUE)\n          block &lt;- paste0(block, '      &lt;li&gt;', item, '&lt;/li&gt;\\n')\n        }\n        block &lt;- paste0(block, '    &lt;/ul&gt;\\n')\n      }\n    }\n\n    block &lt;- paste0(block, '  &lt;/div&gt;\\n')\n\n    # Right column (dates)\n    block &lt;- paste0(\n      block,\n      '  &lt;div class=\"cvevent-right\"&gt;',\n      tbl[[when]][i],\n      '&lt;/div&gt;\\n'\n    )\n\n    block &lt;- paste0(block, '&lt;/div&gt;\\n\\n')\n    result &lt;- paste0(result, block)\n  }\n\n  knitr::asis_output(result)\n}"
   },
   {
     "objectID": "cv.html#published",
