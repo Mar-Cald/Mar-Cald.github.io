@@ -9,6 +9,8 @@ website:
         href: index.qmd
       - text: "cv"
         href: cv.qmd
+      - text: "open-material"
+        href: material.qmd
 
 format:
   html:

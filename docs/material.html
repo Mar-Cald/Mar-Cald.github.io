@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Margherita Calderan</title>
+<title>quarto-input31c9fe9ae9bd7e87</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
@@ -91,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">cv</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./material.html"> 
+    <a class="nav-link active" href="./material.html" aria-current="page"> 
 <span class="menu-text">open-material</span></a>
   </li>  
 </ul>
@@ -105,49 +106,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#reproducible-science" id="toc-reproducible-science" class="nav-link active" data-scroll-target="#reproducible-science">Reproducible Science</a></li>
+  <li><a href="#pam-predictive-accumulation-models" id="toc-pam-predictive-accumulation-models" class="nav-link" data-scroll-target="#pam-predictive-accumulation-models">PAM: Predictive Accumulation Models</a></li>
+  <li><a href="#reaction-time-distributions" id="toc-reaction-time-distributions" class="nav-link" data-scroll-target="#reaction-time-distributions">Reaction time distributions</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
 
-<div class="quarto-about-jolla">
-  <img src="img/tulip.jpg" class="about-image
-  round " style="height: 50%; width: 50%;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Margherita Calderan</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><div id="hero-heading">
-<p>I am a <strong>postdoctoral researcher</strong> at the Department of General Psychology, University of Padova, Italy.</p>
-<p>My research interests include <strong>computational models of cognition</strong>, <strong>Bayesian statistics</strong>, and <strong>metascience</strong>. I am a member of the <a href="https://psicostat.dpss.psy.unipd.it/">Psicostat</a> research group.</p>
-</div> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/Mar-Cald" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://gitlab.pavlovia.org/mar.cald" class="about-link" rel="" target="">
-    <i class="bi bi-gitlab"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://www.researchgate.net/profile/Margherita-Calderan-2" class="about-link" rel="" target="">
-    <i class="bi bi-file-text"></i>
-     <span class="about-link-text"></span>
-  </a>
-</div>
-</div>
-
-<center>
-<em>Last update: 2025-06-22</em>
-</center>
+<p>Here are some open resources related to reproducibility, and modeling:</p>
+<section id="reproducible-science" class="level2">
+<h2 class="anchored" data-anchor-id="reproducible-science">Reproducible Science</h2>
+<p>Introduction to reproducible science practices (<a href="https://github.com/Mar-Cald/repro-pre-school">repo</a>, <a href="https://mar-cald.github.io/repro-pre-school/slide/repro-preschool.html#/title-slide">slide</a>)</p>
+<ul>
+<li><p>Write transparent, script-based analyses in R</p></li>
+<li><p>Organize your projects using functional and modular workflows</p></li>
+<li><p>Track your work with Git and collaborate via GitHub</p></li>
+<li><p>Share datasets responsibly using FAIR principles</p></li>
+<li><p>Create fully reproducible papers and reports with Quarto</p></li>
+</ul>
+</section>
+<section id="pam-predictive-accumulation-models" class="level2">
+<h2 class="anchored" data-anchor-id="pam-predictive-accumulation-models">PAM: Predictive Accumulation Models</h2>
+<p>This project implements the PAM framework <a href="https://doi.org/10.48550/arXiv.2411.13203" class="uri">https://doi.org/10.48550/arXiv.2411.13203</a> in R/Stan. Combine predictive processes with evidence accumulation models, <a href="https://github.com/Mar-Cald/PAM-PredictiveAccumulationModels">repo</a>.</p>
+</section>
+<section id="reaction-time-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="reaction-time-distributions">Reaction time distributions</h2>
+<p><a href="https://mar-cald.github.io/tempi/">Overview</a> of RT distributions.</p>
 
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -170,6 +167,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
