@@ -6,6 +6,7 @@ format:
     toc-title: Section
     number-sections: false
     toc-location: right
+    sidebar: true  # This shows the TOC on mobile in a slide-out sidebar
     page-layout: full
 cvcolor: 741b47
 cvfont: lmodern

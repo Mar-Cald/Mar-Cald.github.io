@@ -15,7 +15,9 @@ body {
 /* Hero section custom styles */
 #hero-heading {
   display: flex;
-  align-items: center;
+  align-items: center;    /* center horizontally */
+  justify-content: center; /* center vertically if there's height */
+  text-align: center;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0.5rem 1rem;
@@ -55,9 +57,13 @@ body {
   .cvevent-left,
   .cvevent-right {
     flex: 1 1 100%;
-    text-align: left;
     margin-top: 0.5em;
+    text-align: left;
+  }
+
+  .cvevent-right {
+    font-weight: bold;
+    color: #a90b6d; /* make date stand out */
   }
 }
-
 
