@@ -228,19 +228,18 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 \cvsubsection{Under Review}
 
-1.  Visalli, A., Calistroni, F. M., **Calderan, M.**, Donnarumma, F.,
+1.  **Calderan, M.**, Visalli, A., Degasperi, G., Toffoli, L., Sellaro,
+    R., & Cellini, N. Predictions under sleep restriction: The effects
+    of partial sleep deprivation on learning and inhibitory control.
+    Under Review in *Royal Society Open Science*. **Preprint:**
+    <https://doi.org/10.31234/osf.io/x7m4z\_v3>.
+
+2.  Visalli, A., Calistroni, F. M., **Calderan, M.**, Donnarumma, F.,
     Zorzi, M., & Ambrosini, E. A computational framework for integrating
     Predictive processes with evidence Accumulation Models (PAM). Under
     Review in *Behavior Research Methods*. **Preprint:**
     <https://doi.org/10.48550/arXiv.2411.13203>.
-
-\cvsubsection{Under Consideration}
-
-1.  **Calderan, M.**, Visalli, A., Degasperi, G., Toffoli, L., Sellaro,
-    R., & Cellini, N. Predictions under sleep restriction: The effects
-    of partial sleep deprivation on learning and inhibitory control.
-    Under Consideration in *Royal Society Open Science*. **Preprint:**
-    <https://doi.org/10.31234/osf.io/x7m4z\_v3>.
+    
 
 \cvsubsection{Preregistration}
 
@@ -271,7 +270,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     V., & Mento, G., I am talking to you! Engagement modulates the
     effects of digital contents exposure on preschoolers’ adaptive
     cognitive control. In preparation for *Developmental Sciences*.
-3.  van Dooren, R., **Calderan, M.**, Sellaro, R., & Jongkees, J.B.,
+3.  **Calderan, M.**, van Dooren, R., Sellaro, R., & Jongkees, J.B.,
     Dynamic and contextual modulation of constraints on cognitive
     control. In preparation for *Journal of Experimental Psychology:
     Human Perception and Performance*.
