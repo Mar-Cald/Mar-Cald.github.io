@@ -35,7 +35,6 @@ body {
 .cvevent {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   flex-wrap: nowrap; /* Prevent wrapping */
   gap: 1rem;
   margin-bottom: 1.5em;
