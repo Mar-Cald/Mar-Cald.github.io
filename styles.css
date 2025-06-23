@@ -35,38 +35,32 @@ body {
 .cvevent {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.5em;
 }
 
 .cvevent-left {
-  flex: 1 1 auto;
-  min-width: 0;
+  flex: 1 1 70%;
+  min-width: 250px;
 }
 
 .cvevent-right {
-  flex: 1 1 auto;
+  flex: 0 0 25%;
+  min-width: 120px;
   text-align: right;
   font-weight: bold;
-  min-width: 0;
-  margin-left: 0.5 rem;
 }
 
-/* Responsive font scaling */
+/* Responsive: stack on narrow screens */
 @media (max-width: 768px) {
-  html {
-    font-size: 10px; /* Optional: scale down overall text */
-  }
-
   .cvevent {
-    flex-direction: row; /* Stay in row */
-  }
-
-  .cvevent-left {
-    font-size: 0.5em;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .cvevent-right {
-    font-size: 0.5em;
+    text-align: left;
+    margin-top: 0.5em;
   }
 }
