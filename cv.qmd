@@ -8,8 +8,6 @@ format:
     toc-expand: true
     page-layout: full
 from: markdown+emoji  
-markdown:
-  extensions: [link_attributes]
 ---
 
 ```{r}
@@ -29,10 +27,12 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
 
     if (!is.null(details)) {
       detail_items <- tbl[[details]][[i]]
+
       if (length(detail_items) > 0) {
         block <- paste0(block, '    <ul>\n')
         for (item in detail_items) {
-          item <- gsub("(https?://[^\\s)]+)", "<a href='\\1' target='_blank'>\\1</a>", item, perl = TRUE)
+          # Auto-link any URLs in item
+          item <- gsub("(https?://[^\\s)]+)", "<a href='\\1' target='_blank' rel='noopener noreferrer'>\\1</a>", item, perl = TRUE)
           block <- paste0(block, '      <li>', item, '</li>\n')
         }
         block <- paste0(block, '    </ul>\n')
@@ -41,7 +41,7 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
 
     block <- paste0(block, '  </div>\n')
 
-    # Right column (dates)
+    # Right column (date)
     block <- paste0(
       block,
       '  <div class="cvevent-right">',
@@ -55,7 +55,6 @@ cvevents <- function(tbl, when, what, where, details = NULL) {
 
   knitr::asis_output(result)
 }
-
 
 ```
 

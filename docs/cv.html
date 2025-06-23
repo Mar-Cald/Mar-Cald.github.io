@@ -162,160 +162,231 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<pre class="{r}"><code>#| label: cvevents
-#| echo: false
-
-cvevents &lt;- function(tbl, when, what, where, details = NULL) {
-  result &lt;- ""
-
-  for (i in seq_len(nrow(tbl))) {
-    block &lt;- '&lt;div class="cvevent"&gt;\n'
-    
-    # Left column
-    block &lt;- paste0(block, '  &lt;div class="cvevent-left"&gt;\n')
-    block &lt;- paste0(block, '    &lt;strong&gt;', tbl[[what]][i], '&lt;/strong&gt;&lt;br/&gt;\n')
-    block &lt;- paste0(block, '    &lt;em&gt;', tbl[[where]][i], '&lt;/em&gt;&lt;br/&gt;\n')
-
-    if (!is.null(details)) {
-      detail_items &lt;- tbl[[details]][[i]]
-      if (length(detail_items) &gt; 0) {
-        block &lt;- paste0(block, '    &lt;ul&gt;\n')
-        for (item in detail_items) {
-          item &lt;- gsub("(https?://[^\\s)]+)", "&lt;a href='\\1' target='_blank'&gt;\\1&lt;/a&gt;", item, perl = TRUE)
-          block &lt;- paste0(block, '      &lt;li&gt;', item, '&lt;/li&gt;\n')
-        }
-        block &lt;- paste0(block, '    &lt;/ul&gt;\n')
-      }
-    }
-
-    block &lt;- paste0(block, '  &lt;/div&gt;\n')
-
-    # Right column (dates)
-    block &lt;- paste0(
-      block,
-      '  &lt;div class="cvevent-right"&gt;',
-      tbl[[when]][i],
-      '&lt;/div&gt;\n'
-    )
-
-    block &lt;- paste0(block, '&lt;/div&gt;\n\n')
-    result &lt;- paste0(result, block)
-  }
-
-  knitr::asis_output(result)
-}
-
-</code></pre>
 <div class="pdf no-print">
 Download the <a href="docs/cv-pdf/cv-pdf.pdf" target="_blank">PDF</a> version. <br>
 <center>
-<em>Last update: <code>r Sys.Date()</code></em>
+<em>Last update: 2025-06-23</em>
 </center>
 <p><br></p>
 </div>
 <section id="current-position" class="level1">
 <h1>Current Position</h1>
-<pre class="{r}"><code>#| label: experience
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~role, ~institution, ~dates, ~details, ~tasks,
-    "Postdoctoral Researcher", "Department of General Psychology, University of Padova, Italy", "Oct. 2024 - Present",
-    " ", c("Tails or types? Testing the dimensional hypothesis in neurodevelopmental disorders", "Supervisor: Prof. Enrico Toffalini",
-           "1 year research grant")) |&gt;
-    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Postdoctoral Researcher</strong><br>
+    <em>Department of General Psychology, University of Padova, Italy</em><br>
+    <ul>
+      <li>Tails or types? Testing the dimensional hypothesis in neurodevelopmental disorders</li>
+      <li>Supervisor: Prof. Enrico Toffalini</li>
+      <li>1 year research grant</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Oct. 2024 - Present</div>
+</div>
+
 </section>
 <section id="education" class="level1">
 <h1>Education</h1>
-<pre class="{r }"><code>#| label: education
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~degree, ~institution, ~dates, ~details,
-    "Ph.D. in Psychological Sciences - cum laude", "University of Padova, Italy", "Oct. 2021 - Oct. 2024", 
-      c("Thesis: Balancing stability and flexibility in cognitive control and learning: the effects of arousal", "https://researchdata.cab.unipd.it/1437/",
-        "Supervisors: Prof. Roberta Sellaro, Prof. Nicola Cellini"),
-    "M.S. in Cognitive Neuroscience and Clinical Neuropsychology - 110 cum laude", "University of Padova, Italy", "Oct. 2018 - Dec. 2020", 
-      c("Thesis: Sleep characteristics in adults with high functioning autism: a polysomnographic study", 
-        "Supervisor: Prof. Nicola Cellini"),
-    "B.S. in Cognitive Psychology and Psychobiology - 109/110", "University of Padova, Italy", "Sept. 2015 - July 2018", 
-      c("Thesis: Gender differences in the long-term consolidation of emotional memories", 
-        "Supervisor: Prof. Michela Sarlo")
-) |&gt;
-  cvevents(when = "dates", what = "degree", where = "institution", details = "details")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Ph.D. in Psychological Sciences - cum laude</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>Thesis: Balancing stability and flexibility in cognitive control and learning: the effects of arousal</li>
+      <li><a href="https://researchdata.cab.unipd.it/1437/" target="_blank" rel="noopener noreferrer">https://researchdata.cab.unipd.it/1437/</a></li>
+      <li>Supervisors: Prof. Roberta Sellaro, Prof. Nicola Cellini</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Oct. 2021 - Oct. 2024</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>M.S. in Cognitive Neuroscience and Clinical Neuropsychology - 110 cum laude</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>Thesis: Sleep characteristics in adults with high functioning autism: a polysomnographic study</li>
+      <li>Supervisor: Prof. Nicola Cellini</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Oct. 2018 - Dec. 2020</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>B.S. in Cognitive Psychology and Psychobiology - 109/110</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>Thesis: Gender differences in the long-term consolidation of emotional memories</li>
+      <li>Supervisor: Prof. Michela Sarlo</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Sept. 2015 - July 2018</div>
+</div>
+
+<div style="page-break-after: always;"></div>
 </section>
 <section id="research-experience" class="level1">
 <h1>Research Experience</h1>
-<pre class="{r}"><code>#| label: research
-#| output: asi
-#| echo: false
-tibble::tribble(
-    ~role, ~institution, ~dates, ~details, ~tasks,
-    
-    "Postgraduate Internship", "Psychophysiology Lab, University of Padova, Italy", "Jan. 2021 - Dec. 2021",
-    "", c(
-        "Investigated the role of sleep characteristics in false memory formation and emotional reactivity.",
-        "Processed and interpreted sleep data from healthy participants.",
-        "Supervisors: Prof. Andrea Spoto, Prof. Nicola Cellini"
-    ),
-    
-    "Curricular Internship", "Psychophysiology Lab, University of Padova, Italy", "Dec. 2019 - Aug. 2020",
-    "", c(
-        "Analyzed polysomnographic data to examine sleep architecture in young adults with high-functioning autism.",
-        "Collaborated with the University of Trento and the University of Tübingen.",
-        "Supervisor: Prof. Nicola Cellini"
-    )
-) |&gt;
-cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
-</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Postgraduate Internship</strong><br>
+    <em>Psychophysiology Lab, University of Padova, Italy</em><br>
+    <ul>
+      <li>Investigated the role of sleep characteristics in false memory formation and emotional reactivity.</li>
+      <li>Processed and interpreted sleep data from healthy participants.</li>
+      <li>Supervisors: Prof. Andrea Spoto, Prof. Nicola Cellini</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Jan. 2021 - Dec. 2021</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Curricular Internship</strong><br>
+    <em>Psychophysiology Lab, University of Padova, Italy</em><br>
+    <ul>
+      <li>Analyzed polysomnographic data to examine sleep architecture in young adults with high-functioning autism.</li>
+      <li>Collaborated with the University of Trento and the University of Tübingen.</li>
+      <li>Supervisor: Prof. Nicola Cellini</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Dec. 2019 - Aug. 2020</div>
+</div>
+
+</div>
+</div>
 </section>
 <section id="abroad" class="level1">
 <h1>Abroad</h1>
-<pre class="{r}"><code>#| label: Abroad 
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~role, ~institution, ~dates, ~details, ~tasks,
-    "Visiting PhD student", "Cognitive Psychology Unit, University of Leiden, the Netherlands", "Feb. 2024 - Jun. 2024",
-    "", c(
-        "Worked on a research project investigating how mind-wandering affects cognitive flexibility, applying computational models (https://psyarxiv.com/quhns) to analyze behavioral data.",
-        "Supervisor: Prof. Bryant Jongkees"
-    ),
-         "Research Intern", "Donders Sleep and Memory Lab, Donders Institute, the Netherlands", "Jun. 2019 - Aug. 2019",
-    "", c(
-        "Studied associations between affective memory bias, medial prefrontal schema processing, and sleep in depressed patients and healthy controls.",
-        "Assisted with a project on lucid dream induction.",
-        "Supervisor: Prof. Martin Dresler"
-    ),
-    "Erasmus +", "Jaume I University, Spain", "Feb. 2015 - July. 2015",
-    " ", c("Completed a semester-long academic exchange as part of my undergraduate studies.")
-    ) |&gt;
-    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Visiting PhD student</strong><br>
+    <em>Cognitive Psychology Unit, University of Leiden, the Netherlands</em><br>
+    <ul>
+      <li>Worked on a research project investigating how mind-wandering affects cognitive flexibility, applying computational models (<a href="https://psyarxiv.com/quhns" target="_blank" rel="noopener noreferrer">https://psyarxiv.com/quhns</a>) to analyze behavioral data.</li>
+      <li>Supervisor: Prof. Bryant Jongkees</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Feb. 2024 - Jun. 2024</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Research Intern</strong><br>
+    <em>Donders Sleep and Memory Lab, Donders Institute, the Netherlands</em><br>
+    <ul>
+      <li>Studied associations between affective memory bias, medial prefrontal schema processing, and sleep in depressed patients and healthy controls.</li>
+      <li>Assisted with a project on lucid dream induction.</li>
+      <li>Supervisor: Prof. Martin Dresler</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Jun. 2019 - Aug. 2019</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Erasmus +</strong><br>
+    <em>Jaume I University, Spain</em><br>
+    <ul>
+      <li>Completed a semester-long academic exchange as part of my undergraduate studies.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">Feb. 2015 - July. 2015</div>
+</div>
+
+<div style="page-break-after: always;"></div>
 </section>
 <section id="training" class="level1">
 <h1>Training</h1>
-<pre class="{r}"><code>#| label: Training
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~role, ~institution, ~dates, ~details, ~tasks,
-    "Model-based Neuroscience Summer School", "University of Amsterdam, the Netherlands", "29/07/2024 - 02/08/2024",
-    " ", c("Hands-on experience in both cognitive modeling using evidence-accumulation models and cognitive neuroscience methods. Three-day introduction to evidence-accumulation modeling using Bayesian inference. Two
-days focused on how to use the evidence-accumulation framework to formalize performance in complex experimental paradigms, how to construct joint models of multiple tasks using techniques such as hierarchical factor models, and how to combine evidence-accumulation and reinforcement-learning models.", "Lecturers: Prof. Andrew Heathcote, Prof. Dora Matzke, Dr. Michael Nunez, Dr. Steven Miletic, and Dr. Niek Stevenson"), 
-    "qHelp international seminar on Quantitative Psychology", "Arrifana, Portugal", "26/03/2023 - 02/04/2023",
-    " ", c("A one-week intensive seminar covering Shiny and R Markdown for interactive data reporting, Copula theory and its applications in dependence modeling, numerical methods, and optimization techniques for computational analysis.", "Lecturers: Julian Mollenhauer, Ana Lourenço, Prof. Luciano Stefanutti, Prof. Hans Colonius, Prof. Francis Tuerlinckx, and Prof. Sérgio Moreira"
-    ),
-"Statistical Rethinking", "Online Course", "06/01/2023 - 10/03/2023",
-    " ", c("Pre-recorded lectures and weekly meetings to discuss the material. This course teaches data analysis, focusing on scientific models: conceptual and causal models. Bayesian data analysis to connect scientific models to evidence.", "Lecturers: Prof. Richard McElreath"),
-"Fundamentals and Applications of Pupillometry", "University of Padova, Italy", "20 hours",
-    " ", c("This course offers an introduction to the use of pupillometry in cognitive science, combining practical exercises in data processing with free software tools: OpenSesame for implementing classic cognitive psychology tasks and R for analyzing and visualizing continuous pupil diameter changes. Covering key topics such as noise sources, experimental design, data processing options, and the cognitive interpretation of pupillometric measures.", "Professor: Dr. Giulia Calignano"),
-    "EEGLAB: analysis of electroencephalographic data", "University of Padova, Italy", "20 hours",
-    " ", c("The EEGLAB and ERPLAB toolboxes, which operate within MATLAB, facilitate the analysis of electroencephalographic (EEG) data. This course offers foundational skills in data analysis and theoretical knowledge through practical examples, covering key topics such as data pre-processing and event-related potential (ERP) computation.", "Professor: Dr. Mattia Doro"),
-"Introduction to R", "University of Padova, Italy", "20 hours",
-    " ", c("This course introduces the fundamentals of the open-source programming language R, teaching core programming concepts, data structures, and function creation through practical exercises to build versatile skills applicable across academic and professional settings.", "Professor: Dr. Filippo Gambarota"),
-"PsychoPy3: experimental programming", "University of Padova, Italy", "20 hours",
-    " ", c("This course introduces participants to PsychoPy, an open-source Python-based software for designing and running behavioral science experiments, teaching them how to create, test, deploy, and manage experiments using its flexible and user-friendly graphical interface.", "Professor: Dr. Thomas Quettier")) |&gt;
-    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Model-based Neuroscience Summer School</strong><br>
+    <em>University of Amsterdam, the Netherlands</em><br>
+    <ul>
+      <li>Hands-on experience in both cognitive modeling using evidence-accumulation models and cognitive neuroscience methods. Three-day introduction to evidence-accumulation modeling using Bayesian inference. Two
+days focused on how to use the evidence-accumulation framework to formalize performance in complex experimental paradigms, how to construct joint models of multiple tasks using techniques such as hierarchical factor models, and how to combine evidence-accumulation and reinforcement-learning models.</li>
+      <li>Lecturers: Prof. Andrew Heathcote, Prof. Dora Matzke, Dr. Michael Nunez, Dr. Steven Miletic, and Dr. Niek Stevenson</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">29/07/2024 - 02/08/2024</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>qHelp international seminar on Quantitative Psychology</strong><br>
+    <em>Arrifana, Portugal</em><br>
+    <ul>
+      <li>A one-week intensive seminar covering Shiny and R Markdown for interactive data reporting, Copula theory and its applications in dependence modeling, numerical methods, and optimization techniques for computational analysis.</li>
+      <li>Lecturers: Julian Mollenhauer, Ana Lourenço, Prof. Luciano Stefanutti, Prof. Hans Colonius, Prof. Francis Tuerlinckx, and Prof. Sérgio Moreira</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">26/03/2023 - 02/04/2023</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Statistical Rethinking</strong><br>
+    <em>Online Course</em><br>
+    <ul>
+      <li>Pre-recorded lectures and weekly meetings to discuss the material. This course teaches data analysis, focusing on scientific models: conceptual and causal models. Bayesian data analysis to connect scientific models to evidence.</li>
+      <li>Lecturers: Prof. Richard McElreath</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">06/01/2023 - 10/03/2023</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Fundamentals and Applications of Pupillometry</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>This course offers an introduction to the use of pupillometry in cognitive science, combining practical exercises in data processing with free software tools: OpenSesame for implementing classic cognitive psychology tasks and R for analyzing and visualizing continuous pupil diameter changes. Covering key topics such as noise sources, experimental design, data processing options, and the cognitive interpretation of pupillometric measures.</li>
+      <li>Professor: Dr. Giulia Calignano</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">20 hours</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>EEGLAB: analysis of electroencephalographic data</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>The EEGLAB and ERPLAB toolboxes, which operate within MATLAB, facilitate the analysis of electroencephalographic (EEG) data. This course offers foundational skills in data analysis and theoretical knowledge through practical examples, covering key topics such as data pre-processing and event-related potential (ERP) computation.</li>
+      <li>Professor: Dr. Mattia Doro</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">20 hours</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Introduction to R</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>This course introduces the fundamentals of the open-source programming language R, teaching core programming concepts, data structures, and function creation through practical exercises to build versatile skills applicable across academic and professional settings.</li>
+      <li>Professor: Dr. Filippo Gambarota</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">20 hours</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>PsychoPy3: experimental programming</strong><br>
+    <em>University of Padova, Italy</em><br>
+    <ul>
+      <li>This course introduces participants to PsychoPy, an open-source Python-based software for designing and running behavioral science experiments, teaching them how to create, test, deploy, and manage experiments using its flexible and user-friendly graphical interface.</li>
+      <li>Professor: Dr. Thomas Quettier</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">20 hours</div>
+</div>
+
+<div style="page-break-after: always;"></div>
 </section>
 <section id="publications" class="level1">
 <h1>Publications</h1>
@@ -371,6 +442,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 <li><p><strong>Calderan, M.</strong>, Visalli, A., Sellaro, R., &amp; Cellini, N. (2024). Expecting the unexpected: a closer look at the effect of partial sleep deprivation on learning and inhibitory control. <em>Journal of Sleep Research</em>, <a href="https://doi.org/10.1111/jsr.14291" class="uri">https://doi.org/10.1111/jsr.14291</a>.</p></li>
 <li><p>Baldassarri, A., Colombo, C., Bergamo, D., <strong>Calderan, M.</strong>, Varanini, A., Ferrentino, A.,D’atri, A., &amp; Cellini, N. (2024). Exploring the impact of oscillatory events during a nap on emotional memory consolidation. <em>Journal of Sleep Research</em>, <a href="https://doi.org/10.1111/jsr.14291" class="uri">https://doi.org/10.1111/jsr.14291</a></p></li>
 </ol>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="conferences" class="level1">
@@ -397,6 +469,7 @@ Tarantino V., Visalli A., Sellaro R. &amp; Mento G. Super Learning Bros: Develop
 <li><strong>Erasmus Placement Grant (2 Months)</strong>: Donders Sleep and Memory Lab, Nijmegen (Netherlands).</li>
 <li><strong>Erasmus Placement Grant (5 Months)</strong>: Jaume I University, Castellón de la Plana, (Spain).</li>
 </ol>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="invited-seminar-and-academic-experience" class="level1">
 <h1>Invited Seminar and Academic Experience</h1>
@@ -433,6 +506,7 @@ Tarantino V., Visalli A., Sellaro R. &amp; Mento G. Super Learning Bros: Develop
 <li><p><strong>Representative of Research Fellows</strong> in the Department of General Psychology, University of Padova. 02/2024 – Present</p></li>
 <li><p><strong>Co-supervision of students</strong> for their internships and bachelor (2) and master theses (1)</p></li>
 </ul>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="organizational-activities" class="level1">
@@ -458,38 +532,61 @@ Tarantino V., Visalli A., Sellaro R. &amp; Mento G. Super Learning Bros: Develop
 <section id="cognitive-neuroscience-of-sleep-summer-school" class="level2">
 <h2 class="anchored" data-anchor-id="cognitive-neuroscience-of-sleep-summer-school">Cognitive Neuroscience of Sleep Summer School</h2>
 <p>Member of the <strong>Supporting team</strong>. The Summer School examined methods for investigating sleep and memory in humans and animals. It also covered topics related to sleep medicine and dreaming. Nijmegen (Netherlands)</p>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="research-groups-membership" class="level1">
 <h1>Research Groups Membership</h1>
-<pre class="{r }"><code>#| label: Groups
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~degree, ~institution, ~dates, ~details,
-    "Psicostat", "University of Padova", "2024 - Present", 
-      c("I am a core team member of Psicostat, an interdisciplinary research group specializing in quantitative psychology, psychometrics, psychological testing, and statistics.",
-    "https://psicostat.dpss.psy.unipd.it/people.html"),
-    "SleePy", "University of Padova", "2019 - Present", 
-      c("I am a member of SleePy, a research group focusing on sleep psychology.")
-) |&gt;
-  cvevents(when = "dates", what = "degree", where = "institution", details = "details")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Psicostat</strong><br>
+    <em>University of Padova</em><br>
+    <ul>
+      <li>I am a core team member of Psicostat, an interdisciplinary research group specializing in quantitative psychology, psychometrics, psychological testing, and statistics.</li>
+      <li><a href="https://psicostat.dpss.psy.unipd.it/people.html" target="_blank" rel="noopener noreferrer">https://psicostat.dpss.psy.unipd.it/people.html</a></li>
+    </ul>
+  </div>
+  <div class="cvevent-right">2024 - Present</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>SleePy</strong><br>
+    <em>University of Padova</em><br>
+    <ul>
+      <li>I am a member of SleePy, a research group focusing on sleep psychology.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">2019 - Present</div>
+</div>
+
 </section>
 <section id="collaborations" class="level1">
 <h1>Collaborations</h1>
-<pre class="{r }"><code>#| label: Collaborations
-#| output: asis
-#| echo: false
-tibble::tribble(
-    ~degree, ~institution, ~dates, ~details,
-    "Dr. Bryant Jongkees", "Univeristy of Leiden, the Netherlands", "2024 - Present", 
-      c("Examining the
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Dr. Bryant Jongkees</strong><br>
+    <em>Univeristy of Leiden, the Netherlands</em><br>
+    <ul>
+      <li>Examining the
     influence of expectations and mind-wandering on cognitive control stability
-    and flexibility using computational modeling approaches."),
-    "Dr. Antonino Visalli", "University of Modena-Reggio Emilia, Italy", "2023 - Present", 
-      c("Integrating models of learning and control.")
-) |&gt;
-  cvevents(when = "dates", what = "degree", where = "institution", details = "details")</code></pre>
+    and flexibility using computational modeling approaches.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">2024 - Present</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Dr. Antonino Visalli</strong><br>
+    <em>University of Modena-Reggio Emilia, Italy</em><br>
+    <ul>
+      <li>Integrating models of learning and control.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right">2023 - Present</div>
+</div>
+
 </section>
 <section id="involvement-in-research-groups" class="level1">
 <h1>Involvement in Research Groups</h1>
@@ -509,26 +606,59 @@ tibble::tribble(
 <li><p>Stefanelli G., Toffoli L., <strong>Calderan M.</strong>, Duma G. M., Del Popolo Cristaldi F., Tarantino V., Visalli A., Sellaro R. &amp; Mento G. Super Learning Bros: Developmental trajectories of probabilistic learning in volatile environment. <strong>Talk</strong> at the Cognitive Science Arena, Brixen (Italy), February 2025.</p></li>
 <li><p>Toffoli, L., <strong>Calderan, M.</strong>, Del Popolo Cristaldi, F., Duma, G. M., Calcagnì, A., Pastore, M., Tarantino, V., &amp; Mento, G. (2025). Can I afford one more candy? How motivational contexts shape adaptive cognitive control in children. <em>Developmental Psychology</em>. Advance online publication. <a href="https://doi.org/10.1037/dev0001976" class="uri">https://doi.org/10.1037/dev0001976</a>.</p></li>
 </ul>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="scientific-societies-membership" class="level1">
 <h1>Scientific Societies Membership</h1>
-<pre class="{r }"><code>#| label: Societies
-#| output: asis
-#| echo: false
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Cognitive Science Society</strong><br>
+    <em>https://cognitivesciencesociety.org/</em><br>
+  </div>
+  <div class="cvevent-right">2024 - Present</div>
+</div>
 
-tibble::tribble(
-    ~degree, ~institution, ~dates, 
-    "Cognitive Science Society", "https://cognitivesciencesociety.org/", "2024 - Present", 
-    "Italian Reproduciblity Network", "https://www.itrn.org/", "2023 - Present", 
-    "European Sleep Research Society", "https://esrs.eu/", "2023 - Present", 
-    "AIP, Sezione Sperimentale", "https://aipass.org/psicologia-sperimentale/", "2022 - Present", 
-    "Society for the Improvement of Psychological Science", "https://improvingpsych.org/", "2022 - 2023", 
-    "European Society for Cognitive Psychology", "https://www.escop.eu/", "2021 - 2023"
-    
-) |&gt;
-  cvevents(when = "dates", what = "degree", where = "institution")
-</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Italian Reproduciblity Network</strong><br>
+    <em>https://www.itrn.org/</em><br>
+  </div>
+  <div class="cvevent-right">2023 - Present</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>European Sleep Research Society</strong><br>
+    <em>https://esrs.eu/</em><br>
+  </div>
+  <div class="cvevent-right">2023 - Present</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>AIP, Sezione Sperimentale</strong><br>
+    <em>https://aipass.org/psicologia-sperimentale/</em><br>
+  </div>
+  <div class="cvevent-right">2022 - Present</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Society for the Improvement of Psychological Science</strong><br>
+    <em>https://improvingpsych.org/</em><br>
+  </div>
+  <div class="cvevent-right">2022 - 2023</div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>European Society for Cognitive Psychology</strong><br>
+    <em>https://www.escop.eu/</em><br>
+  </div>
+  <div class="cvevent-right">2021 - 2023</div>
+</div>
+
 </section>
 <section id="languages" class="level1">
 <h1>Languages</h1>
@@ -538,43 +668,125 @@ tibble::tribble(
 </section>
 <section id="programming-languages" class="level1">
 <h1>Programming Languages</h1>
-<pre class="{r}"><code>#| label: Programming 
-#| output: asis
-#| echo: false
-tibble::tribble(
-     ~role, ~institution, ~dates, ~details, ~tasks,
-    "R/R Studio", "Proficient", " ",
-    " ", c("Data handling, pre-processing,
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>R/R Studio</strong><br>
+    <em>Proficient</em><br>
+    <ul>
+      <li>Data handling, pre-processing,
     visualization, Bayesian Hierarchical Modelling, Evidence Accumulation Models,
-    Reinforcement Learning Models."),
-    "STAN", "Intermediate", " ",
-    " ", c("Bayesian Hierarchical Modelling"),
-    "JAGS", "Basic", " ",
-    " ", c("Bayesian Hierarchical Modelling"),
-     "Phyton", "Basic", " ",
-    " ", c("Data handling, pre-processing"),
-    "MatLab", "Basic", " ",
-    " ", c("Data handling, pre-processing")) |&gt;
-    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")</code></pre>
+    Reinforcement Learning Models.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>STAN</strong><br>
+    <em>Intermediate</em><br>
+    <ul>
+      <li>Bayesian Hierarchical Modelling</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>JAGS</strong><br>
+    <em>Basic</em><br>
+    <ul>
+      <li>Bayesian Hierarchical Modelling</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Phyton</strong><br>
+    <em>Basic</em><br>
+    <ul>
+      <li>Data handling, pre-processing</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>MatLab</strong><br>
+    <em>Basic</em><br>
+    <ul>
+      <li>Data handling, pre-processing</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div style="page-break-after: always;"></div>
 </section>
 <section id="research-and-project-management-skills" class="level1">
 <h1>Research and Project Management Skills</h1>
-<pre class="{r}"><code>#| label: skills
-#| output: asis
-#| echo: false
-tibble::tribble(
-     ~role, ~institution, ~dates, ~details, ~tasks,
-    "PsychoPy/Pavlovia and OpenSesame/OSWeb", "Intermediate", " ",
-    " ", c("Task development for behavioral research."),
-    "GitHub and GitLab", "Intermediate", " ",
-    " ", c("Version control and collaboration.", "https://github.com/Mar-Cald, https://gitlab.pavlovia.org/mar.cald"),
-     "Docker", "Basic", " ",
-    " ", c("Development and deployment of containers."),
-    "Google Suite, Office Suite", "Intermediate", " ",
-    " ", c("Gmail, Calendar, Drive, Meet, Docs, Forms, Sheets."),
-     "Operating Systems", " ", " ",
-    " ", c("MacOS (Proficient)", "Windows (Intermediate)", "Linux (Intermediate)"),) |&gt;
-    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")</code></pre>
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>PsychoPy/Pavlovia and OpenSesame/OSWeb</strong><br>
+    <em>Intermediate</em><br>
+    <ul>
+      <li>Task development for behavioral research.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>GitHub and GitLab</strong><br>
+    <em>Intermediate</em><br>
+    <ul>
+      <li>Version control and collaboration.</li>
+      <li><a href="https://github.com/Mar-Cald," target="_blank" rel="noopener noreferrer">https://github.com/Mar-Cald,</a> <a href="https://gitlab.pavlovia.org/mar.cald" target="_blank" rel="noopener noreferrer">https://gitlab.pavlovia.org/mar.cald</a></li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Docker</strong><br>
+    <em>Basic</em><br>
+    <ul>
+      <li>Development and deployment of containers.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Google Suite, Office Suite</strong><br>
+    <em>Intermediate</em><br>
+    <ul>
+      <li>Gmail, Calendar, Drive, Meet, Docs, Forms, Sheets.</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
+<div class="cvevent">
+  <div class="cvevent-left">
+    <strong>Operating Systems</strong><br>
+    <em> </em><br>
+    <ul>
+      <li>MacOS (Proficient)</li>
+      <li>Windows (Intermediate)</li>
+      <li>Linux (Intermediate)</li>
+    </ul>
+  </div>
+  <div class="cvevent-right"> </div>
+</div>
+
 <hr>
 
 
