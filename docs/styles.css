@@ -35,7 +35,6 @@ body {
 .cvevent {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 1rem;
   margin-bottom: 1.5em;
 }
@@ -61,14 +60,13 @@ body {
 
   .cvevent {
     flex-direction: row; /* Stay in row */
-    flex-wrap: nowrap;
   }
 
   .cvevent-left {
-    font-size: 0.95em;
+    font-size: 0.5em;
   }
 
   .cvevent-right {
-    font-size: 0.95em;
+    font-size: 0.5em;
   }
 }
