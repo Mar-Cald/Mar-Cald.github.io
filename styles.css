@@ -52,18 +52,4 @@ body {
   font-weight: bold;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 600px) {
-  .cvevent-left,
-  .cvevent-right {
-    flex: 1 1 100%;
-    margin-top: 0.5em;
-    text-align: left;
-  }
-
-  .cvevent-right {
-    font-weight: bold;
-    color: #6e0748; /* make date stand out */
-  }
-}
 
