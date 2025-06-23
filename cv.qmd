@@ -5,7 +5,6 @@ format:
     toc-depth: 3
     toc-title: Section
     toc-location: right
-    toc-expand: true
     page-layout: full
 from: markdown+emoji  
 ---
