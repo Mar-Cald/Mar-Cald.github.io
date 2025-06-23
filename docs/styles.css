@@ -31,25 +31,45 @@ body {
   margin: 0;
 }
 
-/* ---------- CV Events Layout ---------- */
+/* ---------- CV Events Layout (Improved for Mobile) ---------- */
 .cvevent {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 1rem;
   margin-bottom: 1.5em;
 }
 
 .cvevent-left {
-  flex: 1 1 70%;
-  min-width: 100px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .cvevent-right {
-  flex: 0 0 25%;
-  min-width: 100px;
+  flex: 0 0 auto;
+  white-space: nowrap;
   text-align: right;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
+/* Responsive font scaling */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Optional: scale down overall text */
+  }
 
+  .cvevent {
+    flex-direction: row; /* Stay in row */
+    flex-wrap: nowrap;
+  }
+
+  .cvevent-left {
+    font-size: 0.95em;
+  }
+
+  .cvevent-right {
+    font-size: 0.95em;
+  }
+}
