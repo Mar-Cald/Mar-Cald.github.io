@@ -190,41 +190,44 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 \cvsubsection{Published}
 
-1.  **Calderan, M.**, Toffalini, E., Mirandola, C., & Cellini, N. (2025). Sleep
-    does not affect false memory production on a script-based test.
-    *Neuropsychologia*. 
-    <https://doi.org/10.1016/j.neuropsychologia.2025.109210>\ [IF: 2,
+1.  **Calderan, M.**, Toffalini, E., Mirandola, C., & Cellini, N.
+    (2025). Sleep does not affect false memory production on a
+    script-based test. *Neuropsychologia*.
+    <https://doi.org/10.1016/j.neuropsychologia.2025.109210> \[IF: 2,
     Quartile: Q3\] (*Open Access*)
 
-2.  Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G. M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025). Can I afford one more candy? How motivational contexts shape adaptive cognitive control in children. *Developmental Psychology*. Advance online publication.  <https://doi.org/10.1037/dev0001976>.**OSF** repo:  <https://osf.io/shuq2/> \[IF: 3.1, Quartile: Q2\]
-
+2.  Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
+    M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025).
+    Can I afford one more candy? How motivational contexts shape
+    adaptive cognitive control in children. *Developmental Psychology*.
+    Advance online publication.
+    <https://doi.org/10.1037/dev0001976>.**OSF** repo:
+    <https://osf.io/shuq2/> \[IF: 3.1, Quartile: Q2\]
 
 3.  Sobol, M., Błachnio, A., **Calderan, M.**, Degasperi, G., Mioni, G.,
     Hryhorchuk, I., Plucińska, E., Stasiniewicz, J., Kwapiński, J.,
     Jankowski, K., & Cellini, N. (2025). Balanced time perspective as a
     factor mitigating the negative consequences of sleep disruptions in
     the perinatal period. *Chronobiology International*, 1–12.
-     <https://doi.org/10.1080/07420528.2025.2490499>
-    \[IF: 2.2, Quartile: Q3\]
-    
-1.  **Calderan, M.**, & Visalli, A. (2024). Challenges of meta-learning
-    and rational analysis in large worlds. *Behavioral and Brain Sciences*, 47, e148.
-    <https://doi.org/10.1017/S0140525X24000128>.Target
-    paper and commentaries:
-    <https://cldlab.org/static/papers/Binz\_2024\_BBS.pdf>
+    <https://doi.org/10.1080/07420528.2025.2490499> \[IF: 2.2, Quartile:
+    Q3\]
+
+4.  **Calderan, M.**, & Visalli, A. (2024). Challenges of meta-learning
+    and rational analysis in large worlds. *Behavioral and Brain
+    Sciences*, 47, e148.
+    <https://doi.org/10.1017/S0140525X24000128>.Target paper and
+    commentaries:
+    [https://cldlab.org/static/papers/Binz\\\_2024\\\_BBS.pdf](https://cldlab.org/static/papers/Binz_2024_BBS.pdf){.uri}
     \[IF: 16.6, Quartile: Q1\]
-
-
 
 \cvsubsection{Accepted for Publication}
 
 1.  **Calderan, M.**, Jongkees, J.B., Gambarota, F., Pastore, M.,
     Cellini, N., & Sellaro, R. Isolating working memory gating processes
     under stress. *Collabra::Psychology* (*Open Access*).
-     <https://doi.org/10.1525/collabra.140750>,
-    **OSF** repo: \href{https://osf.io/d43vs/}{https://osf.io/d43vs/}
-    \[IF: 3.1, Quartile: Q1\]
-
+    <https://doi.org/10.1525/collabra.140750>, **OSF** repo:
+    \href{https://osf.io/d43vs/}{https://osf.io/d43vs/} \[IF: 3.1,
+    Quartile: Q1\]
 
 \cvsubsection{Under Review}
 
@@ -232,14 +235,13 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     R., & Cellini, N. Predictions under sleep restriction: The effects
     of partial sleep deprivation on learning and inhibitory control.
     Under Review in *Royal Society Open Science*. **Preprint:**
-    <https://doi.org/10.31234/osf.io/x7m4z\_v3>.
+    [https://doi.org/10.31234/osf.io/x7m4z\\\_v3](https://doi.org/10.31234/osf.io/x7m4z_v3){.uri}.
 
 2.  Visalli, A., Calistroni, F. M., **Calderan, M.**, Donnarumma, F.,
     Zorzi, M., & Ambrosini, E. A computational framework for integrating
     Predictive processes with evidence Accumulation Models (PAM). Under
     Review in *Behavior Research Methods*. **Preprint:**
     <https://doi.org/10.48550/arXiv.2411.13203>.
-    
 
 \cvsubsection{Preregistration}
 
@@ -251,8 +253,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 2.  Toffalini, E., **Calderan, M.**, Feraco, T., & Gambarota, F. Link
     Functions and Generalized Linear Models in Interaction Testing
-    within Psychological Research.
-    <https://osf.io/sjdu4>
+    within Psychological Research. <https://osf.io/sjdu4>
 
 3.  Toffalini, E., **Calderan, M.**, Pagan, R., & Tobia, V. A Critical
     Evaluation of Taxometric Analysis in the Study of Neurodevelopmental
@@ -333,32 +334,49 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     presented at CogSci 2024: Dynamics of Cognition, Rotterdam
     (Netherlands), July 2024.
 
-5.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The Eﬀects
+5.  Degasperi, G.,**Calderan, M.**, Mioni, G., Meisner, M., Blachnio,
+    A., Hryhorchuk, I., Plucinska, E., Sobol, M., & Cellini, N. The role
+    of sleep, circadian rhythms, balanced time perspective on perinatal
+    depression symptoms. **Poster** at the Cognitive Science Arena,
+    Brixen (Italy), February 2024.
+
+6.  Toffoli, L.,**Calderan, M.**, Duma, G. M., Frisina, S., Tarantino
+    V., & Mento, G. I'm talking to you! Interactive digital content
+    effects on children's adaptive cognitive control. **Talk** at the
+    Cognitive Science Arena, Brixen (Italy), February 2024.
+
+7.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The Eﬀects
     of Partial Sleep Deprivation on Adaptive Cognitive Control.
     **Poster** presented at World Sleep Congress, Rio de Janeiro
     (Brasil), October 2023.
 
-6.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The
+8.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The
     sleep-deprived predictive brain: modeling the eﬀect of partial sleep
     deprivation on adaptive cognitive control. **Talk** at the XXIX
     Conference of the Italian Association of Psychology (AIP) -
     Experimental Psychology Section. Lucca (Italy), September 2023.
 
-7.  **Calderan, M.**, Cellini, N., Sellaro, R., Stressed Minds:
+9.  **Calderan, M.**, Cellini, N., Sellaro, R., Stressed Minds:
     Unraveling Acute-Stress Eﬀects on Working Memory Processes.
     **Mini-Talk** at the Cognitive Science Arena, Brixen (Italy),
     February 2023.
 
-8.  **Calderan, M.**, Cellini, N., Sellaro, R., Exploring the Influence
+10. Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
+    M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. Can I
+    afford one more candy? How motivational contexts shape adaptive
+    cognitive control in children. **Talk** at the Cognitive Science
+    Arena, Brixen (Italy), February 2023.
+
+11. **Calderan, M.**, Cellini, N., Sellaro, R., Exploring the Influence
     of Stress on Working Memory Gating Mechanisms. **Mini-Talk** at the
     XXX Conference of the Italian Association of Psychology (AIP).
     Padova (Italy), September 2022.
 
-9.  **Calderan, M.**, Cellini, N., Sellaro, R., Understanding
+12. **Calderan, M.**, Cellini, N., Sellaro, R., Understanding
     stress-induced eﬀects on Working Memory gating mechanisms.
     **Poster** presented at the 22nd meeting of the European Society for
     Cognitive Psychology (ESCoP), Lille (France), August 2022.
-    
+
 # Awards and Grants
 
 1.  **Travel Grant**: European Conference on Visual Perception, Mainz,
@@ -429,7 +447,6 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 -   **Co-supervision of students** for their internships and
     bachelor (2) and master theses (1)
-
 
 \newpage
 
@@ -526,8 +543,7 @@ include:
 
 -   Toffalini, E., **Calderan, M.**, Feraco, T., & Gambarota, F. Link
     Functions and Generalized Linear Models in Interaction Testing
-    within Psychological Research.
-    <https://osf.io/sjdu4>
+    within Psychological Research. <https://osf.io/sjdu4>
 
 -   Toffalini, E., **Calderan, M.**, Pagan, R., & Tobia, V. A Critical
     Evaluation of Taxometric Analysis in the Study of Neurodevelopmental
@@ -548,6 +564,12 @@ specifically focused on the application of **Bayesian methods**,
 including **generalized multilevel models** and **survival analysis**
 techniques, in the following selected works:
 
+-   Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
+    M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025).
+    Can I afford one more candy? How motivational contexts shape
+    adaptive cognitive control in children. *Developmental Psychology*.
+    Advance online publication. <https://doi.org/10.1037/dev0001976>.
+
 -   Stefanelli G., Toffoli L., **Calderan M.**, Del Popolo Cristaldi F.,
     Duma G. M., Tarantino V., Visalli A., Sellaro R., Mento
     G.Apprendimento associative implicito e volatilità ambientale
@@ -561,7 +583,16 @@ techniques, in the following selected works:
     in volatile environment. **Talk** at the Cognitive Science Arena,
     Brixen (Italy), February 2025.
 
--   Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G. M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025). Can I afford one more candy? How motivational contexts shape adaptive cognitive control in children. *Developmental Psychology*. Advance online publication.  <https://doi.org/10.1037/dev0001976>.
+-   Toffoli, L.,**Calderan, M.**, Duma, G. M., Frisina, S., Tarantino
+    V., & Mento, G. I'm talking to you! Interactive digital content
+    effects on children's adaptive cognitive control. **Talk** at the
+    Cognitive Science Arena, Brixen (Italy), February 2024.
+
+-   Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
+    M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. Can I
+    afford one more candy? How motivational contexts shape adaptive
+    cognitive control in children. **Talk** at the Cognitive Science
+    Arena, Brixen (Italy), February 2023.
 
 \newpage
 
@@ -650,3 +681,8 @@ accordance with Legislative Decree 2018/101 and the GDPR (Regulation EU
 this Curriculum Vitae are true and accurate to the best of my knowledge,
 acknowledging the legal and criminal consequences of providing false
 statements as per Article 76 of Presidential Decree 445/2000.
+
+
+<center>**Date**: `r Sys.Date()` ![](sing.png){fig-align="left"}</center>
+
+
