@@ -4,21 +4,14 @@
     "href": "cv.html",
     "title": "Current Position",
     "section": "",
-    "text": "Download the PDF version. \n\nLast update: 2025-06-25"
+    "text": "Download the PDF version. \n\nLast update: 2025-06-27"
   },
   {
     "objectID": "cv.html#published",
     "href": "cv.html#published",
     "title": "Current Position",
     "section": "Published",
-    "text": "Published\n\nCalderan, M., Toffalini, E., Mirandola, C., & Cellini, N. (2025). Sleep does not affect false memory production on a script-based test. Neuropsychologia. https://doi.org/10.1016/j.neuropsychologia.2025.109210 [IF: 2, Quartile: Q3] (Open Access)\nToffoli, L., Calderan, M., Del Popolo Cristaldi, F., Duma, G. M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025). Can I afford one more candy? How motivational contexts shape adaptive cognitive control in children. Developmental Psychology. Advance online publication. https://doi.org/10.1037/dev0001976.OSF repo: https://osf.io/shuq2/ [IF: 3.1, Quartile: Q2]\nSobol, M., Błachnio, A., Calderan, M., Degasperi, G., Mioni, G., Hryhorchuk, I., Plucińska, E., Stasiniewicz, J., Kwapiński, J., Jankowski, K., & Cellini, N. (2025). Balanced time perspective as a factor mitigating the negative consequences of sleep disruptions in the perinatal period. Chronobiology International, 1–12. https://doi.org/10.1080/07420528.2025.2490499 [IF: 2.2, Quartile: Q3]\nCalderan, M., & Visalli, A. (2024). Challenges of meta-learning and rational analysis in large worlds. Behavioral and Brain Sciences, 47, e148. https://doi.org/10.1017/S0140525X24000128.Target paper and commentaries: https://cldlab.org/static/papers/Binz\\_2024\\_BBS.pdf [IF: 16.6, Quartile: Q1]"
-  },
-  {
-    "objectID": "cv.html#accepted-for-publication",
-    "href": "cv.html#accepted-for-publication",
-    "title": "Current Position",
-    "section": "Accepted for Publication",
-    "text": "Accepted for Publication\n\nCalderan, M., Jongkees, J.B., Gambarota, F., Pastore, M., Cellini, N., & Sellaro, R. Isolating working memory gating processes under stress. Collabra::Psychology (Open Access). https://doi.org/10.1525/collabra.140750, OSF repo: [IF: 3.1, Quartile: Q1]"
+    "text": "Published\n\nCalderan, M., Jongkees, J.B., Gambarota, F., Pastore, M., Cellini, N., & Sellaro, R. (2025) Isolating working memory gating processes under stress. Collabra::Psychology. https://doi.org/10.1525/collabra.140750 [IF: 3.1,Quartile: Q1], OSF repo: https://osf.io/d43vs/\nCalderan, M., Toffalini, E., Mirandola, C., & Cellini, N. (2025). Sleep does not affect false memory production on a script-based test. Neuropsychologia. https://doi.org/10.1016/j.neuropsychologia.2025.109210 [IF: 2, Quartile: Q3] OSF repo: https://osf.io/kwycq/\nToffoli, L., Calderan, M., Del Popolo Cristaldi, F., Duma, G. M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025). Can I afford one more candy? How motivational contexts shape adaptive cognitive control in children. Developmental Psychology. https://doi.org/10.1037/dev0001976. [IF: 3.1, Quartile: Q2], OSF repo: https://osf.io/shuq2/\nSobol, M., Błachnio, A., Calderan, M., Degasperi, G., Mioni, G., Hryhorchuk, I., Plucińska, E., Stasiniewicz, J., Kwapiński, J., Jankowski, K., & Cellini, N. (2025). Balanced time perspective as a factor mitigating the negative consequences of sleep disruptions in the perinatal period. Chronobiology International, 1–12. https://doi.org/10.1080/07420528.2025.2490499 [IF: 2.2, Quartile: Q3]\nCalderan, M., & Visalli, A. (2024). Challenges of meta-learning and rational analysis in large worlds. Behavioral and Brain Sciences, 47, e148. https://doi.org/10.1017/S0140525X24000128.Target paper and commentaries: https://cldlab.org/static/papers/Binz\\_2024\\_BBS.pdf [IF: 16.6, Quartile: Q1]"
   },
   {
     "objectID": "cv.html#under-review",
@@ -123,7 +116,7 @@
     "href": "index.html",
     "title": "Margherita Calderan",
     "section": "",
-    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n\n\n\n\nLast update: 2025-06-25"
+    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n\n\n\n\nLast update: 2025-06-27"
   },
   {
     "objectID": "material.html",
@@ -137,14 +130,14 @@
     "href": "material.html#reproducible-science",
     "title": "",
     "section": "Reproducible Science",
-    "text": "Reproducible Science\nIntroduction to reproducible science practices (repo, slide)\n\nWrite transparent, script-based analyses in R\nOrganize your projects using functional and modular workflows\nTrack your work with Git and collaborate via GitHub\nShare datasets responsibly using FAIR principles\nCreate fully reproducible papers and reports with Quarto"
+    "text": "Reproducible Science\nIntroduction to reproducible science practices (GitHub repository, slide)\n\nWrite transparent, script-based analyses in R\nOrganize your projects using functional and modular workflows\nTrack your work with Git and collaborate via GitHub\nShare datasets responsibly using FAIR principles\nCreate fully reproducible papers and reports with Quarto"
   },
   {
     "objectID": "material.html#pam-predictive-accumulation-models",
     "href": "material.html#pam-predictive-accumulation-models",
     "title": "",
     "section": "PAM: Predictive Accumulation Models",
-    "text": "PAM: Predictive Accumulation Models\nThis project implements the PAM framework https://doi.org/10.48550/arXiv.2411.13203 in R/Stan. Combine predictive processes with evidence accumulation models, repo."
+    "text": "PAM: Predictive Accumulation Models\nThis project implements the PAM framework in R/Stan. Combine predictive processes with evidence accumulation models, GitHub repository."
   },
   {
     "objectID": "material.html#reaction-time-distributions",

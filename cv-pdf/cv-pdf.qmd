@@ -190,21 +190,23 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 \cvsubsection{Published}
 
-1.  **Calderan, M.**, Toffalini, E., Mirandola, C., & Cellini, N.
+1.  **Calderan, M.**, Jongkees, J.B., Gambarota, F., Pastore, M.,
+    Cellini, N., & Sellaro, R. (2025) Isolating working memory gating processes
+    under stress. *Collabra::Psychology*. <https://doi.org/10.1525/collabra.140750> \[IF: 3.2,Quartile: Q1\], **OSF** repo: <https://osf.io/d43vs/> 
+
+2.  **Calderan, M.**, Toffalini, E., Mirandola, C., & Cellini, N.
     (2025). Sleep does not affect false memory production on a
     script-based test. *Neuropsychologia*.
-    <https://doi.org/10.1016/j.neuropsychologia.2025.109210> \[IF: 2,
-    Quartile: Q3\] (*Open Access*)
+    <https://doi.org/10.1016/j.neuropsychologia.2025.109210> \[IF: 2,
+    Quartile: Q3\] **OSF** repo: <https://osf.io/kwycq/> 
 
-2.  Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
+3.  Toffoli, L., **Calderan, M.**, Del Popolo Cristaldi, F., Duma, G.
     M., Calcagnì, A., Pastore, M., Tarantino, V., & Mento, G. (2025).
     Can I afford one more candy? How motivational contexts shape
     adaptive cognitive control in children. *Developmental Psychology*.
-    Advance online publication.
-    <https://doi.org/10.1037/dev0001976>.**OSF** repo:
-    <https://osf.io/shuq2/> \[IF: 3.1, Quartile: Q2\]
+    <https://doi.org/10.1037/dev0001976>. \[IF: 3.1, Quartile: Q2\], **OSF** repo: <https://osf.io/shuq2/> 
 
-3.  Sobol, M., Błachnio, A., **Calderan, M.**, Degasperi, G., Mioni, G.,
+4.  Sobol, M., Błachnio, A., **Calderan, M.**, Degasperi, G., Mioni, G.,
     Hryhorchuk, I., Plucińska, E., Stasiniewicz, J., Kwapiński, J.,
     Jankowski, K., & Cellini, N. (2025). Balanced time perspective as a
     factor mitigating the negative consequences of sleep disruptions in
@@ -212,7 +214,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     <https://doi.org/10.1080/07420528.2025.2490499> \[IF: 2.2, Quartile:
     Q3\]
 
-4.  **Calderan, M.**, & Visalli, A. (2024). Challenges of meta-learning
+5.  **Calderan, M.**, & Visalli, A. (2024). Challenges of meta-learning
     and rational analysis in large worlds. *Behavioral and Brain
     Sciences*, 47, e148.
     <https://doi.org/10.1017/S0140525X24000128>.Target paper and
@@ -220,14 +222,6 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     [https://cldlab.org/static/papers/Binz\\\_2024\\\_BBS.pdf](https://cldlab.org/static/papers/Binz_2024_BBS.pdf){.uri}
     \[IF: 16.6, Quartile: Q1\]
 
-\cvsubsection{Accepted for Publication}
-
-1.  **Calderan, M.**, Jongkees, J.B., Gambarota, F., Pastore, M.,
-    Cellini, N., & Sellaro, R. Isolating working memory gating processes
-    under stress. *Collabra::Psychology* (*Open Access*).
-    <https://doi.org/10.1525/collabra.140750>, **OSF** repo:
-    \href{https://osf.io/d43vs/}{https://osf.io/d43vs/} \[IF: 3.1,
-    Quartile: Q1\]
 
 \cvsubsection{Under Review}
 
@@ -266,15 +260,18 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     cerebellum in time perception: A systematic review and
     meta-analyses. In preparation for *Wiley Interdisciplinary
     Reviews-Cognitive Science*
+    
 2.  Toffoli, L., **Calderan, M.**, Stefanelli, G., Duma, G.M., Del
     Popolo Cristaldi, F., Duma, G., Pastore, M., Frisina, S., Tarantino,
     V., & Mento, G., I am talking to you! Engagement modulates the
     effects of digital contents exposure on preschoolers’ adaptive
     cognitive control. In preparation for *Developmental Sciences*.
+    
 3.  **Calderan, M.**, van Dooren, R., Sellaro, R., & Jongkees, J.B.,
     Dynamic and contextual modulation of constraints on cognitive
     control. In preparation for *Journal of Experimental Psychology:
     Human Perception and Performance*.
+    
 4.  Mazzoni, N., Ciringione, L., **Calderan, M.**, De Falco, S., Venuti,
     P., Zinke, K., Born, J., Cellini, N., & Caria, A. Sleep
     characteristics in high-functioning Autism Spectrum Disorder. In
@@ -620,7 +617,7 @@ tibble::tribble(
 
 -   Italian \texttwemoji{flag: Italy}: Mother Tongue
 -   English \texttwemoji{flag: United Kingdom}
-    \texttwemoji{flag: United States}: Upper Intermediate
+    \texttwemoji{flag: United States}: Proficient
 -   Spanish \texttwemoji{flag: Spain}: Beginner
 
 # Programming Languages

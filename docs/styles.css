@@ -1,6 +1,25 @@
-/* Navbar color override */
+
+
+/* ---------- Navbar Styling ---------- */
 .navbar {
-  background-color: #6e0748 !important; /* override superhero default */
+  background-color: #6e0748 !important;
+  padding: 0.4rem 1rem; /* reduce navbar thickness */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border-bottom: 2px solid #5a063d; /* optional: subtle border */
+}
+
+/* Navbar link styles */
+.navbar a {
+  color: white !important;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.navbar a:hover {
+  background-color: #5a063d;
+  border-radius: 4px;
 }
 
 /* ---------- Base Styling ---------- */
@@ -8,27 +27,18 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
   color: #333;
-  font-size: 18px;
-  padding: 0 1rem;
+  margin: 0; /* remove default browser margin */
 }
 
-/* Hero section custom styles */
 #hero-heading {
-  display: flex;
-  align-items: center;    /* center horizontally */
-  justify-content: center; /* center vertically if there's height */
+  position: center;
   text-align: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  margin: 0;
-  width: 100%;
-}
-
-#hero-heading * {
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: 1.3em;
+  left: 50%;
+  right: 50%;
+  width: 75vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* ---------- CV Events Layout (Improved for Mobile) ---------- */
@@ -51,18 +61,16 @@ body {
   text-align: right;
   font-weight: bold;
   color: #6e0748;
-  
 }
 
-/* Responsive: stack on narrow screens */
+
 @media (max-width: 768px) {
-  .cvevent {
-    flex-direction: column;
-    align-items: flex-start;
+  body {
+    padding: 0 0.5rem;
+    font-size:1em ;
   }
 
-  .cvevent-right {
-    text-align: left;
-    margin-top: 0.5em;
+  .navbar {
+    padding: 0.3rem 0.75rem;
   }
 }
