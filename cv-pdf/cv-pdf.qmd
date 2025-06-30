@@ -12,6 +12,7 @@ cvfont: lmodern
 cvmeta:
   - title: Email address
     left: margherita.calderan@gmail.com
+    right: https://mar-cald.github.io/
   - title: ORCID
     left: 0009-0005-5668-5162
     right: https://orcid.org/0009-0005-5668-5162
@@ -662,7 +663,7 @@ tibble::tribble(
     "Google Suite, Office Suite", "Intermediate", " ",
     " ", c("Gmail, Calendar, Drive, Meet, Docs, Forms, Sheets."),
      "Operating Systems", " ", " ",
-    " ", c("MacOS (Proficient)", "Windows (Intermediate)", "Linux (Intermediate)"),) |>
+    " ", c("MacOS (Intermediate)", "Windows (Intermediate)", "Linux (Intermediate)"),) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
 ```
 
