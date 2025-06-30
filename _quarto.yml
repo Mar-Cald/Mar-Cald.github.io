@@ -11,6 +11,8 @@ website:
         href: cv.qmd
       - text: "open-material"
         href: material.qmd
+      - text: "contact"
+        href: contact.qmd
 
 format:
   html: 

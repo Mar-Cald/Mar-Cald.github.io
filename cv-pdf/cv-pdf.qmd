@@ -276,6 +276,8 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     P., Zinke, K., Born, J., Cellini, N., & Caria, A. Sleep
     characteristics in high-functioning Autism Spectrum Disorder. In
     preparation for *Sleep Medicine*.
+    
+\newpage
 
 \cvsubsection{Published Abstract}
 
