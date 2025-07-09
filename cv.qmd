@@ -286,7 +286,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     <https://escholarship.org/uc/item/65b2f0n7>.
 
 2.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N., (2024).
-    The Eﬀects of Partial Sleep Deprivation on Adaptive Cognitive
+    The Effects of Partial Sleep Deprivation on Adaptive Cognitive
     Control. *Sleep Medicine*,
     <https://doi.org/10.1016/j.sleep.2023.11.156>.
 
@@ -335,7 +335,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 4.  Toffoli, L.,**Calderan, M.**, Duma, G. M., Frisina, S., Tarantino V., & Mento, G. I'm talking to you! Interactive digital content effects on children's adaptive cognitive control. **Talk** at the Cognitive Science Arena, Brixen (Italy), February 2024.
     
     
-5.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The Eﬀects
+5.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. The Effects
     of Partial Sleep Deprivation on Adaptive Cognitive Control.
     **Poster** presented at World Sleep Congress, Rio de Janeiro
     (Brasil), October 2023.
@@ -347,7 +347,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     Experimental Psychology Section. Lucca (Italy), September 2023.
 
 7.  **Calderan, M.**, Cellini, N., Sellaro, R., Stressed Minds:
-    Unraveling Acute-Stress Eﬀects on Working Memory Processes.
+    Unraveling Acute-Stress Effects on Working Memory Processes.
     **Mini-Talk** at the Cognitive Science Arena, Brixen (Italy),
     February 2023.
 
@@ -360,7 +360,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     Padova (Italy), September 2022.
 
 9.  **Calderan, M.**, Cellini, N., Sellaro, R., Understanding
-    stress-induced eﬀects on Working Memory gating mechanisms.
+    stress-induced Effects on Working Memory gating mechanisms.
     **Poster** presented at the 22nd meeting of the European Society for
     Cognitive Psychology (ESCoP), Lille (France), August 2022.
     

@@ -17,7 +17,7 @@ website:
 format:
   html: 
     theme: solar
-    fontsize: 1.3em
+    fontsize: 1.1em
     linestretch: 1.7
     mainfont: Helvetica Neue
     css: styles.css
