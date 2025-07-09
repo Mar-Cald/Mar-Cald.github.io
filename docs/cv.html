@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -698,21 +664,6 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 </section>
 <section id="programming-languages" class="level1">
 <h1>Programming Languages</h1>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="sc">~</span>role, <span class="sc">~</span>institution, <span class="sc">~</span>dates, <span class="sc">~</span>details, <span class="sc">~</span>tasks,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"R/R Studio"</span>, <span class="st">"Proficient"</span>, <span class="st">" "</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Data handling, pre-processing,</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">    visualization, Bayesian Hierarchical Modelling, Evidence Accumulation Models,</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">    Reinforcement Learning Models."</span>),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STAN"</span>, <span class="st">"Intermediate"</span>, <span class="st">" "</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Bayesian Hierarchical Modelling"</span>),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"JAGS"</span>, <span class="st">"Basic"</span>, <span class="st">" "</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Bayesian Hierarchical Modelling"</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Python"</span>, <span class="st">"Basic"</span>, <span class="st">" "</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Data handling, pre-processing"</span>),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MatLab"</span>, <span class="st">"Basic"</span>, <span class="st">" "</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Data handling, pre-processing"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cvevents</span>(<span class="at">when =</span> <span class="st">"dates"</span>, <span class="at">what =</span> <span class="st">"role"</span>, <span class="at">where =</span> <span class="st">"institution"</span>, <span class="at">details =</span> <span class="st">"tasks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cvevent">
   <div class="cvevent-left">
     <strong>R/R Studio</strong><br>
@@ -774,19 +725,6 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 </section>
 <section id="research-and-project-management-skills" class="level1">
 <h1>Research and Project Management Skills</h1>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="sc">~</span>role, <span class="sc">~</span>institution, <span class="sc">~</span>dates, <span class="sc">~</span>details, <span class="sc">~</span>tasks,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PsychoPy/Pavlovia and OpenSesame/OSWeb"</span>, <span class="st">"Intermediate"</span>, <span class="st">" "</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Task development for behavioral research."</span>),</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GitHub and GitLab"</span>, <span class="st">"Intermediate"</span>, <span class="st">" "</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Version control and collaboration."</span>, <span class="st">"https://github.com/Mar-Cald, https://gitlab.pavlovia.org/mar.cald"</span>),</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Docker"</span>, <span class="st">"Basic"</span>, <span class="st">" "</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Development and deployment of containers."</span>),</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Google Suite, Office Suite"</span>, <span class="st">"Intermediate"</span>, <span class="st">" "</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"Gmail, Calendar, Drive, Meet, Docs, Forms, Sheets."</span>),</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>     <span class="st">"Operating Systems"</span>, <span class="st">" "</span>, <span class="st">" "</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>, <span class="fu">c</span>(<span class="st">"macOS (Intermediate)"</span>, <span class="st">"Windows (Intermediate)"</span>, <span class="st">"Linux (Intermediate)"</span>),) <span class="sc">|&gt;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cvevents</span>(<span class="at">when =</span> <span class="st">"dates"</span>, <span class="at">what =</span> <span class="st">"role"</span>, <span class="at">where =</span> <span class="st">"institution"</span>, <span class="at">details =</span> <span class="st">"tasks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cvevent">
   <div class="cvevent-left">
     <strong>PsychoPy/Pavlovia and OpenSesame/OSWeb</strong><br>

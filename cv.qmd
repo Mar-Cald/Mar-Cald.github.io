@@ -608,6 +608,7 @@ tibble::tribble(
 ```{r}
 #| label: Programming 
 #| output: asis
+#| echo: false
 tibble::tribble(
      ~role, ~institution, ~dates, ~details, ~tasks,
     "R/R Studio", "Proficient", " ",
@@ -632,6 +633,7 @@ tibble::tribble(
 ```{r}
 #| label: skills
 #| output: asis
+#| echo: false
 tibble::tribble(
      ~role, ~institution, ~dates, ~details, ~tasks,
     "PsychoPy/Pavlovia and OpenSesame/OSWeb", "Intermediate", " ",
