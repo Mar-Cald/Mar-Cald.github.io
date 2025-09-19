@@ -116,14 +116,14 @@
     "href": "material.html",
     "title": "",
     "section": "",
-    "text": "Here are some open resources related to reproducibility, and modeling:"
+    "text": "Introduction to reproducible science practices (GitHub repository, slide)"
   },
   {
     "objectID": "material.html#reproducible-science",
     "href": "material.html#reproducible-science",
     "title": "",
-    "section": "Reproducible Science",
-    "text": "Reproducible Science\nIntroduction to reproducible science practices (GitHub repository, slide)\n\nWrite transparent, script-based analyses in R\nOrganize your projects using functional and modular workflows\nTrack your work with Git and collaborate via GitHub\nShare datasets responsibly using FAIR principles\nCreate fully reproducible papers and reports with Quarto"
+    "section": "",
+    "text": "Introduction to reproducible science practices (GitHub repository, slide)"
   },
   {
     "objectID": "material.html#pam-predictive-accumulation-models",
@@ -165,6 +165,13 @@
     "href": "material.html#reaction-time",
     "title": "",
     "section": "Reaction time",
-    "text": "Reaction time\nOverview of RT distributions. Pratical introduction to evidence accumulation models."
+    "text": "Reaction time\n\nOverview of RT distributions.\nPratical introduction to evidence accumulation models."
+  },
+  {
+    "objectID": "material.html#reaction-times",
+    "href": "material.html#reaction-times",
+    "title": "",
+    "section": "Reaction times",
+    "text": "Reaction times\n\nOverview of RT distributions.\nPratical introduction to evidence accumulation models."
   }
 ]
