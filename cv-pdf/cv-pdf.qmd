@@ -239,6 +239,8 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     Review in *Behavior Research Methods*. **Preprint:**
     <https://doi.org/10.48550/arXiv.2411.13203>.
 
+3.  Mazzoni, N., Kurz, EM., Cellini, N., Ciringione, L., Calderan, M., Gallitto, G., De Falco, S., Venuti, P., Zinke, K., Born, J., Andrea, C. A. Aperiodic and periodic neural activity during sleep in autism spectrum disorders. Under review in *Brain Communications*.
+
 \cvsubsection{Preregistration}
 
 1.  Sirota, M., Srol, J., Lisi, M., Juanchich, M., Guglani, K.,
@@ -271,13 +273,8 @@ days focused on how to use the evidence-accumulation framework to formalize perf
     
 3.  **Calderan, M.**, van Dooren, R., Sellaro, R., & Jongkees, J.B.,
     Dynamic and contextual modulation of constraints on cognitive
-    control. In preparation for *Journal of Experimental Psychology:
-    Human Perception and Performance*.
+    control. In preparation for *Journal of Experimental Psychology: Human Perception and Performance*.
     
-4.  Mazzoni, N., Ciringione, L., **Calderan, M.**, De Falco, S., Venuti,
-    P., Zinke, K., Born, J., Cellini, N., & Caria, A. Sleep
-    characteristics in high-functioning Autism Spectrum Disorder. In
-    preparation for *Sleep Medicine*.
     
 \newpage
 

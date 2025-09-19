@@ -42,11 +42,11 @@
     "text": "Published Abstract\n\nCalderan, M., Visalli, A., Sellaro, R., & Cellini, N. (2024). Restless Sleep, Uncertain Minds: Learning and Inhibitory Control Under Partial Sleep Deprivation. Proceedings of the Annual Meeting of the Cognitive Science Society, 46. https://escholarship.org/uc/item/65b2f0n7.\nCalderan, M., Visalli, A., Sellaro, R., & Cellini, N., (2024). The Effects of Partial Sleep Deprivation on Adaptive Cognitive Control. Sleep Medicine, https://doi.org/10.1016/j.sleep.2023.11.156.\nCalderan, M., Visalli, A., Sellaro, R., & Cellini, N. (2024). Expecting the unexpected: a closer look at the effect of partial sleep deprivation on learning and inhibitory control. Journal of Sleep Research, https://doi.org/10.1111/jsr.14291.\nBaldassarri, A., Colombo, C., Bergamo, D., Calderan, M., Varanini, A., Ferrentino, A.,D’atri, A., & Cellini, N. (2024). Exploring the impact of oscillatory events during a nap on emotional memory consolidation. Journal of Sleep Research, https://doi.org/10.1111/jsr.14291"
   },
   {
-    "objectID": "cv.html#workshops",
-    "href": "cv.html#workshops",
+    "objectID": "cv.html#lectures-on-contract-docenze-a-contratto",
+    "href": "cv.html#lectures-on-contract-docenze-a-contratto",
     "title": "Current Position",
-    "section": "Workshops",
-    "text": "Workshops\n\nA Practical Introduction to Evidence Accumulation Models in Visual Perception Research. European Conference on Visual Perception, Mainz (Germany). 24 August 2025 (2.30 hr.). Material: https://mar-cald.github.io/eam-workshop/eam-home.html.\nIntroduction to Reproducible Science. Pre-School workshop Replicability Crisis in Science, Padova (Italy). 6 June 2025 (2 hrs.). Material: https://github.com/Mar-Cald/repro-pre-school.\nTempi di risposta. Workshop on reaction time distributions, Univeristy of Padova, Padova (Italy). 10 June 2025 (1 hr.). Material: https://mar-cald.github.io/tempi/."
+    "section": "Lectures on contract (docenze a contratto)",
+    "text": "Lectures on contract (docenze a contratto)\n\nTest per le organizzazioni (21 hours, 3 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Lecturer (titolare di modulo) for the Master’s Degree in Psicologia Sociale, del Lavoro e della Comunicazione, University of Padova.\nIntroduction to meta-analysis with application in R (5 hours, 1 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Professor for the course within the PhD program in Psychological Sciences, University of Padova."
   },
   {
     "objectID": "cv.html#seminars",
@@ -61,6 +61,13 @@
     "title": "Current Position",
     "section": "Integrative teaching (Didattica integrativa)",
     "text": "Integrative teaching (Didattica integrativa)\n\nPreparation and correction of practical group exercises and exams for the course Experimental Research Methods in Psychology (Prof. Roberta Sellaro), Master’s degree in Developmental and Educational Psychology, University of Padova (14 hrs.).\nAssistance in the preparation of exercises and corrections for the course General Psychology (Prof. Enrico Toﬀalini), Bachelor’s degree in Techniques and Methods in Psychological Sciences, University of Padova (15 hrs.).\nAssistance during lectures and preparation of practical group exercise for the course General Psychology (Prof.Giovanna Mioni),Bachelor’s degree in Social and Work Psychological Sciences, University of Padova (14 hrs.)."
+  },
+  {
+    "objectID": "cv.html#workshops",
+    "href": "cv.html#workshops",
+    "title": "Current Position",
+    "section": "Workshops",
+    "text": "Workshops\n\nA Practical Introduction to Evidence Accumulation Models in Visual Perception Research. European Conference on Visual Perception, Mainz (Germany). 24 August 2025 (2.30 hr.). Material: https://mar-cald.github.io/eam-workshop/eam-home.html.\nIntroduction to Reproducible Science. Pre-School workshop Replicability Crisis in Science, Padova (Italy). 6 June 2025 (2 hrs.). Material: https://github.com/Mar-Cald/repro-pre-school.\nTempi di risposta. Workshop on reaction time distributions, Univeristy of Padova, Padova (Italy). 10 June 2025 (1 hr.). Material: https://mar-cald.github.io/tempi/."
   },
   {
     "objectID": "cv.html#other-academic-roles",
@@ -133,11 +140,11 @@
     "text": "PAM: Predictive Accumulation Models\nThis project implements the PAM framework in R/Stan. Combine predictive processes with evidence accumulation models, GitHub repository."
   },
   {
-    "objectID": "material.html#reaction-time-distributions",
-    "href": "material.html#reaction-time-distributions",
+    "objectID": "material.html#reaction-times",
+    "href": "material.html#reaction-times",
     "title": "",
-    "section": "Reaction time distributions",
-    "text": "Reaction time distributions\nOverview of RT distributions."
+    "section": "Reaction times",
+    "text": "Reaction times\n\nOverview of RT distributions.\nPratical introduction to evidence accumulation models."
   },
   {
     "objectID": "contact.html",
@@ -151,27 +158,6 @@
     "href": "index.html",
     "title": "Margherita Calderan",
     "section": "",
-    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n\n\n\n\nLast update: 2025-07-09"
-  },
-  {
-    "objectID": "cv.html#lectures-on-contract-docenze-a-contratto",
-    "href": "cv.html#lectures-on-contract-docenze-a-contratto",
-    "title": "Current Position",
-    "section": "Lectures on contract (docenze a contratto)",
-    "text": "Lectures on contract (docenze a contratto)\n\nTest per le organizzazioni (21 hours, 3 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Lecturer (titolare di modulo) for the Master’s Degree in Psicologia Sociale, del Lavoro e della Comunicazione, University of Padova.\nIntroduction to meta-analysis with application in R (5 hours, 1 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Professor for the course within the PhD program in Psychological Sciences, University of Padova."
-  },
-  {
-    "objectID": "material.html#reaction-time",
-    "href": "material.html#reaction-time",
-    "title": "",
-    "section": "Reaction time",
-    "text": "Reaction time\n\nOverview of RT distributions.\nPratical introduction to evidence accumulation models."
-  },
-  {
-    "objectID": "material.html#reaction-times",
-    "href": "material.html#reaction-times",
-    "title": "",
-    "section": "Reaction times",
-    "text": "Reaction times\n\nOverview of RT distributions.\nPratical introduction to evidence accumulation models."
+    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n  \n    \n     \n  \n\n\n\n\nLast update: 2025-09-19"
   }
 ]
