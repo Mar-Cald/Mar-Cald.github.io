@@ -394,8 +394,6 @@ tibble::tribble(
 
 \newpage
 
-# Invited Talks
-
 # Organizational Activities
 
 ## Methodological School: Replicability Crisis in Science
