@@ -20,6 +20,7 @@ Introduction to reproducible science practices ([GitHub repository](https://gith
 
 This project implements the [PAM framework](https://doi.org/10.48550/arXiv.2411.13203){target="_blank"} in R/Stan. Combine predictive processes with evidence accumulation models, [GitHub repository](https://github.com/Mar-Cald/PAM-PredictiveAccumulationModels){target="_blank"}.
 
-## Reaction time distributions
+## Reaction time
 
 [Overview](https://mar-cald.github.io/tempi/){target="_blank"} of RT distributions.
+[Pratical introduction](<https://mar-cald.github.io/eam-workshop/eam-home.html>) to evidence accumulation models.
