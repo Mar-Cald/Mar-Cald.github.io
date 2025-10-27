@@ -64,7 +64,7 @@ Download the [PDF](cv-pdf.pdf){target="_blank"} version.
 </br>
 :::
 
-# Current Position
+## Current Position
 
 ```{r}
 #| label: experience
@@ -74,11 +74,11 @@ tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Postdoctoral Researcher", "Department of General Psychology, University of Padova, Italy", "Oct. 2024 - Present",
     " ", c("Tails or types? Testing the dimensional hypothesis in neurodevelopmental disorders", "Supervisor: Prof. Enrico Toffalini",
-           "1 year research grant")) |>
+           "1.5 year research grant")) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
 ```
 
-# Education
+## Education
 
 ```{r }
 #| label: education
@@ -90,7 +90,7 @@ tibble::tribble(
       c("Thesis: Balancing stability and flexibility in cognitive control and learning: the effects of arousal", "https://researchdata.cab.unipd.it/1437/",
         "Supervisors: Prof. Roberta Sellaro, Prof. Nicola Cellini"),
      "Postgraduate Internship", "Psychophysiology Lab, University of Padova, Italy", "Jan. 2021 - Dec. 2021", c(
-        "Investigated the role of sleep characteristics in false memory formation and emotional reactivity.","Processed and interpreted sleep data from healthy participants.",
+        "Investigated the role of sleep characteristics in false memory formation and emotional reactivity.",
         "Supervisors: Prof. Andrea Spoto, Prof. Nicola Cellini"),
     "M.S. in Cognitive Neuroscience and Clinical Neuropsychology - 110 cum laude", "University of Padova, Italy", "Oct. 2018 - Dec. 2020", 
       c("Thesis: Sleep characteristics in adults with high functioning autism: a polysomnographic study", "Supervisor: Prof. Nicola Cellini"),
@@ -108,7 +108,7 @@ tibble::tribble(
 
 \newpage
 
-# Abroad
+## Abroad
 
 ```{r}
 #| label: Abroad 
@@ -139,9 +139,9 @@ tibble::tribble(
 ```
 
 
-# Publications
+## Publications
 
-## Published
+### Published
 
 1.  **Calderan, M.**, Jongkees, J.B., Gambarota, F., Pastore, M.,
     Cellini, N., & Sellaro, R. (2025) Isolating working memory gating processes
@@ -176,7 +176,7 @@ tibble::tribble(
     \[IF: 16.6, Quartile: Q1\]
 
 
-## Under Review
+### Under Review
 
 1. **Calderan, M.**, Visalli, A., Degasperi, G., Toffoli, L., Sellaro,
     R., & Cellini, N. Predictions under sleep restriction: The effects
@@ -195,7 +195,7 @@ tibble::tribble(
 4.  Mazzoni, N., Kurz, E.V., Cellini, N., Ciringione, L., **Calderan, M.**, Gallitto, G., Falco, S., Venuti, P., Zinke, K., Born, J., & Carìa, A., Aperiodic and periodic neural activity during sleep in autism spectrum disorders. Under Review in *BMC medicine*.
 
 
-## Preregistration
+### Preregistration
 
 1.  Sirota, M., Šrol, J., Lisi, M., Juanchich, M., Guglani, K.,
     Silverstein, P., … **Calderan, M.**, ... Schmidt, K. (2025, January
@@ -208,7 +208,7 @@ tibble::tribble(
     within Psychological Research.
     <https://osf.io/sjdu4>
 
-## In Preparation
+### In Preparation
 
 1.  Barbiero, J., **Calderan, M.**, & Mioni, G., The contribution of
     cerebellum in time perception: A systematic review and
@@ -225,7 +225,7 @@ tibble::tribble(
     control. In preparation for *Journal of Experimental Psychology: Human Perception and Performance*.
     
 
-## Published Abstract
+### Published Abstract
 
 1.  **Calderan, M.**, Visalli, A., Sellaro, R., & Cellini, N. (2024).
     Restless Sleep, Uncertain Minds: Learning and Inhibitory Control
@@ -251,7 +251,7 @@ tibble::tribble(
 
 \newpage
 
-# Conferences
+## Conferences
 
 1.  Stefanelli G., Toffoli L., **Calderan M.**, Del Popolo Cristaldi F.,
     Duma G. M., Tarantino V., Visalli A., Sellaro R., Mento
@@ -312,31 +312,47 @@ tibble::tribble(
     **Poster** presented at the 22nd meeting of the European Society for
     Cognitive Psychology (ESCoP), Lille (France), August 2022.
     
-# Awards and Grants
+\newpage
 
-1.  **Travel Grant**: European Conference on Visual Perception, Mainz,
+## Invited talks
+
+-  **From Cognitive Psychology to Bayesian Multiple Testing**. Medical Statistics Meeting, Department of Biomedical Data Sciences, Leiden University Medical Center, Leiden, The Netherlands. 23rd October 2025.
+
+-  **Bayesian Multiple Testing**. STAT-Talk Series, Methodology and Statistics Department, Institute of Psychology, Leiden University, Leiden, The Netherlands. 18th September 2025.
+
+
+## Awards and Grants
+
+-  **Travel Grant**: European Conference on Visual Perception, Mainz,
     (Germany).
-2.  **Travel Grant**: qHelp international seminar on Quantitative
+-  **Travel Grant**: qHelp international seminar on Quantitative
     Psychology. Arrifana (Portugal)
-3.  **Painter Award**: Best Poster, Cognitive Science Arena, Brixen,
+- **Painter Award**: Best Poster, Cognitive Science Arena, Brixen,
     (Italy).
-4.  **Erasmus Placement Grant (2 Months)**: Donders Sleep and Memory
+-  **Erasmus Placement Grant (2 Months)**: Donders Sleep and Memory
     Lab, Nijmegen (Netherlands).
-5.  **Erasmus Placement Grant (5 Months)**: Jaume I University,
+-  **Erasmus Placement Grant (5 Months)**: Jaume I University,
     Castellón de la Plana, (Spain).
 
 \newpage
 
-# Teaching
+## Peer Reviews
 
-## Lectures on contract (docenze a contratto)
+Ad-hoc reviewer (2 reviewed papers) for:
+
+- Frontiers in Psychology - Theoretical and Philosophical Psychology (1)
+- Frontiers in Psychology - Cognition (1)
+
+## Teaching
+
+### Lectures on contract (docenze a contratto)
 
 - **Test per le organizzazioni** (21 hours, 3 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Lecturer (titolare di modulo) for the Master’s Degree in Psicologia Sociale, del Lavoro e della Comunicazione, University of Padova.
 
 - **Introduction to meta-analysis with application in R** (5 hours, 1 CFU). Scheduled for the 2nd semester of the 2025/2026 academic year. Professor for the course within the PhD program in Psychological Sciences, University of Padova.
 
 
-## Seminars
+### Seminars
 
 -  **Introduction to R**. An intensive R programming course offered
     within the ARCA (Applied Research Course Academy) courses,
@@ -346,13 +362,14 @@ tibble::tribble(
     -   April, 2025 (20 hrs.)
     -   November, 2025 (20 hrs., *planned*)
     
--  **Learning in Dynamic Environments: A Tentative Implementation of the Volatile Kalman Filter in STAN.** Presentation (1 hr.) on a
-    Bayesian-based implementation of a learning algorithm for the
+-  **Learning in Dynamic Environments: A Tentative Implementation of the Volatile Kalman Filter in STAN.** Presentation (1 hr.) on a Bayesian-based implementation of a learning algorithm for the
     2023/24 Psicostat meeting series:
     <https://psicostat.dpss.psy.unipd.it/meetings/slides/2024-03-22_calderan.pdf>
 
 
-## Integrative teaching (Didattica integrativa)
+### Integrative teaching (Didattica integrativa)
+
+-  **Assistance** during lectures for the course **Testing Psicologico** (Prof. Tatiana Marci), Bachelor's degree in Scienze psicologiche dello sviluppo, della personalità e delle relazioni interpersonali, University of Padova (14 hrs.).
 
 -  Preparation and correction of **practical group exercises** and
     exams for the course **Experimental Research Methods in Psychology**
@@ -369,7 +386,7 @@ tibble::tribble(
     Mioni),Bachelor's degree in Social and Work Psychological Sciences,
     University of Padova (14 hrs.).
 
-## Workshops
+### Workshops
 
 -  **A Practical Introduction to Evidence Accumulation Models in Visual Perception Research**. European Conference on Visual Perception,
     Mainz (Germany). 24 August 2025 (2.30 hr.). Material:
@@ -384,7 +401,7 @@ tibble::tribble(
     Material: <https://mar-cald.github.io/tempi/>.
     
     
-## Other Academic Roles
+### Other Academic Roles
 
 -   **Representative of Research Fellows** in the Department of General
     Psychology, University of Padova. 02/2024 – Present
@@ -394,9 +411,9 @@ tibble::tribble(
 
 \newpage
 
-# Organizational Activities
+## Organizational Activities
 
-## Methodological School: Replicability Crisis in Science
+### Methodological School: Replicability Crisis in Science
 
 Member of the **Organizing team**. The school aims to provide a
 broad and interdisciplinary perspective on replicability, along with
@@ -410,7 +427,7 @@ issues and apply the course concepts to real data analysis. Padova
 -   **Lecturers**: Prof. Branden Fitelson, Prof. Giovanni Parmigiani,
     Dr. Filippo Gambarota
 
-## International Winter School - The 4 Ms: Meta-research, Measurement, Multi-lab, and Multiverse data analysis in Behavioral Sciences
+### International Winter School - The 4 Ms: Meta-research, Measurement, Multi-lab, and Multiverse data analysis in Behavioral Sciences
 
 Member of the **Organizing team**. The Winter School aims to
 address the methodological challenges in behavioral sciences, which
@@ -427,13 +444,13 @@ tools. Padova (Italy). (<https://winterschool4ms.dpg.unipd.it/>)
     Carlo Umiltà, Prof. Ettore Ambrosini, Dr. Filippo Gambarota, Dr.
     Giulia Calignano, Prof. Massimo Grassi, Prof. Livio Finos
 
-## ONIRICAMENTE
+### ONIRICAMENTE
 
 Member of the **Organizing team** of the one-day workshop
 dedicated to public outreach on the Psychology of Sleep. Padova (Italy)
 (<https://sites.google.com/view/oniricamente/home-page?authuser=0>)
 
-## Cognitive Neuroscience of Sleep Summer School
+### Cognitive Neuroscience of Sleep Summer School
 
 Member of the **Supporting team**. The Summer School examined methods
 for investigating sleep and memory in humans and animals. It also
@@ -442,7 +459,7 @@ covered topics related to sleep medicine and dreaming. Nijmegen
 
 \newpage
 
-# Research Groups Membership
+## Research Groups Membership
 
 ```{r }
 #| label: Groups
@@ -459,7 +476,7 @@ tibble::tribble(
   cvevents(when = "dates", what = "degree", where = "institution", details = "details")
 ```
 
-# Collaborations
+## Collaborations
 
 ```{r }
 #| label: Collaborations
@@ -467,19 +484,23 @@ tibble::tribble(
 #| echo: false
 tibble::tribble(
     ~degree, ~institution, ~dates, ~details,
-    "Dr. Bryant Jongkees", "Univerisity of Leiden, the Netherlands", "2024 - Present", 
-      c("Examining the
-    influence of expectations and mind-wandering on cognitive control stability
-    and flexibility using computational modeling approaches."),
+    "Prof. Jelle Goeman", "Leiden University Medical Center, The Netherlands", "2025 - Present",
+      c("Multiple testing."),
+    "Prof. Aldo Solari", "Ca’ Foscari University of Venice, Italy", "2025 - Present",
+      c("Multiple testing."),
+    "Prof. Giovanni Parmigiani", "Harvard University", "2025 - Present",
+      c("Multiple testing."),
+    "Dr. Bryant Jongkees", "Univerisity of Leiden, The Netherlands", "2024 - Present", 
+      c("Stability and flexibility in cognitive control."),
     "Dr. Antonino Visalli", "University of Modena-Reggio Emilia, Italy", "2023 - Present", 
-      c("Integrating models of learning and control.")
+      c("Computational models of learning and control.")
 ) |>
   cvevents(when = "dates", what = "degree", where = "institution", details = "details")
 ```
 
-# Involvement in Research Groups
+## Involvement in Research Groups
 
-## National Project on Malpractice in Psychological Research
+### National Project on Malpractice in Psychological Research
 
 Collaborative initiative aimed at identifying and addressing
 **methodological malpractice** in psychological science, with Enrico
@@ -492,12 +513,9 @@ include:
     within Psychological Research.
     <https://osf.io/sjdu4>
 
--   Toffalini, E., **Calderan, M.**, Pagan, R., & Tobia, V. A Critical
-    Evaluation of Taxometric Analysis in the Study of Neurodevelopmental
-    Disorders.
-    <https://github.com/EnricoToffalini/Taxometrics-Neurodevelopmental-Disorders/tree/main>
+-   Toffalini, E., **Calderan, M.**, Pagan, R., Tobia, V. & Sonuga-Barke, E. A   Critical Tails or Types? A Critical Systematic Review of Taxometric Studies of  Neurodevelopmental Conditions. Under review in *Journal of Child Psychology and Psychiatry* <https://github.com/EnricoToffalini/Taxometrics-Neurodevelopmental-Disorders/tree/main>
 
-## National Project on Adaptive Cognitive Control in Children
+### National Project on Adaptive Cognitive Control in Children
 
 Part of a national research group focused on investigating adaptive
 cognitive control in typical, at-risk, and atypical populations within a
@@ -532,7 +550,7 @@ techniques, in the following selected works:
 
 \newpage
 
-# Training
+## Training
 
 ```{r}
 #| label: Training
@@ -561,7 +579,7 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 
 \newpage
 
-# Scientific Societies Membership
+## Scientific Societies Membership
 
 ```{r }
 #| label: Societies
@@ -569,26 +587,26 @@ days focused on how to use the evidence-accumulation framework to formalize perf
 #| echo: false
 
 tibble::tribble(
-    ~degree, ~institution, ~dates, 
-    "Cognitive Science Society", "https://cognitivesciencesociety.org/", "2024 - Present", 
-    "Italian Reproduciblity Network", "https://www.itrn.org/", "2023 - Present", 
-    "European Sleep Research Society", "https://esrs.eu/", "2023 - Present", 
-    "AIP, Sezione Sperimentale", "https://aipass.org/psicologia-sperimentale/", "2022 - Present", 
-    "Society for the Improvement of Psychological Science", "https://improvingpsych.org/", "2022 - 2023", 
-    "European Society for Cognitive Psychology", "https://www.escop.eu/", "2021 - 2023"
+    ~degree, ~dates, 
+    "Cognitive Science Society",  "2024 - Present", 
+    "Italian Reproduciblity Network",  "2023 - Present", 
+    "European Sleep Research Society",  "2023 - Present", 
+    "AIP, Sezione Sperimentale",  "2022 - Present", 
+    "Society for the Improvement of Psychological Science",  "2022 - 2023", 
+    "European Society for Cognitive Psychology",  "2021 - 2023"
     
 ) |>
   cvevents(when = "dates", what = "degree", where = "institution")
 
 ```
 
-# Languages
+## Languages
 
 :it:   Italian: Mother Tongue\
 :uk:  English : Proficient\
 :es:  Spanish : Beginner
 
-# Programming Languages
+## Programming Languages
 
 ```{r}
 #| label: Programming 
@@ -611,7 +629,7 @@ tibble::tribble(
 
 \newpage
 
-# Research and Project Management Skills
+## Research and Project Management Skills
 
 ```{r}
 #| label: skills
