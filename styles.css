@@ -49,19 +49,6 @@
 }
 
 
-.navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
-    font-size: medium;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    padding: 5px;
-}
-
-body.quarto-light .navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
-    color: #d9e3eb;
-    border: 2px solid #b9b4b4;
-}
-
 
 /* ---------- Base Styling ---------- */
 body {

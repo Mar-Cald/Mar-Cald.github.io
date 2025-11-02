@@ -20,7 +20,7 @@ format:
   html: 
     theme:
       light: yeti
-    fontsize: 1.1em
+    fontsize: 1.2em
     linestretch: 1.7
     css: styles.css
     toc: true
