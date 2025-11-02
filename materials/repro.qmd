@@ -1,0 +1,14 @@
+---
+title: "Reproducible Science"
+description: "Intro to reproducible practices with slides and repo."
+date: 2025-09-23
+categories: [reproducibility, teaching]
+image: img/repro.png
+image-alt: "Reproducible science workshop cover"
+---
+
+Introduction to reproducible science practices:
+
+- [Slides](https://mar-cald.github.io/repro-pre-school/slide/repro-preschool.html#/title-slide){target="_blank"}
+
+- [GitHub repository](https://github.com/Mar-Cald/repro-pre-school){target="_blank"}

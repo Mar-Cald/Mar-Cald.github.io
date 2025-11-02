@@ -1,0 +1,9 @@
+---
+title: "Modeling reaction times"
+date: 2025-09-23
+categories: [modeling]
+---
+
+- An [overview](https://mar-cald.github.io/tempi/slides/handzone.html#/title-slide){target="_blank"} of RT distributions.
+
+- [Pratical introduction](<https://mar-cald.github.io/eam-workshop/eam-home.html>) to evidence accumulation models.

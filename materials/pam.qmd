@@ -1,0 +1,7 @@
+---
+title: "Predictive accumulation models"
+date: 2025-09-23
+categories: [modeling]
+---
+
+This project implements the [PAM framework](https://doi.org/10.48550/arXiv.2411.13203){target="_blank"} in R/Stan. Combine predictive processes with evidence accumulation models, [GitHub repository](https://github.com/Mar-Cald/PAM-PredictiveAccumulationModels){target="_blank"}.

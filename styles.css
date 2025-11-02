@@ -1,3 +1,5 @@
+
+
 /* ---------- Navbar Styling ---------- */
 .navbar {
   background-color: #6e0748 !important;
@@ -21,9 +23,48 @@
   border-radius: 4px;
 }
 
+/* Improve link spacing and alignment */
+.navbar .nav-link {
+  padding: 0.5rem 0.9rem;
+  font-weight: 500;
+}
+
+/* Subtle hover underline with offset for readability */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  text-underline-offset: 3px;
+}
+
+/* Remove Bootstrap active indicator under the current page link */
+.navbar .nav-link.active {
+  box-shadow: none !important;
+  border-bottom: none !important;
+  background: rgba(255,255,255,.08);
+  border-radius: .5rem;
+}
+
+/* Gentle elevation for separation from content */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+
+.navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
+    font-size: medium;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+}
+
+body.quarto-light .navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
+    color: #d9e3eb;
+    border: 2px solid #b9b4b4;
+}
+
+
 /* ---------- Base Styling ---------- */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
   color: #333;
   margin: 0;
@@ -32,14 +73,44 @@ body {
 }
 
 /* ---------- Hero Section Styling ---------- */
+/* Hero container: tighter margins/padding */
 #hero-heading {
   text-align: center;
   font-size: 1.2rem;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 1rem 1rem;
+  margin: 0.5rem 0.5rem;      /* was 1rem */
+  padding: 0.1rem 0.1rem;     /* unchanged; keep minimal */
   box-sizing: border-box;
 }
+
+/* Reduce top whitespace for the about hero block itself */
+.quarto-about .about-entity {
+  padding-top: 0.75rem;       /* trims space above the title/photo */
+}
+
+/* Tighter vertical rhythm under the hero */
+#hero-heading p { 
+  margin-bottom: 0.5rem;     /* was 0.65rem */
+}
+
+/* Bring the links row closer to the text */
+.about .about-links {
+  margin-top: 0.2rem;         /* smaller gap before the buttons */
+}
+
+/* Slimmer rule above links (optional) */
+.about hr {
+  margin: 0.5rem 0;
+}
+
+/* Subtle, aligned last-updated line closer to links */
+.last-updated {
+  margin-top: 0.2rem;         /* was 0.8rem */
+  text-align: center;
+  color: var(--bs-secondary-color);
+  font-size: 0.9rem;
+}
+
 
 /* ---------- CV Events Layout (Improved for Mobile) ---------- */
 .cvevent {
@@ -84,3 +155,5 @@ body {
     padding: 0 0.5rem;
   }
 }
+
+

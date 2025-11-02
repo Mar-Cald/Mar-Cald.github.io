@@ -6,5 +6,5 @@ toc: false
 ### email addresses
 
 
-*Personal*: <margherita.calderan@gmail.com>\
-*Institutional*: <margherita.calderan@unipd.it>
+Personal: <margherita.calderan@gmail.com>\
+Institutional: <margherita.calderan@unipd.it>
