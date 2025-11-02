@@ -48,22 +48,18 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-
-
 /* ---------- Base Styling ---------- */
 body {
   background-color: #fff;
   color: #333;
   margin: 0;
   padding: 0 0.75rem;
-  font-size: 1rem;
 }
 
 /* ---------- Hero Section Styling ---------- */
 /* Hero container: tighter margins/padding */
 #hero-heading {
   text-align: center;
-  font-size: 1.2rem;
   max-width: 100%;
   margin: 0.5rem 0.5rem;      /* was 1rem */
   padding: 0.1rem 0.1rem;     /* unchanged; keep minimal */
