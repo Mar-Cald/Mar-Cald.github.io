@@ -61,6 +61,7 @@ body {
 #hero-heading {
   text-align: center;
   max-width: 100%;
+  font-size: 1.1rem;
   margin: 0.5rem 0.5rem;      /* was 1rem */
   padding: 0.1rem 0.1rem;     /* unchanged; keep minimal */
   box-sizing: border-box;
@@ -68,7 +69,7 @@ body {
 
 /* Reduce top whitespace for the about hero block itself */
 .quarto-about .about-entity {
-  padding-top: 0.75rem;       /* trims space above the title/photo */
+  padding-top: 0.7rem;       /* trims space above the title/photo */
 }
 
 /* Tighter vertical rhythm under the hero */
