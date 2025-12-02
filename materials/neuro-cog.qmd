@@ -293,7 +293,11 @@ sim_res |>
 So we have been taught to either correct the p-values or adjust the alpha level to compensate for this issue. 
 :::
 
-# Multiplicity in Bayes
+## Multiplicity in Bayes
+
+- Bayes Factor (prior odds)
+
+- Posterior Probabilities (joint credibility)
 
 ## Bayes Factor 
 
