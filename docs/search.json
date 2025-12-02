@@ -4,7 +4,7 @@
     "href": "cv.html",
     "title": "",
     "section": "",
-    "text": "Download the PDF version. \n\nLast update: 2025-11-12"
+    "text": "Download the PDF version. \n\nLast update: 2025-12-02"
   },
   {
     "objectID": "cv.html#current-position",
@@ -137,7 +137,7 @@
     "href": "index.html",
     "title": "Margherita Calderan",
     "section": "",
-    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     GitHub\n  \n  \n    \n     Pavlovia GitLab\n  \n  \n    \n     ResearchGate\n  \n  \n    \n     OSF\n  \n\n\n\n\nLast updated: 2025-11-12"
+    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     GitHub\n  \n  \n    \n     Pavlovia GitLab\n  \n  \n    \n     ResearchGate\n  \n  \n    \n     OSF\n  \n\n\n\n\nLast updated: 2025-12-02"
   },
   {
     "objectID": "contact.html",
@@ -147,11 +147,172 @@
     "text": "Email addresses\nPersonal: margherita.calderan@gmail.com\nInstitutional: margherita.calderan@unipd.it"
   },
   {
-    "objectID": "materials/repro.html",
-    "href": "materials/repro.html",
-    "title": "Reproducible Science",
+    "objectID": "materials/neuro-cog.html#about-me",
+    "href": "materials/neuro-cog.html#about-me",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "About me 👋",
+    "text": "About me 👋\n\n\nPostdoctoral Researcher in Cognitive Psychology\nResearch interests:\n\nComputational modeling of cognition and learning\n\nBayesian hypothesis testing (recently)\nMeta-science\n\n\n\n\n\n\nHave I ever considered multiplicity? No 😔\n\n\nSince I was inexperienced and misunderstood many things — after all, none of us can be an expert in everything. So I think that could be useful to revisit some knowledge a common mistakes. And what brought me to bayes"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#hypothesis-testing-and-errors",
+    "href": "materials/neuro-cog.html#hypothesis-testing-and-errors",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Hypothesis testing and errors",
+    "text": "Hypothesis testing and errors\nWhen testing a null hypothesis H_0 against an alternative H_1, we can make two types of errors.\n\n\n\n\nReality\nReject H_0\nFail to reject H_0\n\n\n\n\nH_0 true\nType I Error (False Positive)\nCorrect decision\n\n\nH_1 true\nCorrect decision\nType II Error (False Negative)\n\n\n\n\n\nWe (usually) control the Type I error rate at a pre-specified level \\alpha (typically 0.05)."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#frequentist-hypothesis-testing",
+    "href": "materials/neuro-cog.html#frequentist-hypothesis-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Frequentist hypothesis testing",
+    "text": "Frequentist hypothesis testing\n\nYou compare the scores of the control and experimental groups and obtain a p-value of 0.05.\n\n\n\n\n\nIf, hypothetically, the experiment were repeated a great number of times when the null hypothesis is true, we would falsely reject the null hypothesis about 5% of the time."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayesian-hypothesis-testing",
+    "href": "materials/neuro-cog.html#bayesian-hypothesis-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayesian hypothesis testing",
+    "text": "Bayesian hypothesis testing\n\nAfter comparing the scores of the control and experimental groups, you find that the posterior probability that the groups differ is 95%.\n\n\n\n\n\nBased on the data and your prior, there is a 95% probability that groups differ. If you act as though the groups truly differ, there is a 5% chance that this decision is wrong."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayesian-methods-in-psychology",
+    "href": "materials/neuro-cog.html#bayesian-methods-in-psychology",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayesian methods in psychology",
+    "text": "Bayesian methods in psychology\n\n(Heck et al., 2023; Jevremov & Pajić, 2024; Van De Schoot et al., 2017)"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#multiplicity",
+    "href": "materials/neuro-cog.html#multiplicity",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Multiplicity",
+    "text": "Multiplicity\n\nMultiplicity (or multiple testing problem) emerges when we test more than one hypothesis.\n\n\n\nI test the effect of the manipulation on both working memory and inhibitory control.\nI test the effect of the manipulation and its interaction with age on working memory.\nI run post hoc tests to examine differences across four time-points."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#why-multiplicity-creates-problems",
+    "href": "materials/neuro-cog.html#why-multiplicity-creates-problems",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Why multiplicity creates problems",
+    "text": "Why multiplicity creates problems\nWhen testing m hypotheses independently, each at Type I error rate \\alpha, the overall probability of at least one false positive (family wise error rate) grows rapidly with m.\n\n\nSo we have been taught to either correct the p-values or adjust the alpha level to compensate for this issue."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayes-factor",
+    "href": "materials/neuro-cog.html#bayes-factor",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayes Factor",
+    "text": "Bayes Factor\n\n\nIt measures the probability that the null hypothesis is true given the data.\n\n\n\n\nIt measures the probability that the alternative hypothesis is true given the data.\n\n\n\n\nIt is the ratio of how likely the observed data are under one hypothesis compared to another.\n\n\nHave you ever use bayesian methods? If yes, probably the most used metric is the BF. what is ? , and it quantifies how much the data shift your relative support for these two hypotheses."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayes-factor-1",
+    "href": "materials/neuro-cog.html#bayes-factor-1",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayes Factor",
+    "text": "Bayes Factor\n\nFrom Keysers et al. (2020)\nEveryone has their own prior…"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayes-factor-and-multiple-testing",
+    "href": "materials/neuro-cog.html#bayes-factor-and-multiple-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayes Factor and multiple testing",
+    "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#posterior-odds-and-multiple-testing",
+    "href": "materials/neuro-cog.html#posterior-odds-and-multiple-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Posterior odds and multiple testing",
+    "text": "Posterior odds and multiple testing\nResearchers often interpret BF as posterior odds (Hoijtink et al., 2016; Tendeiro et al., 2024; Tendeiro & Kiers, 2019).\n\n\n\\text{Posterior odds,  } \\frac{Pr(\\mathcal{H_1} | data)}{Pr(\\mathcal{H_0} | data)} = \\frac{Pr(\\mathcal{H_1})}{Pr(\\mathcal{H_0})} \\times \\frac{p(data | \\mathcal{H_1})}{p(data | \\mathcal{H_0})}\n \n\nMultiplicity adjustment can be incorporated by modifying the prior odds \\frac{Pr(\\mathcal{H}_1)}{Pr(\\mathcal{H}_0)} based on the number of hypotheses tested, which produces posterior odds that control for multiple testing."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayesian-estimation",
+    "href": "materials/neuro-cog.html#bayesian-estimation",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayesian estimation",
+    "text": "Bayesian estimation\nThe prior (grey) represents our initial guess about plausible values; after observing data, it updates to the posterior (blue), which narrows around the most likely value."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayesian-estimation-concrete-example",
+    "href": "materials/neuro-cog.html#bayesian-estimation-concrete-example",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayesian estimation concrete example",
+    "text": "Bayesian estimation concrete example\nSuppose we want to estimate the Stroop effect (0.060–0.120s). We can adopt priors centered at zero with varying standard deviations (τ = 0.1, 0.25, 0.5) to reflect increasing skepticism."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#probability-of-direction",
+    "href": "materials/neuro-cog.html#probability-of-direction",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Probability of Direction",
+    "text": "Probability of Direction\n\np_d = \\max(Pr({\\hat{\\beta}} &lt; 0), Pr({\\hat{\\beta}} &gt; 0))\n\n\n\n\n\nMeasures the certainty of an effect’s direction (positive or negative).\nTypically ranges from 0.5 to 1.\n\\text{p-value} \\approx 2 \\times (1 - pd)"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#probability-of-direction-and-multiplicity",
+    "href": "materials/neuro-cog.html#probability-of-direction-and-multiplicity",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Probability of Direction and Multiplicity",
+    "text": "Probability of Direction and Multiplicity\nfwer = \\text{Pr(at least one } P_d \\geq 0.975)"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#the-joint-posterior-approach",
+    "href": "materials/neuro-cog.html#the-joint-posterior-approach",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "The joint posterior approach",
+    "text": "The joint posterior approach\nYou want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve. Improvement in at least one domain is more probable than improvement in both.\n\n\n\n\nIt is important, of course, not to make the elementary mistake of supposing that joint it probability statements can generally be made using the marginal distributions (Box & Tiao, 1992, p. 122)."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#example-of-hypothesis-testing",
+    "href": "materials/neuro-cog.html#example-of-hypothesis-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Example of hypothesis testing",
+    "text": "Example of hypothesis testing\n\n\n\n\\theta_1 = verbal abilities\n\\theta_2 = visuospatial abilities\n\nvertical line: \\theta_1 = 0\nhorizontal line: \\theta_2 = 0\ndiagonal: \\theta_1 = \\theta_2\nintersection: \\theta_1 = \\theta_2 = 0"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#questions-for-you",
+    "href": "materials/neuro-cog.html#questions-for-you",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Questions for You",
+    "text": "Questions for You\n\n\nWho here has used Bayesian methods? What was your experience?\n\n\n\nWhat are the main barriers to correct statistical understanding and practice in your field? What would help us improve?\n\n\n\nWe often test multiple hypotheses in a single study. What drives this practice in your research? Do the benefits outweigh the costs?\n\n\nSelective reporting becomes tempting when you’ve run 20 tests but only 3 are significant Reproducibility crisis stems partly from ignoring multiplicity"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#h_0-0-h_1-cauchyscale-sqrt22",
+    "href": "materials/neuro-cog.html#h_0-0-h_1-cauchyscale-sqrt22",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "H_0 = 0, H_1 = Cauchy(scale = \\sqrt{2}/2)",
+    "text": "H_0 = 0, H_1 = Cauchy(scale = \\sqrt{2}/2)"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#between-models-priors-jeff",
+    "href": "materials/neuro-cog.html#between-models-priors-jeff",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Between-models priors (Jeffreys, 1938)",
+    "text": "Between-models priors (Jeffreys, 1938)\n\n\nm alternative hypotheses.\nLet \\mathcal{H}_A be the event that at least one alternative hypothesis is true.\nWe assign equal prior probability to the event \\mathcal{H}_A and to its complement \\mathcal{H}_0 (the global null, all false):\n\n\nPr(\\mathcal{H}_0) = Pr(\\mathcal{H}_A) = \\frac{1}{2}"
+  },
+  {
+    "objectID": "materials/neuro-cog.html#section",
+    "href": "materials/neuro-cog.html#section",
+    "title": "Bayesian inference and multiple comparisons",
     "section": "",
-    "text": "Introduction to reproducible science practices:\n\nSlides\nGitHub repository"
+    "text": "The probability that all alternative are false\n Since this equals the global null probability\n The prior of each alternative hypothesis\n The prior for each null hypothesis\n\n (1 - Pr(h_{1_i}))^m\n (1 - Pr(h_{1_i}))^m = 0.5\n Pr(h_{1_i}) = 1 - 0.5^{1/m}\n Pr(h_{0_i}) = 0.5^{1/m}\n\n This ensures that the probability of all nulls being true simultaneously and the probability of at least one alternative being true both equal 0.5."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#westfalls-approach-for-dependent-tests",
+    "href": "materials/neuro-cog.html#westfalls-approach-for-dependent-tests",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Westfall’s approach for dependent tests",
+    "text": "Westfall’s approach for dependent tests\nFor multiple comparisons among m means, Westfall et al. (1997) developed a solution for the \\binom{m}{2} possible pairwise comparisons involving \\mu_1, \\mu_2, \\ldots, \\mu_m, where \\theta_{ij} represents the difference \\mu_i - \\mu_j. Their hierarchical prior structure specifies:\n\n\\mu_i\n\\begin{cases}\n\\equiv \\mu & \\text{with probability } \\lambda, \\\\\n\\sim G & \\text{with probability } 1-\\lambda,\n\\end{cases}\n\nwith G(\\cdot) being a continuous distribution."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#section-1",
+    "href": "materials/neuro-cog.html#section-1",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "",
+    "text": "Under this specification, the probability that any two specific means equal \\mu is \\lambda^2, and \\text{Pr}(\\text{all }\\theta_{ij} = 0) = \\lambda^m. This dependency structure yields a modified adjustment k = 1-0.5^{2/m}, replacing the independence-based correction (resembles previously described mixture models).\nNote: Implemented in JASP for post-hoc testing (for details, see de Jong, 2019)."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayesian-estimation-prior-precision",
+    "href": "materials/neuro-cog.html#bayesian-estimation-prior-precision",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayesian estimation prior precision",
+    "text": "Bayesian estimation prior precision"
   },
   {
     "objectID": "materials/rt.html",
@@ -159,6 +320,13 @@
     "title": "Modeling reaction times",
     "section": "",
     "text": "An overview of RT distributions.\nPratical introduction to evidence accumulation models."
+  },
+  {
+    "objectID": "materials/repro.html",
+    "href": "materials/repro.html",
+    "title": "Reproducible Science",
+    "section": "",
+    "text": "Introduction to reproducible science practices:\n\nSlides\nGitHub repository"
   },
   {
     "objectID": "materials/pam.html",
@@ -172,6 +340,6 @@
     "href": "open-materials.html",
     "title": "Open materials",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 2, 2025\n\n\n12/2/25, 2:48:34 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
   }
 ]
