@@ -590,7 +590,7 @@ ggplot(aes(x = den)) +
 
 ## Probability of Direction and Multiplicity
 
-$fwer = \text{Pr(at least one } P_d \geq 0.975)$\
+$\text{Pr(at least one } P_d \geq 0.975)$\
 
 
 ```{r, echo=FALSE, message=FALSE,warning=FALSE}
@@ -636,7 +636,7 @@ You want to test whether an intervention improves verbal and/or visuospatial abi
 :::
 :::::
 
-## Example of hypothesis testing
+## Example of hypothesis testing 
 
 ::::: columns
 ::: {.column width="40%"}
