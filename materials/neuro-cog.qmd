@@ -1,0 +1,912 @@
+---
+title: "Bayesian inference and multiple comparisons"
+subtitle: "From idealization of methods to conscious practice"
+author: "Margherita Calderan"
+date: today
+format:
+  revealjs:
+    width: 1200
+    text-align: center
+    slide-number: true
+    toc: false
+    incremental: false
+    linestretch: 1.2
+    margin-top: .7em
+    html-math-method: katex
+    logo: img/psicostatLogo.png
+    logo-width: 200px
+from: markdown+emoji  
+css:  style/styles.css
+bibliography: "biblio.bib"
+csl: style/apa.csl
+reference-section-title: References
+embed-resources: true
+execute:
+  cache: true
+  cache-lazy: false
+  messages: false
+  warning: false
+---
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+pkg = c("ggplot2","dplyr","MASS","tidyr","dplyr","furrr","tibble","purrr",
+        "flip","BayesFactor","miscF","patchwork")
+invisible(sapply(pkg, require, character.only = T))
+theme_set(theme_bw(base_size = 14))
+
+bayes_posterior_analytical = function(x, sigma = 1, tau0 = 1, mu0=0) {
+  n = length(x)
+  bar_y=mean(x)
+  post_mean=(bar_y * (n / sigma^2) + mu0 * (1 / tau0^2)) / (n / sigma^2 + 1 / tau0^2)
+  post_sd=sqrt(1 / (n / sigma^2 + 1 / tau0^2))
+  posterior_samples = rnorm(10000, mean = post_mean, sd = post_sd)
+  return(posterior_samples)
+}
+
+sign_pval = function(data, th){
+  data |> 
+    group_by(eff, k,s,n,nsim) |> 
+    summarise(sign = any(value <= th)) |> 
+    ungroup()
+}
+
+sign_bay = function(data, th){
+  data |> 
+    group_by(eff, k, s,n, nsim) |> 
+    summarise(sign = any(value >= th)) |> # at least one bf >= 3
+    ungroup()
+}
+
+
+sim_fun = function(n, k,eff,s,nsim){
+  replicate(nsim,{
+    r = 0 #covariance
+    S = r + diag(1 - r, k) 
+    R = S
+    X = MASS::mvrnorm(n, rep(eff, k), Sigma = R) 
+    # extract bf default ttestBF function
+    bf = apply(X, 2, function(x) exp(ttestBF(x)@bayesFactor[["bf"]]))
+    post = apply(X, 2, function(x) bayes_posterior_analytical(x, tau0 = s))
+    pd = apply(post, 2, function(x) max(mean(x > 0), mean(x < 0))) #two one
+    # frequentist
+    pval = apply(X, 2, function(x) t.test(x)$p.value)
+    data.frame(bf = bf, pval = pval,pd = pd)
+  }, 
+  simplify = FALSE)
+}
+
+nsim = 5000
+n = c(30,50,100) #sample size
+k = c(1,2,5,10,20) #number of tests
+eff = c(0,.3)
+s = c(.2,.5, 1, 1.5) # prior sd
+
+sim = expand.grid(
+  n = n,
+  k = k,
+  eff = eff,
+  s = s
+)
+
+plan(multisession(workers = parallel::detectCores() - 2))
+sim$res = future_pmap(sim, 
+                      ~sim_fun(n = ..1, k = ..2, eff = ..3, s = ..4, nsim = nsim), 
+                      .options = furrr_options(seed = TRUE),
+                      .progress = TRUE)
+```
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+sim = tibble(sim)
+
+sign_bay_pw = function(data, th){
+  data |> 
+    group_by(eff, k, s,n, nsim) |> 
+    summarise(sign = mean(value >= th)) |> # at least one bf >= 3
+    ungroup()
+}
+
+sim_res = sim |> 
+  unnest(res) |> 
+  group_by(eff,k, s, n) |> 
+  mutate(nsim = 1:n()) |> 
+  ungroup() |> 
+  unnest(res) |> 
+  pivot_longer(c("pval","bf", "pd")) |>
+  group_by(name) |> 
+  nest()
+
+sim_res$fwer = vector(mode = "list", length = nrow(sim_res))
+sim_res$pw = vector(mode = "list", length = nrow(sim_res))
+
+
+for(i in 1:nrow(sim_res)){
+  if(sim_res$name[i] == "pval"){
+    sim_res$fwer[[i]] = sign_pval(sim_res$data[[i]], 0.05)
+  } else if (sim_res$name[i] == "pd"){
+    sim_res$fwer[[i]] = sign_bay(sim_res$data[[i]], .975)
+  } else{
+      sim_res$fwer[[i]] = sign_bay(sim_res$data[[i]], 3)
+      sim_res$pw[[i]] = sign_bay_pw(sim_res$data[[i]], 3)}
+}
+
+
+```
+
+
+##  About me :wave:
+
+::: nonincremental
+-   Postdoctoral Researcher in Cognitive Psychology 
+-   Research interests:
+    -   Computational modeling of cognition and learning\
+    -   Bayesian hypothesis testing (recently)
+    -   Meta-science
+:::
+
+<br/>
+
+. . .
+
+>  Have I ever considered multiplicity? 
+No :pensive:
+
+::: notes
+Since I was inexperienced and misunderstood many things — after all, none of us can be an expert in everything. So I think that could be useful to revisit some knowledge a common mistakes. And what brought me to bayes
+:::
+
+
+## Hypothesis testing and errors
+
+When testing a null hypothesis $H_0$ against an alternative $H_1$, we can make two types of errors.
+
+<br/>
+
+| **Reality** | **Reject** $H_0$ | **Fail to reject** $H_0$ |
+|----|----|----|
+| $H_0$ true | **Type I Error** (False Positive) | Correct decision |
+| $H_1$ true | Correct decision | **Type II Error** (False Negative) |
+
+<br/>
+
+> We (usually) control the Type I error rate at a pre-specified level $\alpha$ (typically 0.05). 
+
+
+## Frequentist hypothesis testing 
+
+> You compare the scores of the control and experimental groups 
+and obtain a p-value of 0.05.
+
+. . .
+
+<br/>
+
+::::: {.columns .center}
+::: {.column width="50%"}
+If, hypothetically, the experiment were repeated a great number of times when the null hypothesis is true, we would falsely reject the null hypothesis about 5% of the time.
+:::
+
+::: {.column width="50%"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExejB3eTZ2OTM2Y2h5ZGV2enc0dDUxaGFqazhnZDNhYnNqa3UxaDEyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lHfxDepSGlzom6f65K/giphy.gif){.fragment width=500px fig-align="center"}
+
+:::
+:::::
+
+
+
+
+## Bayesian hypothesis testing 
+
+> After comparing the scores of the control and experimental groups, you find that the posterior probability that the groups differ is 95%.
+
+. . .
+
+<br/>
+
+::::: {.columns .center}
+::: {.column width="50%"}
+Based on the data and your prior, there is a 95% probability that groups differ. If you act as though the groups truly differ, there is a 5% chance that this decision is wrong.
+:::
+
+::: {.column width="50%"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzZuc3hibTYydDZ1aHFieTN5ODdxdzJ5YXlvMWdhZ2VtaDc1eW9sMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9582DNuQppxC/giphy.gif){.fragment width=500px fig-align="center"}
+
+:::
+:::::
+
+## Bayesian methods in psychology
+
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 10
+
+df=read.csv("data/scopus.csv")
+df_all = read.csv("data/scopus-all.csv")
+colnames(df)= "n_b"; df$year = as.numeric(row.names(df));df=na.omit(df); df=df[df$year >= 1995,]
+colnames(df_all)= "n_tot"; df_all$year = as.numeric(row.names(df_all));df_all=na.omit(df_all);
+df_all=df_all[df_all$year < 2025,]
+df_ok = df_all|>left_join(df,by ="year")
+df_ok$ratio=df_ok$n_b/df_ok$n_tot
+
+ggplot(df_ok, aes(x = year, y = ratio))+
+  geom_line(linewidth =1 )+
+  geom_point(size = 3, col = "orchid3")+
+  ggtitle("bayesian analysis OR bayes factor")+
+  scale_x_continuous(breaks = seq(1995, 2025, 5))+
+  ylab("bayes/total")+
+  theme_bw(base_size = 22)
+```
+
+
+[@heck2023review; @van2017systematic; @jevremov2024bayesian]
+
+
+## Multiplicity
+
+> Multiplicity (or multiple testing problem) emerges when we test more than one hypothesis.
+
+<br/>
+
+- I test the effect of the manipulation on both working memory and inhibitory control.  
+
+- I test the effect of the manipulation and its interaction with age on working memory.  
+
+- I run post hoc tests to examine differences across four time-points.
+
+
+## Why multiplicity creates problems
+
+When testing $m$ hypotheses independently, each at Type I error rate $\alpha$, the *overall probability of at least one false positive* (family wise error rate) grows rapidly with $m$.
+
+
+```{r, message=FALSE, echo=FALSE}
+#| fig-align: "center"
+#| fig-width: 10
+#| fig-asp: .5
+
+# plot fwer as a function of n and k
+sim_res |> 
+  unnest(fwer) |> 
+  subset(eff == 0)|>
+  group_by(name, k) |> 
+  subset(name == "pval")|>
+  summarise(fwer = mean(sign)) |> 
+  ggplot(aes(x = k, y = fwer, color =name)) +
+  geom_line(lwd = 2,show.legend = F) +
+  geom_point(show.legend = F, size = 3, color = "black", alpha = .5) +
+  geom_hline(yintercept = 0.05)+
+  scale_y_continuous(breaks = seq(0,1,.1))+
+  scale_x_continuous(breaks = c(1,2,5,10,20))+
+  xlab("m")+
+  ylab("fwer")+
+  theme_bw(base_size = 20)
+
+```
+
+
+
+::: notes
+So we have been taught to either correct the p-values or adjust the alpha level to compensate for this issue. 
+:::
+
+# Multiplicity in Bayes
+
+## Bayes Factor 
+
+. . .
+
+1. It measures the probability that the null hypothesis is true given the data.
+
+. . .
+
+2. It measures the probability that the alternative hypothesis is true given the data.
+
+. . .
+
+3. It is the ratio of how likely the observed data are under one hypothesis compared to another.
+
+::: notes
+Have you ever use bayesian methods? If yes, probably the most used metric is the BF. what is ?
+, and it quantifies how much the data shift your relative support for these two hypotheses.
+:::
+
+
+## Bayes Factor 
+
+![From @keysers2020using](img/figBF.png){fig-align="center"}
+
+::: notes
+Everyone has their own prior...
+:::
+
+## Bayes Factor and multiple testing
+
+$\text{Pr(at least one } BF \geq 3)$
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 14
+#| fig-asp: .3
+
+sim_res |> 
+  unnest(fwer) |> 
+  group_by(name,eff, k, n) |> 
+  subset(name == "bf")|>
+  summarise(fwer = mean(sign),
+            pw = mean(sign)) |> 
+  mutate(
+    n = factor(n, levels = unique(n), labels = paste0("n = ", unique(n))),
+    true_effect = as.factor(eff)
+  )|>
+  ggplot(aes(x = k, y = fwer, color = true_effect)) +
+  geom_line(lwd = 1.5,show.legend = T) +
+  geom_point(show.legend = F, size = 2, color = "black", alpha = .5) +
+  facet_grid(~n) +
+  geom_hline(yintercept = 0.05,color = "red4")+
+  geom_hline(yintercept = 0.8,color = "blue4")+
+  scale_y_continuous(breaks = seq(0,1,.1))+
+  scale_x_continuous(breaks = c(1,2,5,10,20))+
+  xlab("m")+ylab("fwer/power")+
+  theme_bw(base_size = 20)
+
+```
+
+**N.B.** Results change depending on priors and threshold.
+
+## Posterior odds and multiple testing
+
+Researchers often interpret BF as posterior odds [@tendeiro2019review; @tendeiro2024diagnosing; @hoijtink2016bayesian].
+
+<br/> 
+
+$$
+\text{Posterior odds,  } \frac{Pr(\mathcal{H_1} | data)}{Pr(\mathcal{H_0} | data)} = \frac{Pr(\mathcal{H_1})}{Pr(\mathcal{H_0})} \times \frac{p(data | \mathcal{H_1})}{p(data | \mathcal{H_0})}
+$$ 
+<br/> 
+
+> Multiplicity adjustment can be incorporated by modifying the prior odds $\frac{Pr(\mathcal{H}_1)}{Pr(\mathcal{H}_0)}$ based on the number of hypotheses tested, which produces posterior odds that control for multiple testing.
+
+
+## Bayesian estimation
+
+The prior (grey) represents our initial guess about plausible values; after observing data, it updates to the posterior (blue), which narrows around the most likely value.
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 14
+#| fig-asp: .5
+
+# Data and model settings (edit these)
+xbar  <- 0.25     # sample mean
+sigma <- 1.0     # known sd of data
+n     <- 50      # sample size
+nu    <- 0       # prior mean
+taus  <- c(0.25)  # prior sd values (narrow → wide)
+
+# Posterior parameters for normal-normal with known sigma
+post_params <- function(nu, tau, xbar, sigma, n){
+  prec_lik <- n / (sigma^2)
+  prec_pr  <- 1 / (tau^2)
+  prec_po  <- prec_lik + prec_pr
+  mu_p     <- (prec_lik * xbar + prec_pr * nu) / prec_po
+  sd_p     <- sqrt(1 / prec_po)
+  list(mu_p = mu_p, sd_p = sd_p)
+}
+
+# Build curves for prior and posterior across tau
+xgrid <- seq(-4, 4, length.out = 1000)
+curves <- map_dfr(taus, function(tau){
+  pp <- post_params(nu, tau, xbar, sigma, n)
+  tibble(
+    x = xgrid,
+    density = dnorm(x, mean = nu, sd = tau),
+    dist = "Prior",
+    tau = tau,
+    mu_post = pp$mu_p
+  ) |>
+    bind_rows(tibble(
+      x = xgrid,
+      density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
+      dist = "Posterior",
+      tau = tau,
+      mu_post = pp$mu_p
+    ))
+})
+
+# Nice labels for facets
+curves <- curves |>
+  mutate(tau_lab = paste0("Prior sd = ", tau))
+
+# Data for posterior mean lines (one per facet)
+post_means <- curves |>
+  filter(dist == "Posterior") |>
+  distinct(tau_lab, mu_post)
+
+ggplot(curves, aes(x, density, color = dist, linetype = dist)) +
+  geom_line(linewidth = 2.5) +
+  #geom_vline(data = post_means, aes(xintercept = mu_post),
+   #          color = "red",  linewidth = 2.5) +
+  geom_text(
+    data = post_means,
+    inherit.aes = FALSE,   # <-- important
+    aes(x = mu_post, y = 0,  # or choose a suitable y, e.g. max density
+        label = sprintf("μ = %.2f", mu_post)),
+    vjust = -2,
+    hjust = -.8,
+    size = 12,
+    color = "#2C7BB9"
+  ) +
+  scale_color_manual(values = c("Prior" = "grey40", "Posterior" = "#2C7BB6")) +
+  scale_linetype_manual(values = c("Prior" = "22", "Posterior" = "solid")) +
+  labs(
+    x = "Parameter value",
+    y = "Density",
+    color = NULL, linetype = NULL
+  ) +
+  theme(legend.position = "top")+
+  scale_x_continuous(limits = c(-1.2,1.2), breaks = round(seq(-1.2,1.2, .2),2))+
+  theme_classic(base_size = 25)
+
+```
+
+
+## Bayesian estimation concrete example
+
+Suppose we want to estimate the Stroop effect (0.060–0.120s). We can adopt priors centered at zero with varying standard deviations (τ = 0.1, 0.25, 0.5) to reflect increasing skepticism.
+
+<br/>
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 14
+#| fig-asp: .3
+
+# Data and model settings (edit these)
+xbar  <- 0.10     # sample mean
+sigma <- .8     # known sd of data
+n     <- 150      # sample size
+nu    <- 0       # prior mean
+taus  <- c(0.1, .25, .5)  # prior sd values (narrow → wide)
+
+# Posterior parameters for normal-normal with known sigma
+post_params <- function(nu, tau, xbar, sigma, n){
+  prec_lik <- n / (sigma^2)
+  prec_pr  <- 1 / (tau^2)
+  prec_po  <- prec_lik + prec_pr
+  mu_p     <- (prec_lik * xbar + prec_pr * nu) / prec_po
+  sd_p     <- sqrt(1 / prec_po)
+  list(mu_p = mu_p, sd_p = sd_p)
+}
+
+# Build curves for prior and posterior across tau
+xgrid <- seq(-4, 4, length.out = 1000)
+curves <- map_dfr(taus, function(tau){
+  pp <- post_params(nu, tau, xbar, sigma, n)
+  tibble(
+    x = xgrid,
+    density = dnorm(x, mean = nu, sd = tau),
+    dist = "Prior",
+    tau = tau,
+    mu_post = pp$mu_p
+  ) |>
+    bind_rows(tibble(
+      x = xgrid,
+      density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
+      dist = "Posterior",
+      tau = tau,
+      mu_post = pp$mu_p
+    ))
+})
+
+# Nice labels for facets
+curves <- curves |>
+  mutate(tau_lab = paste0("Prior sd = ", tau))
+
+# Data for posterior mean lines (one per facet)
+post_means <- curves |>
+  filter(dist == "Posterior") |>
+  distinct(tau_lab, mu_post)
+
+ggplot(curves, aes(x, density, color = dist, linetype = dist)) +
+  geom_line(linewidth = 1.2) +
+  geom_vline(data = post_means, aes(xintercept = 0),
+             color = "black",  linewidth = 0.8) +
+  geom_text(
+    data = post_means,
+    inherit.aes = FALSE,   # <-- important
+    aes(x = mu_post, y = 0,  # or choose a suitable y, e.g. max density
+        label = paste0("hat(beta) == ", sprintf("%.2f", mu_post))),
+    vjust = -7,
+    hjust = -.8,
+    size = 6,
+    color = "#2C7BB9",
+    parse = TRUE
+  ) +
+  scale_color_manual(values = c("Prior" = "grey40", "Posterior" = "#2C7BB6")) +
+  scale_linetype_manual(values = c("Prior" = "22", "Posterior" = "solid")) +
+  facet_wrap(~ tau_lab, nrow = 1) +
+  labs(
+    x = " ",
+    y = "Density",
+    color = NULL, linetype = NULL
+  ) +
+  theme(legend.position = "top")+
+  scale_x_continuous(limits = c(-.3,.4), breaks = round(seq(-.3,.4,.1),2))+
+  theme_classic(base_size = 16)
+
+```
+
+
+## Probability of Direction
+
+$$
+p_d = \max(Pr({\hat{\beta}} < 0), Pr({\hat{\beta}} > 0))
+$$
+
+<br/>
+
+::::: {.columns .center}
+::: {.column width="50%"}
+- Measures the certainty of an effect's direction (positive or negative).
+- Typically ranges from 0.5 to 1.
+- $\text{p-value} \approx 2 \times (1 - pd)$
+:::
+
+::: {.column width="50%"}
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 10
+
+h1 = data.frame(den = rnorm(n = 1e6, mean = .1, sd = .05))
+h1|>
+ggplot(aes(x = den)) +
+  # density with conditional fill along x
+  geom_density(
+    aes(fill = after_stat(ifelse(between(x, -.5, 0), "highlight", "base"))),
+    color = "black", linewidth = 1, alpha = 0.8
+  ) +
+  xlab("stroop effect")+
+  scale_fill_manual(values = c(base = "#2C7BB9", highlight = "lightblue"), guide = "none") +
+  scale_x_continuous(breaks = round(seq(-.2,.4, 0.1),2), limits = c(-.2, .4)) +
+  theme_classic(base_size = 20)+
+  geom_text(
+    aes(x = 0.3, y = 2,  
+        label = paste0("Pd = 0.975")),
+    size = 12,
+    color = "#2C7BB9"
+  )+
+  ylab("density")
+  
+
+```
+:::
+:::::
+
+
+## Probability of Direction and Multiplicity
+
+$fwer = \text{Pr(at least one } P_d \geq 0.975)$\
+
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 14
+#| fig-asp: .4
+sim_res |> 
+  unnest(fwer) |> 
+  subset(eff == 0)|>
+  group_by(name, n,s,k) |> 
+  subset(name == "pd")|>
+  summarise(fwer = mean(sign)) |> 
+  mutate(
+    n = factor(n, levels = unique(n), labels = paste0("n = ", unique(n))),
+    prior_sd = factor(s, levels = unique(s), labels = paste0("sd = ", unique(s)))
+  )|>
+  ggplot(aes(x = k, y = fwer, color = prior_sd)) +
+  geom_line(lwd = 1.2,show.legend = T) +
+  geom_point(show.legend = F, size = 2, color = "black", alpha = .5) +
+  facet_grid(~n) +
+  geom_hline(yintercept = 0.05)+
+  scale_y_continuous(breaks = seq(0,1,.1))+
+  scale_x_continuous(breaks = c(1,2,5,10,20))+
+  xlab("m")+
+  theme_bw(base_size = 18)
+```
+
+
+## The joint posterior approach
+
+You want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve. Improvement in at least one domain is more probable than improvement in both.
+
+::::: {.columns .center}
+::: {.column width="50%"}
+
+<br/>
+
+>It is important, of course, not to make the elementary mistake of supposing that joint it probability statements can generally be made using the marginal distributions [@box1992 p. 122].
+
+:::
+::: {.column width="50%"}
+![](img/boxtia.png){alt="From @box1992" fig-align="center" width="500"}
+:::
+:::::
+
+## Example of hypothesis testing
+
+::::: columns
+::: {.column width="40%"}
+<br/>
+
+$\theta_1$ = verbal abilities\
+$\theta_2$ = visuospatial abilities
+
+<br/>
+
+**vertical line:** $\theta_1 = 0$\
+**horizontal line:** $\theta_2 = 0$\
+**diagonal:** $\theta_1 = \theta_2$\
+**intersection**: $\theta_1 = \theta_2 = 0$\
+:::
+
+::: {.column width="60%"}
+![](img/hp-space.png){fig-align="center" width="700"}
+:::
+:::::
+
+
+## Questions for You
+<br/>
+
+> Who here has used Bayesian methods? What was your experience?
+
+<br/>
+
+> What are the main barriers to correct statistical understanding and practice in your field? What would help us improve?
+
+<br/>
+
+> We often test multiple hypotheses in a single study. What drives this practice in your research? Do the benefits outweigh the costs?
+
+
+::: notes
+
+Selective reporting becomes tempting when you've run 20 tests but only 3 are significant
+Reproducibility crisis stems partly from ignoring multiplicity
+
+:::
+
+## $H_0 = 0$, $H_1 = Cauchy(scale = \sqrt{2}/2)$ {visibility="uncounted"}
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 10
+
+h1 = data.frame(den = rcauchy(n = 1e6, scale = sqrt(2)/2))
+h1|>
+ggplot(aes(x = den)) +
+  # density with conditional fill along x
+  geom_density(
+    aes(fill = after_stat(ifelse(between(x, -0.7, 0.7), "highlight", "base"))),
+    color = "black", linewidth = 1, alpha = 0.6
+  ) +
+  scale_fill_manual(values = c(base = "lightblue", highlight = "blue4"), guide = "none") +
+  scale_x_continuous(breaks = seq(-2, 2, 0.5), limits = c(-3, 3)) +
+  theme_bw(base_size = 20)+
+  xlab("Standardized Difference")+
+  ylab("density")+
+  geom_segment(aes(x = 0, xend = 0, y = 0, yend = 1), 
+             color = "red", lwd = 2)
+
+
+```
+
+## Between-models priors [@Jeff] 
+<br/>
+
+-   $m$ alternative hypotheses.
+
+-   Let $\mathcal{H}_A$ be the event that **at least one alternative hypothesis is true**.
+
+-   We assign **equal prior probability** to the event $\mathcal{H}_A$ and to its complement $\mathcal{H}_0$ (the global null, all false):
+
+$$
+Pr(\mathcal{H}_0) = Pr(\mathcal{H}_A) = \frac{1}{2}
+$$
+
+##  
+
+::::: columns
+::: {.column width="55%"}
+<br/> 
+The probability that **all alternative are false**
+
+<br/> 
+Since this equals the **global null** probability
+
+<br/> 
+The **prior of each alternative** hypothesis
+
+<br/> 
+The **prior for each null** hypothesis
+:::
+
+::: {.column width="45%"}
+<br/> $(1 - Pr(h_{1_i}))^m$
+
+<br/> $(1 - Pr(h_{1_i}))^m = 0.5$
+
+<br/> $Pr(h_{1_i}) = 1 - 0.5^{1/m}$
+
+<br/> $Pr(h_{0_i}) = 0.5^{1/m}$
+:::
+:::::
+
+<br/> This ensures that the probability of **all nulls being true simultaneously** and the probability of **at least one alternative being true** both equal 0.5.
+
+## Westfall's approach for dependent tests 
+
+For multiple comparisons among $m$ means, @west developed a solution for the $\binom{m}{2}$ possible pairwise comparisons involving $\mu_1, \mu_2, \ldots, \mu_m$, where $\theta_{ij}$ represents the difference $\mu_i - \mu_j$. Their hierarchical prior structure specifies:
+
+$$
+\mu_i 
+\begin{cases}
+\equiv \mu & \text{with probability } \lambda, \\
+\sim G & \text{with probability } 1-\lambda, 
+\end{cases}
+$$
+
+with $G(\cdot)$ being a continuous distribution. 
+
+##
+
+Under this specification, the probability that any two specific means equal $\mu$ is $\lambda^2$, and $\text{Pr}(\text{all }\theta_{ij} = 0) = \lambda^m$. This dependency structure yields a modified adjustment $k = 1-0.5^{2/m}$, replacing the independence-based correction (resembles previously described mixture models).
+
+**Note:** Implemented in JASP for post-hoc testing (for details, see [de Jong, 2019](https://doi.org/10.31234/osf.io/s56mk)).
+
+
+## Bayesian estimation prior precision
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+#| fig-align: "center"
+#| fig-width: 14
+#| fig-asp: .5
+
+# Data and model settings (edit these)
+xbar  <- 0.25     # sample mean
+sigma <- 1.0     # known sd of data
+n     <- 30      # sample size
+nu    <- 0       # prior mean
+taus  <- c(0.15, 0.2,0.5, 1.5)  # prior sd values (narrow → wide)
+
+# Posterior parameters for normal-normal with known sigma
+post_params <- function(nu, tau, xbar, sigma, n){
+  prec_lik <- n / (sigma^2)
+  prec_pr  <- 1 / (tau^2)
+  prec_po  <- prec_lik + prec_pr
+  mu_p     <- (prec_lik * xbar + prec_pr * nu) / prec_po
+  sd_p     <- sqrt(1 / prec_po)
+  list(mu_p = mu_p, sd_p = sd_p)
+}
+
+# Build curves for prior and posterior across tau
+xgrid <- seq(-4, 4, length.out = 1000)
+curves <- map_dfr(taus, function(tau){
+  pp <- post_params(nu, tau, xbar, sigma, n)
+  tibble(
+    x = xgrid,
+    density = dnorm(x, mean = nu, sd = tau),
+    dist = "Prior",
+    tau = tau,
+    mu_post = pp$mu_p
+  ) |>
+    bind_rows(tibble(
+      x = xgrid,
+      density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
+      dist = "Posterior",
+      tau = tau,
+      mu_post = pp$mu_p
+    ))
+})
+
+# Nice labels for facets
+curves <- curves |>
+  mutate(tau_lab = paste0("Prior sd = ", tau))
+
+# Data for posterior mean lines (one per facet)
+post_means <- curves |>
+  filter(dist == "Posterior") |>
+  distinct(tau_lab, mu_post)
+
+n30 = ggplot(curves, aes(x, density, color = dist, linetype = dist)) +
+  geom_line(linewidth = 1.2) +
+  #geom_vline(data = post_means, aes(xintercept = mu_post),
+   #          color = "red",  linewidth = 0.8) +
+  geom_text(
+    data = post_means,
+    inherit.aes = FALSE,   # <-- important
+    aes(x = mu_post, y = 0,  # or choose a suitable y, e.g. max density
+        label = sprintf("μ = %.2f", mu_post)),
+    vjust = -2,
+    hjust = -.5,
+    size = 5,
+    color = "#2C7BB9"
+  ) +
+  scale_color_manual(values = c("Prior" = "grey40", "Posterior" = "#2C7BB6")) +
+  scale_linetype_manual(values = c("Prior" = "22", "Posterior" = "solid")) +
+  facet_wrap(~ tau_lab, nrow = 1) +
+  labs(
+    title = sprintf("Data: effect = %.2f, n = %d",
+                       xbar, n),
+    x = " ",
+    y = "Density",
+    color = NULL, linetype = NULL
+  ) +
+  theme(legend.position = "top")+
+  scale_x_continuous(limits = c(-1.2,1.2))+
+  theme_classic(base_size = 20)
+
+n     <- 200      # sample size
+# Build curves for prior and posterior across tau
+xgrid <- seq(-4, 4, length.out = 1000)
+curves <- map_dfr(taus, function(tau){
+  pp <- post_params(nu, tau, xbar, sigma, n)
+  tibble(
+    x = xgrid,
+    density = dnorm(x, mean = nu, sd = tau),
+    dist = "Prior",
+    tau = tau,
+    mu_post = pp$mu_p
+  ) |>
+    bind_rows(tibble(
+      x = xgrid,
+      density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
+      dist = "Posterior",
+      tau = tau,
+      mu_post = pp$mu_p
+    ))
+})
+
+# Nice labels for facets
+curves <- curves |>
+  mutate(tau_lab = paste0("Prior sd = ", tau))
+
+# Data for posterior mean lines (one per facet)
+post_means <- curves |>
+  filter(dist == "Posterior") |>
+  distinct(tau_lab, mu_post)
+
+n60 = ggplot(curves, aes(x, density, color = dist, linetype = dist)) +
+  geom_line(linewidth = 1.2) +
+  #geom_vline(data = post_means, aes(xintercept = mu_post),
+   #          color = "red",  linewidth = 0.8) +
+  geom_text(
+    data = post_means,
+    inherit.aes = FALSE,   # <-- important
+    aes(x = mu_post, y = 0,  # or choose a suitable y, e.g. max density
+        label = sprintf("μ = %.2f", mu_post)),
+    vjust = -2,
+     hjust = -.5,
+    size = 5,
+    color = "#2C7BB9"
+  ) +
+  scale_color_manual(values = c("Prior" = "grey40", "Posterior" = "#2C7BB6")) +
+  scale_linetype_manual(values = c("Prior" = "22", "Posterior" = "solid")) +
+  facet_wrap(~ tau_lab, nrow = 1) +
+  labs(
+    title = sprintf("Data: effect = %.2f, n = %d",
+                       xbar, n),
+    x = "Parameter value",
+    y = "Density",
+    color = NULL, linetype = NULL
+  ) +
+  theme(legend.position = "top")+
+  scale_x_continuous(limits = c(-1.2,1.2))+
+  theme_classic(base_size = 20)
+n30/n60
+
+```

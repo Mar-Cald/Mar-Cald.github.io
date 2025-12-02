@@ -1,0 +1,33 @@
+---
+title: "Margherita Calderan"
+image: img/tulip.jpg
+about:
+  id: hero-heading
+  template: jolla
+  image-shape: round
+  image-width: 12em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/Mar-Cald
+    - icon: gitlab
+      text: Pavlovia GitLab
+      href: https://gitlab.pavlovia.org/mar.cald
+    - icon: file-text
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Margherita-Calderan-2
+    - icon: flower2
+      text: OSF
+      href: https://osf.io/profile/
+markdown:
+  extensions: [link_attributes]
+engine: knitr
+---
+
+::: {#hero-heading}
+I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy. 
+
+My research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the [Psicostat](https://psicostat.dpss.psy.unipd.it/){target="_blank"} research group.
+:::
+
+<div class="last-updated">Last updated: `r format(Sys.Date(), "%Y-%m-%d")`</div>

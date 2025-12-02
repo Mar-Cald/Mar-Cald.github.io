@@ -1,0 +1,17 @@
+ggplot2
+dplyr
+MASS
+tidyr
+future
+furrr
+tibble
+purrr
+flip
+coda
+Matrix
+BayesFactor
+rjags
+R2jags
+miscF
+patchwork
+ellipse
