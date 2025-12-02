@@ -165,14 +165,14 @@
     "href": "materials/neuro-cog.html#frequentist-hypothesis-testing",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Frequentist hypothesis testing",
-    "text": "Frequentist hypothesis testing\n\nYou compare the scores of the control and experimental groups and obtain a p-value of 0.05.\n\n\n\n\n\nIf, hypothetically, the experiment were repeated a great number of times when the null hypothesis is true, we would falsely reject the null hypothesis about 5% of the time."
+    "text": "Frequentist hypothesis testing\n\nYou compare the scores of the control and experimental groups and obtain a p-value of 0.05.\n\n\n\n\n\nIf, hypothetically, we were to repeat the experiment many times under a true null hypothesis, we would falsely reject it about 5% of the time."
   },
   {
     "objectID": "materials/neuro-cog.html#bayesian-hypothesis-testing",
     "href": "materials/neuro-cog.html#bayesian-hypothesis-testing",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Bayesian hypothesis testing",
-    "text": "Bayesian hypothesis testing\n\nAfter comparing the scores of the control and experimental groups, you find that the posterior probability that the groups differ is 95%.\n\n\n\n\n\nBased on the data and your prior, there is a 95% probability that groups differ. If you act as though the groups truly differ, there is a 5% chance that this decision is wrong."
+    "text": "Bayesian hypothesis testing\n\nAfter comparing the scores of the control and experimental groups, you find that the posterior probability that the groups differ is 95%.\n\n\n\n\n\nBased on the data and your prior, there is a 95% probability that groups differ.\nIf you act as though the groups truly differ, there is a 5% chance that this decision is wrong."
   },
   {
     "objectID": "materials/neuro-cog.html#bayesian-methods-in-psychology",
@@ -200,7 +200,7 @@
     "href": "materials/neuro-cog.html#multiplicity-in-bayes",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Multiplicity in Bayes",
-    "text": "Multiplicity in Bayes\n\nBayes Factor (prior odds)\nPosterior Probabilities (joint credibility)"
+    "text": "Multiplicity in Bayes\n\n\nBayes Factor (prior odds)\n\n\n\nPosterior Probabilities (joint credibility)"
   },
   {
     "objectID": "materials/neuro-cog.html#bayes-factor",
@@ -224,11 +224,18 @@
     "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
   },
   {
+    "objectID": "materials/neuro-cog.html#bayes-factor-and-multiple-testing-1",
+    "href": "materials/neuro-cog.html#bayes-factor-and-multiple-testing-1",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayes Factor and multiple testing",
+    "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
+  },
+  {
     "objectID": "materials/neuro-cog.html#posterior-odds-and-multiple-testing",
     "href": "materials/neuro-cog.html#posterior-odds-and-multiple-testing",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Posterior odds and multiple testing",
-    "text": "Posterior odds and multiple testing\nResearchers often interpret BF as posterior odds (Hoijtink et al., 2016; Tendeiro et al., 2024; Tendeiro & Kiers, 2019).\n\n\n\\text{Posterior odds,  } \\frac{Pr(\\mathcal{H_1} | data)}{Pr(\\mathcal{H_0} | data)} = \\frac{Pr(\\mathcal{H_1})}{Pr(\\mathcal{H_0})} \\times \\frac{p(data | \\mathcal{H_1})}{p(data | \\mathcal{H_0})}\n \n\nMultiplicity adjustment can be incorporated by modifying the prior odds \\frac{Pr(\\mathcal{H}_1)}{Pr(\\mathcal{H}_0)} based on the number of hypotheses tested, which produces posterior odds that control for multiple testing."
+    "text": "Posterior odds and multiple testing\nResearchers often interpret BF as posterior odds (Hoijtink et al., 2016; Tendeiro et al., 2024).\n\n\\underbrace{\\frac{Pr(\\mathcal{H_1} | data)}{Pr(\\mathcal{H_0} | data)}}_{\\text{Posterior odds}} = \\underbrace{\\frac{Pr(\\mathcal{H_1})}{Pr(\\mathcal{H_0})}}_{\\text{Prior odds}} \\times \\underbrace{\\frac{p(data | \\mathcal{H_1})}{p(data | \\mathcal{H_0})}}_{\\text{BF}_{10}}\n \n\nMultiplicity adjustment can be incorporated by modifying the prior odds \\frac{Pr(\\mathcal{H}_1)}{Pr(\\mathcal{H}_0)} based on the number of hypotheses tested (Jeffreys, 1938; Westfall et al., 1997)."
   },
   {
     "objectID": "materials/neuro-cog.html#bayesian-estimation",
@@ -263,7 +270,7 @@
     "href": "materials/neuro-cog.html#the-joint-posterior-approach",
     "title": "Bayesian inference and multiple comparisons",
     "section": "The joint posterior approach",
-    "text": "The joint posterior approach\nYou want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve. Improvement in at least one domain is more probable than improvement in both.\n\n\n\n\nIt is important, of course, not to make the elementary mistake of supposing that joint it probability statements can generally be made using the marginal distributions (Box & Tiao, 1992, p. 122)."
+    "text": "The joint posterior approach\nYou want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve.\n\n\nP(ver &gt; 0 \\text{ AND } vis &gt; 0) \\leq P(ver &gt; 0 \\text{ OR } vis &gt; 0)\n\n\nImprovement in at least one domain is more probable than improvement in both.\n\n(Box & Tiao, 1992; Gelman & Tuerlinckx, 2000; Goeman et al., n.d.; Joshi et al., 2023; Pruzek, 2016; Schnell et al., 2020)."
   },
   {
     "objectID": "materials/neuro-cog.html#example-of-hypothesis-testing",
@@ -347,6 +354,6 @@
     "href": "open-materials.html",
     "title": "Open materials",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 2, 2025\n\n\n12/2/25, 6:38:42 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 2, 2025\n\n\n12/2/25, 7:29:13 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
   }
 ]
