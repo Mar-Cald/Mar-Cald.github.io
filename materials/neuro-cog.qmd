@@ -786,6 +786,8 @@ Once you consider the joint distribution, you are free to test as many hypothese
 
 <br/>
 
+> Have you ever come across the claim that Bayesian models are immune to multiplicity problems?
+
 <br/>
 
 > We often test multiple hypotheses in a single study. What drives this
