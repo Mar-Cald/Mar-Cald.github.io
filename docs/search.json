@@ -224,11 +224,11 @@
     "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
   },
   {
-    "objectID": "materials/neuro-cog.html#bayes-factor-and-multiple-testing-1",
-    "href": "materials/neuro-cog.html#bayes-factor-and-multiple-testing-1",
+    "objectID": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing",
+    "href": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing",
     "title": "Bayesian inference and multiple comparisons",
-    "section": "Bayes Factor and multiple testing",
-    "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
+    "section": "Bayes Factor (“JZS” t test) and multiple testing",
+    "text": "Bayes Factor (“JZS” t test) and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
   },
   {
     "objectID": "materials/neuro-cog.html#posterior-odds-and-multiple-testing",
@@ -284,7 +284,7 @@
     "href": "materials/neuro-cog.html#questions-for-you",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Questions for You",
-    "text": "Questions for You\n\n\nWho here has used Bayesian methods? What was your experience?\n\n\n\nWhat are the main barriers to correct statistical understanding and practice in your field? What would help us improve?\n\n\n\nWe often test multiple hypotheses in a single study. What drives this practice in your research? Do the benefits outweigh the costs?\n\n\nSelective reporting becomes tempting when you’ve run 20 tests but only 3 are significant Reproducibility crisis stems partly from ignoring multiplicity"
+    "text": "Questions for You\n\n\nWho here has used Bayesian methods? What was your experience?\n\n\n\n\nWe often test multiple hypotheses in a single study. What drives this practice in your research? Do the benefits outweigh the costs?\n\n\nSelective reporting becomes tempting when you’ve run 20 tests but only 3 are significant Reproducibility crisis stems partly from ignoring multiplicity"
   },
   {
     "objectID": "materials/neuro-cog.html#h_0-0-h_1-cauchyscale-sqrt22",
@@ -354,6 +354,6 @@
     "href": "open-materials.html",
     "title": "Open materials",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 3, 2025\n\n\n12/3/25, 11:41:57 AM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 3, 2025\n\n\n12/3/25, 12:54:38 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
   }
 ]

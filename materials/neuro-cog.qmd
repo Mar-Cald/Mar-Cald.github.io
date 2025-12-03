@@ -370,7 +370,7 @@ sim_res |>
 
 **N.B.** Results change depending on priors and threshold.
 
-## Bayes Factor and multiple testing
+## Bayes Factor (“JZS” t test) and multiple testing
 
 $\text{Pr(at least one } BF \geq 3)$
 
@@ -785,9 +785,6 @@ Once you consider the joint distribution, you are free to test as many hypothese
 > Who here has used Bayesian methods? What was your experience?
 
 <br/>
-
-> What are the main barriers to correct statistical understanding and
-> practice in your field? What would help us improve?
 
 <br/>
 
