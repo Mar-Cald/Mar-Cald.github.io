@@ -419,9 +419,7 @@ $$ <br/>
 
 ## Bayesian estimation
 
-The prior (grey) represents our initial guess about plausible values;
-after observing data, it updates to the posterior (blue), which narrows
-around the most likely value.
+Suppose we want to estimate the Stroop effect (0.060–0.120s). The prior (grey) represents our initial guess about plausible values; after observing data, it updates to the posterior (blue), which narrows around the most likely value.
 
 ```{r, echo=FALSE, message=FALSE,warning=FALSE}
 #| fig-align: "center"
@@ -429,11 +427,11 @@ around the most likely value.
 #| fig-asp: .5
 
 # Data and model settings (edit these)
-xbar  <- 0.25     # sample mean
-sigma <- 1.0     # known sd of data
-n     <- 50      # sample size
+xbar  <- 0.1     # sample mean
+sigma <- 0.4     # known sd of data
+n     <- 70      # sample size
 nu    <- 0       # prior mean
-taus  <- c(0.25)  # prior sd values (narrow → wide)
+taus  <- 0.15  # prior sd values (narrow → wide)
 
 # Posterior parameters for normal-normal with known sigma
 post_params <- function(nu, tau, xbar, sigma, n){
@@ -454,20 +452,32 @@ curves <- map_dfr(taus, function(tau){
     density = dnorm(x, mean = nu, sd = tau),
     dist = "Prior",
     tau = tau,
-    mu_post = pp$mu_p
+    mu_post = pp$mu_p,
+    sd_post = pp$sd_p
   ) |>
     bind_rows(tibble(
       x = xgrid,
       density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
       dist = "Posterior",
       tau = tau,
-      mu_post = pp$mu_p
+      mu_post = pp$mu_p,
+      sd_post = pp$sd_p
     ))
 })
 
-# Nice labels for facets
 curves <- curves |>
   mutate(tau_lab = paste0("Prior sd = ", tau))
+
+# One row per posterior: mean, sd, and 95% CI
+post_summ <- curves |>
+  filter(dist == "Posterior") |>
+  distinct(tau_lab, mu_post, sd_post) |>
+  mutate(
+    lower = qnorm(0.025, mean = mu_post, sd = sd_post),
+    upper = qnorm(0.975, mean = mu_post, sd = sd_post),
+    ci_label = sprintf("95%% CI [%.2f, %.2f]", lower, upper)
+  )
+
 
 # Data for posterior mean lines (one per facet)
 post_means <- curves |>
@@ -476,36 +486,59 @@ post_means <- curves |>
 
 ggplot(curves, aes(x, density, color = dist, linetype = dist)) +
   geom_line(linewidth = 2.5) +
-  #geom_vline(data = post_means, aes(xintercept = mu_post),
-   #          color = "red",  linewidth = 2.5) +
-  geom_text(
-    data = post_means,
-    inherit.aes = FALSE,   # <-- important
-    aes(x = mu_post, y = 0,  # or choose a suitable y, e.g. max density
-        label = sprintf("μ = %.2f", mu_post)),
-    vjust = -2,
-    hjust = -.8,
-    size = 12,
-    color = "#2C7BB9"
+
+  # 95% credible interval segment
+  geom_segment(
+    data = post_summ,
+    inherit.aes = FALSE,
+    aes(x = lower, xend = upper, y = 0, yend = 0),
+    color = "blue3",
+    linewidth = 2
   ) +
+
+  # Text for CI
+  geom_text(
+    data = post_summ,
+    inherit.aes = FALSE,
+    aes(x = (lower + upper) / 2, y = 0,
+        label = ci_label),
+    vjust = -1,          # move below the axis
+    hjust = 0.5,
+    size = 7,
+    color = "blue3"
+  ) +
+
+  # Text for posterior mean (as before)
+  geom_text(
+    data = post_summ,
+    inherit.aes = FALSE,
+    aes(x = mu_post, y = 0,
+        label = paste0("hat(beta) == ", sprintf("%.2f", mu_post))),
+    vjust = -1.2,
+    hjust = .5,
+    size = 10,
+    color = "blue3",
+    parse = TRUE
+  ) +
+
   scale_color_manual(values = c("Prior" = "grey40", "Posterior" = "#2C7BB6")) +
   scale_linetype_manual(values = c("Prior" = "22", "Posterior" = "solid")) +
   labs(
-    x = "Parameter value",
+    x = "stroop effect",
     y = "Density",
     color = NULL, linetype = NULL
   ) +
-  theme(legend.position = "top")+
-  scale_x_continuous(limits = c(-1.2,1.2), breaks = round(seq(-1.2,1.2, .2),2))+
+  theme(legend.position = "top") +
+  scale_x_continuous(limits = c(-.4, .4), breaks = round(seq(-.4, .4, .1), 2)) +
   theme_classic(base_size = 25)
+
+
 
 ```
 
-## Bayesian estimation concrete example
+## Bayesian estimation and skeptical priors
 
-Suppose we want to estimate the Stroop effect (0.060–0.120s). We can
-adopt priors centered at zero with varying standard deviations (τ = 0.1,
-0.25, 0.5) to reflect increasing skepticism.
+We can adopt priors centered at zero with varying standard deviations (0.1, 0.25, 0.5) to reflect increasing skepticism.
 
 ```{r, echo=FALSE, message=FALSE,warning=FALSE}
 #| fig-align: "center"
@@ -514,10 +547,10 @@ adopt priors centered at zero with varying standard deviations (τ = 0.1,
 
 # Data and model settings (edit these)
 xbar  <- 0.10     # sample mean
-sigma <- .8     # known sd of data
-n     <- 150      # sample size
+sigma <- .6     # known sd of data
+n     <- 130      # sample size
 nu    <- 0       # prior mean
-taus  <- c(0.1, .25, .5)  # prior sd values (narrow → wide)
+taus  <- c(0.05, .1, .5)  # prior sd values (narrow → wide)
 
 # Posterior parameters for normal-normal with known sigma
 post_params <- function(nu, tau, xbar, sigma, n){
@@ -538,14 +571,16 @@ curves <- map_dfr(taus, function(tau){
     density = dnorm(x, mean = nu, sd = tau),
     dist = "Prior",
     tau = tau,
-    mu_post = pp$mu_p
+    mu_post = pp$mu_p,
+    sd_post = pp$sd_p
   ) |>
     bind_rows(tibble(
       x = xgrid,
       density = dnorm(x, mean = pp$mu_p, sd = pp$sd_p),
       dist = "Posterior",
       tau = tau,
-      mu_post = pp$mu_p
+      mu_post = pp$mu_p,
+      sd_post = pp$sd_p
     ))
 })
 
@@ -557,10 +592,16 @@ curves_fill <- curves |>
   filter(dist == "Posterior") |>
   mutate(region = if_else(x >= 0, "main", "tail"))
 
-# Data for posterior mean lines (one per facet)
-post_means <- curves |>
+# Posterior summaries: mean, sd, 95% CI per facet
+post_summ <- curves |>
   filter(dist == "Posterior") |>
-  distinct(tau_lab, mu_post)
+  distinct(tau_lab, mu_post, sd_post) |>
+  mutate(
+    lower = qnorm(0.025, mean = mu_post, sd = sd_post),
+    upper = qnorm(0.975, mean = mu_post, sd = sd_post),
+    ci_label = sprintf("95%% CI [%.2f, %.2f]", lower, upper)
+  )
+
 
 ggplot(curves, aes(x, density)) +
   # shaded posterior
@@ -570,23 +611,31 @@ ggplot(curves, aes(x, density)) +
     alpha = 0.6,
     position = "identity"
   ) +
+  # 95% credible interval segment at y = 0
+  geom_segment(
+    data = post_summ,
+    inherit.aes = FALSE,
+    aes(x = lower, xend = upper, y = 0, yend = 0),
+    color = "blue3",
+    linewidth = 2
+  ) +
+  # label for posterior mean (as you had)
   geom_text(
-data = post_means,
-inherit.aes = FALSE, # <-- important
-aes(x = mu_post, y = 0, # or choose a suitable y, e.g. max density
-label = paste0("hat(beta) == ", sprintf("%.2f", mu_post))),
-vjust = -5,
-hjust = -.8,
-size = 6,
-color = "#2C7BB9",
-parse = TRUE
-)+
-  # prior/posterior lines as before
+    data = post_summ,
+    inherit.aes = FALSE,
+    aes(x = mu_post, y = 0,
+        label = paste0("hat(beta) == ", sprintf("%.2f", mu_post))),
+    vjust = -5,
+    hjust = -.8,
+    size = 6,
+    color = "blue3",
+    parse = TRUE
+  ) +
+  # prior/posterior lines
   geom_line(aes(color = dist, linetype = dist), linewidth = 1.2) +
-  #geom_vline(xintercept = 0, color = "black", linewidth = 0.8) +
   scale_fill_manual(
-    values = c(main = "#2C7BB6",  # dark blue (Pd side)
-               tail = "#B3D7F4"), # light blue (small opposite tail)
+    values = c(main = "#2C7BB6",
+               tail = "#B3D7F4"),
     guide = "none"
   ) +
   scale_color_manual(values = c("Prior" = "black", "Posterior" = "#2C7BB6")) +
@@ -598,6 +647,8 @@ parse = TRUE
   theme(legend.position = "top")
 
 ```
+
+When we express stronger prior skepticism about the Stroop effect (tighter prior around zero), the posterior distribution shifts closer to zero.
 
 ## Probability of Direction
 
@@ -621,22 +672,33 @@ $$
 #| fig-width: 10
 
 h1 = data.frame(den = rnorm(n = 1e6, mean = .1, sd = .05))
+# 95% central credible interval from the posterior sample
+ci95 <- quantile(h1$den, probs = c(0.025, 0.975))
+ci95 <- data.frame(lw = ci95[1],up = ci95[2])
+
 h1|>
 ggplot(aes(x = den)) +
   # density with conditional fill along x
   geom_density(
     aes(fill = after_stat(ifelse(between(x, -.5, 0), "highlight", "base"))),
-    color = "black", linewidth = 1, alpha = 0.8
+    color = "black", linewidth = 1,     alpha = 0.6,
+  ) +
+  geom_segment(
+    data = ci95,
+    inherit.aes = FALSE,
+    aes(x = lw, xend = up, y = 0, yend = 0),
+    color = "blue3",
+    linewidth = 4
   ) +
   xlab("stroop effect")+
-  scale_fill_manual(values = c(base = "#2C7BB9", highlight = "lightblue"), guide = "none") +
+  scale_fill_manual(values = c(base = "#2C7BB6", highlight = "lightblue"), guide = "none") +
   scale_x_continuous(breaks = round(seq(-.2,.4, 0.1),2), limits = c(-.2, .4)) +
   theme_classic(base_size = 20)+
   geom_text(
     aes(x = 0.3, y = 2,  
         label = paste0("Pd = 0.975")),
     size = 12,
-    color = "#2C7BB9"
+    color = "blue3"
   )+
   ylab("density")
   
@@ -644,6 +706,8 @@ ggplot(aes(x = den)) +
 ```
 :::
 :::::
+
+**Note.** When the $Pd \geq .975$, the 95% credible interval excludes zero.
 
 ## Probability of Direction and Multiplicity
 
@@ -681,7 +745,7 @@ visuospatial abilities, identify which domains improve.
 
 <br/>
 
-> $P(ver > 0 \text{ AND } vis > 0) \leq P(ver > 0 \text{ OR } vis > 0)$
+> $P(\text{verb} > 0) \text{ OR } P(\text{visu} > 0) \geq P(\text{verb} > 0 \text{ AND visu} > 0)$
 
 <br/>
 
@@ -692,11 +756,10 @@ both.
 
 [@schnell2020; @joshi2023; @box1992; @pruzek2016; @Gelman2000; @BB].
 
-## Example of hypothesis testing
+## Example of hypothesis space
 
 ::::: columns
 ::: {.column width="40%"}
-<br/>
 
 $\theta_1$ = verbal abilities\
 $\theta_2$ = visuospatial abilities
@@ -710,9 +773,10 @@ $\theta_2$ = visuospatial abilities
 :::
 
 ::: {.column width="60%"}
-![](img/hp-space.png){fig-align="center" width="700"}
+![](img/hp-space.png){fig-align="center" width="600"}
 :::
 :::::
+Once you consider the joint distribution, you are free to test as many hypotheses as you like at the same time.
 
 ## Questions for You
 

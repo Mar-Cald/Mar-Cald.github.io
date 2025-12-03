@@ -4,7 +4,7 @@
     "href": "cv.html",
     "title": "",
     "section": "",
-    "text": "Download the PDF version. \n\nLast update: 2025-12-02"
+    "text": "Download the PDF version. \n\nLast update: 2025-12-03"
   },
   {
     "objectID": "cv.html#current-position",
@@ -137,7 +137,7 @@
     "href": "index.html",
     "title": "Margherita Calderan",
     "section": "",
-    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     GitHub\n  \n  \n    \n     Pavlovia GitLab\n  \n  \n    \n     ResearchGate\n  \n  \n    \n     OSF\n  \n\n\n\n\nLast updated: 2025-12-02"
+    "text": "I am a postdoctoral researcher at the Department of General Psychology, University of Padova, Italy.\nMy research interests include computational models of cognition, Bayesian statistics, and metascience. I am a member of the Psicostat research group.\n \n  \n   \n  \n    \n     GitHub\n  \n  \n    \n     Pavlovia GitLab\n  \n  \n    \n     ResearchGate\n  \n  \n    \n     OSF\n  \n\n\n\n\nLast updated: 2025-12-03"
   },
   {
     "objectID": "contact.html",
@@ -242,21 +242,21 @@
     "href": "materials/neuro-cog.html#bayesian-estimation",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Bayesian estimation",
-    "text": "Bayesian estimation\nThe prior (grey) represents our initial guess about plausible values; after observing data, it updates to the posterior (blue), which narrows around the most likely value."
+    "text": "Bayesian estimation\nSuppose we want to estimate the Stroop effect (0.060–0.120s). The prior (grey) represents our initial guess about plausible values; after observing data, it updates to the posterior (blue), which narrows around the most likely value."
   },
   {
-    "objectID": "materials/neuro-cog.html#bayesian-estimation-concrete-example",
-    "href": "materials/neuro-cog.html#bayesian-estimation-concrete-example",
+    "objectID": "materials/neuro-cog.html#bayesian-estimation-and-skeptical-priors",
+    "href": "materials/neuro-cog.html#bayesian-estimation-and-skeptical-priors",
     "title": "Bayesian inference and multiple comparisons",
-    "section": "Bayesian estimation concrete example",
-    "text": "Bayesian estimation concrete example\nSuppose we want to estimate the Stroop effect (0.060–0.120s). We can adopt priors centered at zero with varying standard deviations (τ = 0.1, 0.25, 0.5) to reflect increasing skepticism."
+    "section": "Bayesian estimation and skeptical priors",
+    "text": "Bayesian estimation and skeptical priors\nWe can adopt priors centered at zero with varying standard deviations (0.1, 0.25, 0.5) to reflect increasing skepticism.\n\nWhen we express stronger prior skepticism about the Stroop effect (tighter prior around zero), the posterior distribution shifts closer to zero."
   },
   {
     "objectID": "materials/neuro-cog.html#probability-of-direction",
     "href": "materials/neuro-cog.html#probability-of-direction",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Probability of Direction",
-    "text": "Probability of Direction\n\np_d = \\max(Pr({\\hat{\\beta}} &lt; 0), Pr({\\hat{\\beta}} &gt; 0))\n\n\n\n\n\nMeasures the certainty of an effect’s direction (positive or negative).\nTypically ranges from 0.5 to 1.\n\\text{p-value} \\approx 2 \\times (1 - pd)"
+    "text": "Probability of Direction\n\np_d = \\max(Pr({\\hat{\\beta}} &lt; 0), Pr({\\hat{\\beta}} &gt; 0))\n\n\n\n\n\nMeasures the certainty of an effect’s direction (positive or negative).\nTypically ranges from 0.5 to 1.\n\\text{p-value} \\approx 2 \\times (1 - pd)\n\n\n\n\n\n\n\n\n\n\n\n\nNote. When the Pd \\geq .975, the 95% credible interval excludes zero."
   },
   {
     "objectID": "materials/neuro-cog.html#probability-of-direction-and-multiplicity",
@@ -270,14 +270,14 @@
     "href": "materials/neuro-cog.html#the-joint-posterior-approach",
     "title": "Bayesian inference and multiple comparisons",
     "section": "The joint posterior approach",
-    "text": "The joint posterior approach\nYou want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve.\n\n\nP(ver &gt; 0 \\text{ AND } vis &gt; 0) \\leq P(ver &gt; 0 \\text{ OR } vis &gt; 0)\n\n\nImprovement in at least one domain is more probable than improvement in both.\n\n(Box & Tiao, 1992; Gelman & Tuerlinckx, 2000; Goeman et al., n.d.; Joshi et al., 2023; Pruzek, 2016; Schnell et al., 2020)."
+    "text": "The joint posterior approach\nYou want to test whether an intervention improves verbal and/or visuospatial abilities, identify which domains improve.\n\n\nP(\\text{verb} &gt; 0) \\text{ OR } P(\\text{visu} &gt; 0) \\geq P(\\text{verb} &gt; 0 \\text{ AND visu} &gt; 0)\n\n\nImprovement in at least one domain is more probable than improvement in both.\n\n(Box & Tiao, 1992; Gelman & Tuerlinckx, 2000; Goeman et al., n.d.; Joshi et al., 2023; Pruzek, 2016; Schnell et al., 2020)."
   },
   {
-    "objectID": "materials/neuro-cog.html#example-of-hypothesis-testing",
-    "href": "materials/neuro-cog.html#example-of-hypothesis-testing",
+    "objectID": "materials/neuro-cog.html#example-of-hypothesis-space",
+    "href": "materials/neuro-cog.html#example-of-hypothesis-space",
     "title": "Bayesian inference and multiple comparisons",
-    "section": "Example of hypothesis testing",
-    "text": "Example of hypothesis testing\n\n\n\n\\theta_1 = verbal abilities\n\\theta_2 = visuospatial abilities\n\nvertical line: \\theta_1 = 0\nhorizontal line: \\theta_2 = 0\ndiagonal: \\theta_1 = \\theta_2\nintersection: \\theta_1 = \\theta_2 = 0"
+    "section": "Example of hypothesis space",
+    "text": "Example of hypothesis space\n\n\n\\theta_1 = verbal abilities\n\\theta_2 = visuospatial abilities\n\nvertical line: \\theta_1 = 0\nhorizontal line: \\theta_2 = 0\ndiagonal: \\theta_1 = \\theta_2\nintersection: \\theta_1 = \\theta_2 = 0\n\n\n\n\n\n\n\n\nOnce you consider the joint distribution, you are free to test as many hypotheses as you like at the same time."
   },
   {
     "objectID": "materials/neuro-cog.html#questions-for-you",
@@ -354,6 +354,6 @@
     "href": "open-materials.html",
     "title": "Open materials",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 2, 2025\n\n\n12/2/25, 7:29:13 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 3, 2025\n\n\n12/3/25, 11:41:57 AM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
   }
 ]
