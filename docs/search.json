@@ -179,7 +179,7 @@
     "href": "materials/neuro-cog.html#bayesian-methods-in-psychology",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Bayesian methods in psychology",
-    "text": "Bayesian methods in psychology\n\n(Heck et al., 2023; Jevremov & Pajić, 2024; Van De Schoot et al., 2017)"
+    "text": "Bayesian methods in psychology"
   },
   {
     "objectID": "materials/neuro-cog.html#multiplicity",
@@ -196,13 +196,6 @@
     "text": "Why multiplicity creates problems\nWhen testing m hypotheses independently, each at Type I error rate \\alpha, the overall probability of at least one false positive (family wise error rate) grows rapidly with m.\n\n\nSo we have been taught to either correct the p-values or adjust the alpha level to compensate for this issue."
   },
   {
-    "objectID": "materials/neuro-cog.html#multiplicity-in-bayes",
-    "href": "materials/neuro-cog.html#multiplicity-in-bayes",
-    "title": "Bayesian inference and multiple comparisons",
-    "section": "Multiplicity in Bayes",
-    "text": "Multiplicity in Bayes\n\n\nBayes Factor (prior odds)\n\n\n\nPosterior Probabilities (joint credibility)"
-  },
-  {
     "objectID": "materials/neuro-cog.html#bayes-factor",
     "href": "materials/neuro-cog.html#bayes-factor",
     "title": "Bayesian inference and multiple comparisons",
@@ -217,15 +210,15 @@
     "text": "Bayes Factor\n\nFrom Keysers et al. (2020)\nEveryone has their own prior…"
   },
   {
-    "objectID": "materials/neuro-cog.html#bayes-factor-and-multiple-testing",
-    "href": "materials/neuro-cog.html#bayes-factor-and-multiple-testing",
-    "title": "Bayesian inference and multiple comparisons",
-    "section": "Bayes Factor and multiple testing",
-    "text": "Bayes Factor and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
-  },
-  {
     "objectID": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing",
     "href": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing",
+    "title": "Bayesian inference and multiple comparisons",
+    "section": "Bayes Factor (“JZS” t test) and multiple testing",
+    "text": "Bayes Factor (“JZS” t test) and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
+  },
+  {
+    "objectID": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing-1",
+    "href": "materials/neuro-cog.html#bayes-factor-jzs-t-test-and-multiple-testing-1",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Bayes Factor (“JZS” t test) and multiple testing",
     "text": "Bayes Factor (“JZS” t test) and multiple testing\n\\text{Pr(at least one } BF \\geq 3)\n\nN.B. Results change depending on priors and threshold."
@@ -326,7 +319,7 @@
     "href": "materials/neuro-cog.html#bayesian-estimation-prior-precision",
     "title": "Bayesian inference and multiple comparisons",
     "section": "Bayesian estimation prior precision",
-    "text": "Bayesian estimation prior precision"
+    "text": "Bayesian estimation prior precision\n\n\n\n\n\n\n\n\n\n\n\n\n\nCognitive Neuroscience Seminars"
   },
   {
     "objectID": "materials/rt.html",
@@ -354,6 +347,6 @@
     "href": "open-materials.html",
     "title": "Open materials",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nDec 3, 2025\n\n\n12/3/25, 1:00:28 PM\n\n\n \n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\nCategories\n\n\n\n\n\n\nModeling reaction times\n\n\nSep 23, 2025\n\n\n11/2/25, 6:57:34 PM\n\n\nmodeling\n\n\n\n\nReproducible Science\n\n\nSep 23, 2025\n\n\n11/2/25, 6:51:59 PM\n\n\nreproducibility, teaching\n\n\n\n\nPredictive accumulation models\n\n\nSep 23, 2025\n\n\n11/2/25, 6:58:51 PM\n\n\nmodeling\n\n\n\n\nBayesian inference and multiple comparisons\n\n\nApr 12, 2025\n\n\n12/3/25, 1:16:23 PM\n\n\n \n\n\n\n\n\nNo matching items"
   }
 ]

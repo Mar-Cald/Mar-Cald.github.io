@@ -2,7 +2,7 @@
 title: "Bayesian inference and multiple comparisons"
 subtitle: "From idealization of methods to conscious practice"
 author: "Margherita Calderan"
-date: today
+date: 04/12/2025
 format:
   revealjs:
     width: 1200
@@ -15,6 +15,7 @@ format:
     html-math-method: katex
     logo: img/psicostatLogo.png
     logo-width: 200px
+    footer: "**C**ognitive **N**euroscience **S**eminars"
 from: markdown+emoji  
 css:  style/styles.css
 bibliography: "biblio.bib"
@@ -243,7 +244,6 @@ ggplot(df_ok, aes(x = year, y = ratio))+
   theme_bw(base_size = 22)
 ```
 
-[@heck2023review; @van2017systematic; @jevremov2024bayesian]
 
 ## Multiplicity
 
@@ -295,15 +295,8 @@ So we have been taught to either correct the p-values or adjust the
 alpha level to compensate for this issue.
 :::
 
-## Multiplicity in Bayes
+# Multiplicity in Bayes
 
-<br/>
-
--   Bayes Factor (prior odds)
-
-<br/>
-
--   Posterior Probabilities (joint credibility)
 
 ## Bayes Factor
 
@@ -336,7 +329,7 @@ your relative support for these two hypotheses.
 Everyone has their own prior...
 :::
 
-## Bayes Factor and multiple testing
+## Bayes Factor (“JZS” t test) and multiple testing
 
 $\text{Pr(at least one } BF \geq 3)$
 

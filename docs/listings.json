@@ -2,10 +2,10 @@
   {
     "listing": "/open-materials.html",
     "items": [
-      "/materials/neuro-cog.html",
       "/materials/rt.html",
       "/materials/repro.html",
-      "/materials/pam.html"
+      "/materials/pam.html",
+      "/materials/neuro-cog.html"
     ]
   }
 ]

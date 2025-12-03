@@ -1,5 +1,10 @@
 /* ---------- Slide Styling ---------- */
 
+/* Or adjust just bottom padding */
+.reveal .slides section {
+  padding-bottom: 20px !important;
+}
+
 .title-slide .title-container {
   display: flex;
   flex-direction: column;
@@ -111,7 +116,7 @@ table {
 /* Center slide number at bottom */
 .reveal .slide-number {
   position: absolute !important;
-  bottom: 20px !important;
+  bottom: 35px !important;
   top: auto !important;
   left: 50% !important;
   right: auto !important;
