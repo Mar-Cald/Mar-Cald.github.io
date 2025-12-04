@@ -307,8 +307,7 @@ alpha level to compensate for this issue.
 
 . . .
 
-2.  It measures the probability that the alternative hypothesis is true
-    given the data.
+2.  It quantifies the posterior probability that the null hypothesis is true given the data, as well as the posterior probability that the alternative hypothesis is true given the data.
 
 . . .
 
