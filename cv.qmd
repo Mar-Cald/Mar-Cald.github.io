@@ -316,6 +316,8 @@ tibble::tribble(
 
 ## Invited talks
 
+-  **Bayesian inference and multiple comparisons: From idealization of methods to conscious practice**. **C**ognitive **N**euroscience **S**eminars, Department of General Psychology,  University of Padova, Italy. 4th December 2025.
+
 -  **From Cognitive Psychology to Bayesian Multiple Testing**. Medical Statistics Meeting, Department of Biomedical Data Sciences, Leiden University Medical Center, Leiden, The Netherlands. 23rd October 2025.
 
 -  **Bayesian Multiple Testing**. STAT-Talk Series, Methodology and Statistics Department, Institute of Psychology, Leiden University, Leiden, The Netherlands. 18th September 2025.
@@ -338,8 +340,9 @@ tibble::tribble(
 
 ## Peer Reviews
 
-Ad-hoc reviewer (2 reviewed papers) for:
+Ad-hoc reviewer (3 reviewed papers) for:
 
+- Italian Journal of Applied Statistics (1)
 - Frontiers in Psychology - Theoretical and Philosophical Psychology (1)
 - Frontiers in Psychology - Cognition (1)
 
@@ -388,6 +391,8 @@ Ad-hoc reviewer (2 reviewed papers) for:
 
 ### Workshops
 
+-  **Bayesian Approaches To Multiplicity**. Psicostat HandZone on Bayesian Approaches To Multiplicity, Univeristy of Padova, Padova (Italy). 27 December 2025 (1.5 hr.). <https://psicostat.dpss.psy.unipd.it/pages/handzone.html>
+
 -  **A Practical Introduction to Evidence Accumulation Models in Visual Perception Research**. European Conference on Visual Perception,
     Mainz (Germany). 24 August 2025 (2.30 hr.). Material:
     <https://mar-cald.github.io/eam-workshop/eam-home.html>.
@@ -398,7 +403,8 @@ Ad-hoc reviewer (2 reviewed papers) for:
 
 -  **Tempi di risposta**. Workshop on reaction time distributions,
     Univeristy of Padova, Padova (Italy). 10 June 2025 (1 hr.).
-    Material: <https://mar-cald.github.io/tempi/>.
+    Material: <https://mar-cald.github.io/tempi/>,
+    <https://psicostat.dpss.psy.unipd.it/pages/handzone.html>
     
     
 ### Other Academic Roles
