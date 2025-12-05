@@ -335,6 +335,8 @@ tibble::tribble(
 
 ## Invited talks
 
+-  **Bayesian inference and multiple comparisons: From idealization of methods to conscious practice**. **C**ognitive **N**euroscience **S**eminars, Department of General Psychology,  University of Padova, Italy. 4th December 2025.
+
 -   **From Cognitive Psychology to Bayesian Multiple Testing**. Medical Statistics Meeting, Department of Biomedical Data Sciences, Leiden University Medical Center, Leiden, The Netherlands. 23rd October 2025.
 
 -   **Bayesian Multiple Testing**. STAT-Talk Series, Methodology and
@@ -356,10 +358,11 @@ tibble::tribble(
 
 ## Peer Reviews
 
-Ad-hoc reviewer (2 reviewed papers) for:
+Ad-hoc reviewer (3 reviewed papers) for:
 
--   Frontiers in Psychology - Theoretical and Philosophical Psychology (1)
--   Frontiers in Psychology - Cognition (1)
+- Italian Journal of Applied Statistics (1)
+- Frontiers in Psychology - Theoretical and Philosophical Psychology (1)
+- Frontiers in Psychology - Cognition (1)
 
 ## Teaching
 
@@ -383,7 +386,7 @@ Ad-hoc reviewer (2 reviewed papers) for:
     of Padova. Material: <https://github.com/arca-dpss/course-R-2425>
     -   December, 2024 (20 hrs.)
     -   April, 2025 (20 hrs.)
-    -   November, 2025 (20 hrs., *planned*)
+    -   November, 2025 (20 hrs.)
 -   **Learning in Dynamic Environments: A Tentative Implementation of
     the Volatile Kalman Filter in STAN.** Presentation (1 hr.) on a
     Bayesian-based implementation of a learning algorithm for the
@@ -393,7 +396,7 @@ Ad-hoc reviewer (2 reviewed papers) for:
 ### Integrative teaching (Didattica integrativa)
 
 -   **Assistance** during lectures for the course **Testing
-    Psicologico** (Prof. Tatiana Marci), Bachelor's degree in Scienze psicologiche dello sviluppo, della personalità e delle relazioni interpersonali, University of Padova (14 hrs.). Scheduled for the 1st semester of the 2025/2026 academic year.
+    Psicologico** (Prof. Tatiana Marci), Bachelor's degree in Scienze psicologiche dello sviluppo, della personalità e delle relazioni interpersonali, University of Padova (14 hrs.). 
 
 -   Preparation and correction of **practical group exercises** and
     exams for the course **Experimental Research Methods in Psychology**
@@ -415,6 +418,9 @@ Ad-hoc reviewer (2 reviewed papers) for:
 -   **The 3Rs of Trustworthy Science: Reproducibility, Replicability, and Robustness. Theory and Applications in R**. Pre-conference Workshop - **International Biometric Society**, Seul (South Korea). 12 July 2026. Planned hands-on methodological workshop held with Dr. Filippo Gambarota.
 
 -   **Generalized Linear Models for Psychology: Understanding, Simulating, and Planning Your Analyses**. Pre-conference Workshop - **Cognitive Science Arena**, Brixen (Italy). 5 February 2026. Planned hands-on methodological workshop held with Dr. Filippo Gambarota.
+
+-  **Bayesian Approaches To Multiplicity**. Psicostat HandZone on Bayesian Approaches To Multiplicity, Univeristy of Padova, Padova (Italy). 27 December 2025 (1.5 hr.). <https://psicostat.dpss.psy.unipd.it/pages/handzone.html>
+
 
 -   **A Practical Introduction to Evidence Accumulation Models in Visual Perception Research**. Pre-conference Workshop - **European Conference on Visual Perception**, Mainz (Germany). 24 August 2025 (2.30 hr.). Hands-on methodological workshop held with Dr. Carolina Maria Oletto. Material: <https://mar-cald.github.io/eam-workshop/eam-home.html>.
 

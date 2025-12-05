@@ -391,6 +391,10 @@ Ad-hoc reviewer (3 reviewed papers) for:
 
 ### Workshops
 
+-   **The 3Rs of Trustworthy Science: Reproducibility, Replicability, and Robustness. Theory and Applications in R**. Pre-conference Workshop - **International Biometric Society**, Seul (South Korea). 12 July 2026. Planned hands-on methodological workshop held with Dr. Filippo Gambarota.
+
+-   **Generalized Linear Models for Psychology: Understanding, Simulating, and Planning Your Analyses**. Pre-conference Workshop - **Cognitive Science Arena**, Brixen (Italy). 5 February 2026. Planned hands-on methodological workshop held with Dr. Filippo Gambarota.
+
 -  **Bayesian Approaches To Multiplicity**. Psicostat HandZone on Bayesian Approaches To Multiplicity, Univeristy of Padova, Padova (Italy). 27 December 2025 (1.5 hr.). <https://psicostat.dpss.psy.unipd.it/pages/handzone.html>
 
 -  **A Practical Introduction to Evidence Accumulation Models in Visual Perception Research**. European Conference on Visual Perception,
